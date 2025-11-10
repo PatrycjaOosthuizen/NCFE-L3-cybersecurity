@@ -1,8 +1,8 @@
-# NCFE Level 3 Certificate in Cyber Security Practices (603/5762/9)
+# NCFE Level 3 Certificate in Cyber Security Practices | Learning Journey
 
 **Author:** Patrycja Oosthuizen
 **Course Provider:** 5E LTD UK  
-**Duration:** Start 22.10.2025 – End 31.01.2026  
+**Duration:** Start October: 2025 – End: January 2026  
 **Location:** United Kingdom
 **Platform:** GitHub portfolio version of my NCFE Level 3 evidence
 
