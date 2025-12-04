@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybersecurity Flash Cards - NCFE Level 3</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+      <div class="loading-spinner"></div>
+      <p>Loading flashcards...</p>
+    </div>
+
+    <!-- Confetti Canvas - Full Screen -->
+    <canvas id="confettiCanvas" class="confetti-canvas-fullscreen"></canvas>
+
+    <!-- Homepage -->
+    <div id="homepage" class="homepage">
+      <header class="header">
+        <h1>🛡️ Cybersecurity Flash Cards - NCFE Level 3</h1>
+        <p class="subtitle">Choose a unit to begin</p>
+      </header>
+
+      <div class="unit-buttons">
+        <button class="unit-btn" data-unit="Unit 1">
+          🔐 Unit 1 - Understand Principles of Cyber Security
+        </button>
+        <button class="unit-btn" data-unit="Unit 2">
+          🧠 Unit 2 - Threat Intelligence in Cyber Security
+        </button>
+        <button class="unit-btn" data-unit="Unit 3">
+          🧰 Unit 3 - Cyber Security Testing, Vulnerabilities and Controls
+        </button>
+        <button class="unit-btn" data-unit="Unit 4">
+          🚨 Unit 4 - Cyber Security Incident Response
+        </button>
+        <button class="unit-btn" data-unit="Unit 5">
+          ⚖️ Unit 5 - Understand Legislation and Ethical Conduct within Cyber
+          Security
+        </button>
+      </div>
+    </div>
+
+    <!-- Flashcard View -->
+    <div id="flashcardView" class="flashcard-view hidden">
+      <button id="backBtn" class="back-btn">← Back to Units</button>
+
+      <div class="flashcard-header">
+        <h2 id="unitTitle"></h2>
+        <p class="instruction">Press SPACE to flip or ←/→ arrows to navigate</p>
+      </div>
+
+      <div class="flashcard-container">
+        <button class="nav-arrow nav-arrow-left" id="prevCardBtn">
+          <span>←</span>
+        </button>
+
+        <div class="card-stack">
+          <div class="card-stack-item stack-3"></div>
+          <div class="card-stack-item stack-2"></div>
+          <div class="flashcard" id="flashcard">
+            <div class="flashcard-inner">
+              <div class="flashcard-front">
+                <div class="card-content" id="questionContent"></div>
+                <div class="show-answer-text" id="showAnswerBtn">
+                  Show Answer
+                </div>
+              </div>
+              <div class="flashcard-back">
+                <div class="card-content" id="answerContent"></div>
+                <div class="show-answer-text" id="showQuestionBtn">
+                  Show Question
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="nav-arrow nav-arrow-right" id="nextCardBtn">
+          <span>→</span>
+        </button>
+      </div>
+
+      <div class="progress-section">
+        <div class="progress-bar-container">
+          <div class="progress-bar">
+            <div class="progress-bar-fill" id="progressBarFill"></div>
+          </div>
+          <p id="progressCounter" class="progress-counter">1 / 0 cards</p>
+        </div>
+      </div>
+
+      <!-- Error Message -->
+      <div id="errorMessage" class="error-message hidden">
+        Error loading flashcards. Please try again.
+      </div>
+
+      <!-- Completion Screen -->
+      <div id="completionScreen" class="completion-screen hidden">
+        <div class="completion-content">
+          <div class="completion-icon">🎉</div>
+          <h2>End of Unit Flashcards</h2>
+          <p class="completion-message">
+            You've completed all the flashcards for this unit!
+          </p>
+          <button id="returnHomeBtn" class="return-btn">Back to Units</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
