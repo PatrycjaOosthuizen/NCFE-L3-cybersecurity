@@ -3,53 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cybersecurity Flash Cards - NCFE Level 3</title>
+    <title>Cybersecurity Study & Practice - NCFE Level 3</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Loading Overlay -->
     <div id="loadingOverlay" class="loading-overlay hidden">
-      <div class="loading-spinner"></div>
-      <p>Loading flashcards...</p>
+      <div class="loading-text">📚 Loading your quiz...</div>
     </div>
 
     <!-- Confetti Canvas - Full Screen -->
     <canvas id="confettiCanvas" class="confetti-canvas-fullscreen"></canvas>
 
-    <!-- Homepage -->
+    <!-- ===========================
+         HOMEPAGE
+         =========================== -->
     <div id="homepage" class="homepage">
       <header class="header">
-        <h1>🛡️ Cybersecurity Flash Cards - NCFE Level 3</h1>
+        <h1>🛡️ Cybersecurity Study & Practice – NCFE Level 3</h1>
         <p class="subtitle">Choose a unit to begin</p>
       </header>
 
-      <div class="unit-buttons">
-        <button class="unit-btn" data-unit="Unit 1">
-          🔐 Unit 1 - Understand Principles of Cyber Security
-        </button>
-        <button class="unit-btn" data-unit="Unit 2">
-          🧠 Unit 2 - Threat Intelligence in Cyber Security
-        </button>
-        <button class="unit-btn" data-unit="Unit 3">
-          🧰 Unit 3 - Cyber Security Testing, Vulnerabilities and Controls
-        </button>
-        <button class="unit-btn" data-unit="Unit 4">
-          🚨 Unit 4 - Cyber Security Incident Response
-        </button>
-        <button class="unit-btn" data-unit="Unit 5">
-          ⚖️ Unit 5 - Understand Legislation and Ethical Conduct within Cyber
-          Security
-        </button>
+      <div class="unit-cards">
+        <!-- Unit 1 -->
+        <div class="unit-card">
+          <h3 class="unit-card-title">
+            🔐 Unit 1 - Understand Principles of Cyber Security
+          </h3>
+          <div class="unit-buttons">
+            <button class="study-btn" data-unit="Unit 1">
+              📚 Study Flashcards
+            </button>
+            <button class="quiz-btn" data-unit="Unit 1">📝 Take Quiz</button>
+          </div>
+        </div>
+
+        <!-- Unit 2 -->
+        <div class="unit-card">
+          <h3 class="unit-card-title">
+            🧠 Unit 2 - Threat Intelligence in Cyber Security
+          </h3>
+          <div class="unit-buttons">
+            <button class="study-btn" data-unit="Unit 2">
+              📚 Study Flashcards
+            </button>
+            <button class="quiz-btn" data-unit="Unit 2">📝 Take Quiz</button>
+          </div>
+        </div>
+
+        <!-- Unit 3 -->
+        <div class="unit-card">
+          <h3 class="unit-card-title">
+            🧰 Unit 3 - Cyber Security Testing, Vulnerabilities and Controls
+          </h3>
+          <div class="unit-buttons">
+            <button class="study-btn" data-unit="Unit 3">
+              📚 Study Flashcards
+            </button>
+            <button class="quiz-btn" data-unit="Unit 3">📝 Take Quiz</button>
+          </div>
+        </div>
+
+        <!-- Unit 4 -->
+        <div class="unit-card">
+          <h3 class="unit-card-title">
+            🚨 Unit 4 - Cyber Security Incident Response
+          </h3>
+          <div class="unit-buttons">
+            <button class="study-btn" data-unit="Unit 4">
+              📚 Study Flashcards
+            </button>
+            <button class="quiz-btn" data-unit="Unit 4">📝 Take Quiz</button>
+          </div>
+        </div>
+
+        <!-- Unit 5 -->
+        <div class="unit-card">
+          <h3 class="unit-card-title">
+            ⚖️ Unit 5 - Understand Legislation and Ethical Conduct within Cyber
+            Security
+          </h3>
+          <div class="unit-buttons">
+            <button class="study-btn" data-unit="Unit 5">
+              📚 Study Flashcards
+            </button>
+            <button class="quiz-btn" data-unit="Unit 5">📝 Take Quiz</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIG 100 Challenge Section -->
+      <div class="big100-section">
+        <div class="big100-content">
+          <h2>🔥 BIG 100 CHALLENGE</h2>
+          <p>Comprehensive Cyber Security Quiz</p>
+          <button class="big100-btn" id="big100Btn">Take BIG 100 Quiz</button>
+        </div>
       </div>
     </div>
 
-    <!-- Flashcard View -->
+    <!-- ===========================
+         FLASHCARD VIEW
+         =========================== -->
     <div id="flashcardView" class="flashcard-view hidden">
-      <button id="backBtn" class="back-btn">← Back to Units</button>
+      <button id="backBtn" class="back-btn">← Home</button>
 
       <div class="flashcard-header">
         <h2 id="unitTitle"></h2>
-        <p class="instruction">Press SPACE to flip or ←/→ arrows to navigate</p>
+        <p class="unit-subtitle" id="unitSubtitle"></p>
       </div>
 
       <div class="flashcard-container">
@@ -64,15 +125,11 @@
             <div class="flashcard-inner">
               <div class="flashcard-front">
                 <div class="card-content" id="questionContent"></div>
-                <div class="show-answer-text" id="showAnswerBtn">
-                  Show Answer
-                </div>
+                <div class="show-answer-text">Show Answer</div>
               </div>
               <div class="flashcard-back">
                 <div class="card-content" id="answerContent"></div>
-                <div class="show-answer-text" id="showQuestionBtn">
-                  Show Question
-                </div>
+                <div class="show-answer-text">Show Question</div>
               </div>
             </div>
           </div>
@@ -88,8 +145,11 @@
           <div class="progress-bar">
             <div class="progress-bar-fill" id="progressBarFill"></div>
           </div>
-          <p id="progressCounter" class="progress-counter">1 / 0 cards</p>
+          <p id="progressCounter" class="progress-counter">1 / 0</p>
         </div>
+        <p class="keyboard-tip">
+          💡 Tip: Press SPACE to flip · ← → to navigate
+        </p>
       </div>
 
       <!-- Error Message -->
@@ -100,12 +160,197 @@
       <!-- Completion Screen -->
       <div id="completionScreen" class="completion-screen hidden">
         <div class="completion-content">
-          <div class="completion-icon">🎉</div>
-          <h2>End of Unit Flashcards</h2>
+          <div class="completion-icon checkmark-icon">✅</div>
+          <div class="sparkles-container">
+            <span class="sparkle">✨</span>
+            <span class="sparkle">✨</span>
+            <span class="sparkle">✨</span>
+            <span class="sparkle">✨</span>
+            <span class="sparkle">✨</span>
+          </div>
+          <h2 id="completionTitle">Unit Complete!</h2>
           <p class="completion-message">
-            You've completed all the flashcards for this unit!
+            Nice work! Your study session is complete.
           </p>
-          <button id="returnHomeBtn" class="return-btn">Back to Units</button>
+          <div class="completion-buttons">
+            <button id="returnHomeBtn" class="return-btn">Home</button>
+            <button id="takeQuizBtn" class="take-quiz-btn">Take Quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================
+         QUIZ VIEW
+         =========================== -->
+    <div id="quizView" class="quiz-view hidden">
+      <button id="quizBackBtn" class="back-btn">← Home</button>
+
+      <div class="quiz-header">
+        <h2 id="quizTitle">Cybersecurity Quiz</h2>
+        <div class="quiz-progress-header">
+          <div class="progress-bar">
+            <div
+              class="progress-bar-fill quiz-progress-fill"
+              id="quizProgressBarFillHeader"
+            ></div>
+          </div>
+          <p id="quizProgressCounterHeader" class="progress-counter">0 / 50</p>
+        </div>
+      </div>
+
+      <!-- Quiz Question Container -->
+      <div id="quizQuestionContainer" class="quiz-question-container">
+        <div class="question-text" id="quizQuestionText"></div>
+
+        <div class="answer-options" id="quizAnswerOptions">
+          <!-- Answer options will be inserted here by JavaScript -->
+        </div>
+
+        <div class="hint-section" id="quizHintSection">
+          <button class="hint-toggle" id="quizHintToggle">
+            <span class="hint-icon">💡</span>
+            <span class="hint-label">Need a hint? (Click to reveal)</span>
+            <span class="hint-arrow">▼</span>
+          </button>
+          <div class="hint-content hidden" id="quizHintContent"></div>
+        </div>
+
+        <!-- Skipped Questions Button -->
+        <div
+          class="skipped-questions-btn-container hidden"
+          id="skippedBtnContainer"
+        >
+          <button class="skipped-questions-btn" id="skippedQuestionsBtn">
+            <span class="skipped-icon">📋</span>
+            <span class="skipped-label"
+              >Skipped (<span id="skippedCount">0</span>)</span
+            >
+          </button>
+        </div>
+
+        <div class="quiz-navigation">
+          <button class="quiz-nav-btn" id="prevQuestionBtn" disabled>
+            Previous
+          </button>
+          <button class="quiz-nav-btn skip-btn" id="skipBtn">Skip</button>
+          <button class="quiz-nav-btn next-btn" id="nextQuestionBtn" disabled>
+            Next
+          </button>
+          <button class="quiz-nav-btn finish-btn hidden" id="finishQuizBtn">
+            Finish Quiz
+          </button>
+        </div>
+      </div>
+
+      <!-- Skipped Questions Modal -->
+      <div class="modal-overlay hidden" id="skippedModalOverlay">
+        <div class="skipped-modal">
+          <div class="skipped-modal-header">
+            <h3>
+              📋 Skipped Questions (<span id="skippedModalCount">0</span>)
+            </h3>
+            <button class="modal-close-btn" id="closeSkippedModal">×</button>
+          </div>
+          <div class="skipped-modal-content" id="skippedModalContent">
+            <!-- Skipped questions list will be inserted here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Warning Dialog Modal -->
+      <div class="modal-overlay hidden" id="warningModalOverlay">
+        <div class="warning-modal">
+          <div class="warning-icon">⚠️</div>
+          <h3>
+            You have <span id="warningSkippedCount">0</span> unanswered or
+            skipped questions.
+          </h3>
+          <p>Review them or finish?</p>
+          <p class="warning-note">
+            Unanswered questions count as incorrect in your final score.
+          </p>
+          <div class="warning-buttons">
+            <button class="warning-btn review-btn" id="reviewSkippedBtn">
+              Review Skipped
+            </button>
+            <button class="warning-btn finish-btn" id="finishAnywayBtn">
+              Finish Anyway
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz Finish Screen -->
+      <div id="quizFinishScreen" class="quiz-finish-screen hidden">
+        <div class="finish-icon-container">
+          <div class="finish-icon" id="quizFinishIcon">🎉</div>
+        </div>
+        <h2 class="finish-title" id="quizFinishTitle">Quiz Complete!</h2>
+        <p class="finish-message" id="quizFinishMessage"></p>
+
+        <div class="score-cards">
+          <div class="score-card">
+            <h3>Score</h3>
+            <div class="score-value" id="quizScoreValue">0/0</div>
+          </div>
+          <div class="score-card">
+            <h3>Accuracy</h3>
+            <div class="score-value" id="quizAccuracyValue">0%</div>
+          </div>
+        </div>
+
+        <!-- Score Breakdown -->
+        <div class="score-breakdown">
+          <h4>Breakdown:</h4>
+          <div class="breakdown-item correct-item">
+            <span class="breakdown-icon">✓</span>
+            <span class="breakdown-text"
+              >Correct: <span id="correctCount">0</span></span
+            >
+          </div>
+          <div class="breakdown-item wrong-item">
+            <span class="breakdown-icon">✗</span>
+            <span class="breakdown-text"
+              >Wrong: <span id="wrongCount">0</span></span
+            >
+          </div>
+          <div class="breakdown-item skipped-item" id="skippedBreakdownItem">
+            <span class="breakdown-icon">⚠️</span>
+            <span class="breakdown-text"
+              >Skipped/Unanswered:
+              <span id="skippedBreakdownCount">0</span> (counted as wrong)</span
+            >
+          </div>
+        </div>
+
+        <div class="finish-buttons">
+          <button class="finish-action-btn" id="reviewQuestionsBtn">
+            Review Questions
+          </button>
+          <button class="finish-action-btn" id="retakeQuizBtn">
+            Retake Quiz
+          </button>
+          <button class="finish-action-btn" id="quizHomeBtn">Home</button>
+        </div>
+      </div>
+
+      <!-- Quiz Review Screen -->
+      <div id="quizReviewScreen" class="quiz-review-screen hidden">
+        <h2 class="review-title">Quiz Review</h2>
+
+        <div class="review-questions-container" id="reviewQuestionsContainer">
+          <!-- Review questions will be inserted here by JavaScript -->
+        </div>
+
+        <div class="review-buttons">
+          <button class="finish-action-btn" id="reviewBackBtn">
+            Back to Results
+          </button>
+          <button class="finish-action-btn" id="reviewRetakeBtn">
+            Retake Quiz
+          </button>
+          <button class="finish-action-btn" id="reviewHomeBtn">Home</button>
         </div>
       </div>
     </div>
