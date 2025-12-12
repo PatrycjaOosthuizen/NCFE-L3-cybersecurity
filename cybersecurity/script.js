@@ -910,6 +910,27 @@ function proceedToFinish() {
   quizFinishScreen.classList.remove("hidden");
 
   console.log("Finish screen should now be visible");
+
+  // TRIGGER FEEDBACK SYSTEM
+  // Capture the current quiz details and score
+  const quizTitle = document.getElementById("quizTitle").textContent;
+  const scoreText = `${correctAnswers}/${totalQuestions} (${accuracy}%)`;
+
+  // Delay feedback prompt by 5 seconds after results shown
+  setTimeout(() => {
+    if (quizTitle.includes("BIG 100")) {
+      // Trigger final feedback for BIG 100
+      showFinalFeedbackPrompt(scoreText);
+    } else {
+      // Extract unit number from title for unit quizzes
+      const unitMatch = quizTitle.match(/Unit (\d+)/);
+      if (unitMatch) {
+        const unitNumber = unitMatch[1];
+        const unitTitle = quizTitle.replace(`Unit ${unitNumber} - `, "");
+        showFeedbackPrompt(unitNumber, unitTitle, scoreText);
+      }
+    }
+  }, 3000); // 3 second delay
 }
 
 function showSkippedQuestionsModal() {
@@ -1150,3 +1171,606 @@ window.addEventListener("DOMContentLoaded", () => {
   flashcardView.classList.add("hidden");
   quizView.classList.add("hidden");
 });
+
+// ============================================
+// EMAILJS CONFIGURATION
+// ============================================
+// Initialize EmailJS with public key
+emailjs.init("D8BkfDXUU7npJC2os");
+
+const EMAIL_CONFIG = {
+  serviceId: "service_0w7q097",
+  unitFeedbackTemplateId: "template_80dw2j7",
+  finalFeedbackTemplateId: "template_oc5nlre",
+};
+
+// ============================================
+// KNOWLEDGE CHECK SYSTEM
+// ============================================
+
+let knowledgeCheckQuestions = [];
+let currentKCQuestion = 0;
+let kcAnswers = [];
+let kcStudentName = "";
+
+// DOM Elements - Knowledge Check
+const kcBtn = document.getElementById("knowledgeCheckBtn");
+const kcModal = document.getElementById("knowledgeCheckModal");
+const kcCloseBtn = document.getElementById("kcCloseBtn");
+const kcIntroScreen = document.getElementById("kcIntroScreen");
+const kcQuestionScreen = document.getElementById("kcQuestionScreen");
+const kcResultsScreen = document.getElementById("kcResultsScreen");
+const kcStartBtn = document.getElementById("kcStartBtn");
+const kcStudentNameInput = document.getElementById("kcStudentName");
+const kcProgressFill = document.getElementById("kcProgressFill");
+const kcProgressText = document.getElementById("kcProgressText");
+const kcQuestion = document.getElementById("kcQuestion");
+const kcOptions = document.getElementById("kcOptions");
+const kcPrevBtn = document.getElementById("kcPrevBtn");
+const kcNextBtn = document.getElementById("kcNextBtn");
+const kcSubmitBtn = document.getElementById("kcSubmitBtn");
+const kcResultName = document.getElementById("kcResultName");
+const kcScoreValue = document.getElementById("kcScoreValue");
+const kcScorePercent = document.getElementById("kcScorePercent");
+const kcCloseResults = document.getElementById("kcCloseResults");
+
+// Load Knowledge Check CSV
+async function loadKnowledgeCheckQuestions() {
+  try {
+    const response = await fetch("my_knowledge_check.csv");
+    const csvText = await response.text();
+    const lines = csvText.split("\n").filter((line) => line.trim());
+
+    // Skip header row
+    knowledgeCheckQuestions = lines.slice(1).map((line) => {
+      const values = parseCSVLine(line);
+      return {
+        id: values[0],
+        question: values[1],
+        options: [values[2], values[3], values[4], values[5]],
+        correct: values[6],
+        explanation: values[7],
+      };
+    });
+  } catch (error) {
+    console.error("Error loading questions:", error);
+    alert("Failed to load Knowledge Check questions. Please refresh the page.");
+  }
+}
+
+// Parse CSV line (handles quotes)
+function parseCSVLine(line) {
+  const result = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+
+    if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === "," && !inQuotes) {
+      result.push(current.trim());
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+  result.push(current.trim());
+  return result;
+}
+
+// Open Knowledge Check Modal
+kcBtn.addEventListener("click", async () => {
+  if (knowledgeCheckQuestions.length === 0) {
+    await loadKnowledgeCheckQuestions();
+  }
+  kcModal.classList.remove("hidden");
+  kcIntroScreen.classList.remove("hidden");
+  kcQuestionScreen.classList.add("hidden");
+  kcResultsScreen.classList.add("hidden");
+  kcStudentNameInput.value = "";
+});
+
+// Close Modal
+kcCloseBtn.addEventListener("click", () => {
+  kcModal.classList.add("hidden");
+});
+
+kcCloseResults.addEventListener("click", () => {
+  kcModal.classList.add("hidden");
+});
+
+// Start Knowledge Check
+kcStartBtn.addEventListener("click", () => {
+  const name = kcStudentNameInput.value.trim();
+  if (!name || name.length < 2) {
+    alert("Please enter your name (at least 2 characters)");
+    return;
+  }
+
+  kcStudentName = name;
+  currentKCQuestion = 0;
+  kcAnswers = new Array(knowledgeCheckQuestions.length).fill(null);
+
+  kcIntroScreen.classList.add("hidden");
+  kcQuestionScreen.classList.remove("hidden");
+  displayKCQuestion();
+});
+
+// Display Question
+function displayKCQuestion() {
+  const q = knowledgeCheckQuestions[currentKCQuestion];
+  const progress =
+    ((currentKCQuestion + 1) / knowledgeCheckQuestions.length) * 100;
+
+  kcProgressFill.style.width = `${progress}%`;
+  kcProgressText.textContent = `Question ${currentKCQuestion + 1} / ${
+    knowledgeCheckQuestions.length
+  }`;
+  kcQuestion.textContent = q.question;
+
+  // Create options
+  kcOptions.innerHTML = "";
+  q.options.forEach((option, index) => {
+    const optionDiv = document.createElement("div");
+    optionDiv.className = "kc-option";
+    optionDiv.textContent = `${String.fromCharCode(65 + index)}) ${option}`;
+    optionDiv.dataset.answer = String.fromCharCode(65 + index);
+
+    if (kcAnswers[currentKCQuestion] === String.fromCharCode(65 + index)) {
+      optionDiv.classList.add("selected");
+    }
+
+    optionDiv.addEventListener("click", () => selectKCAnswer(optionDiv));
+    kcOptions.appendChild(optionDiv);
+  });
+
+  // Update buttons
+  kcPrevBtn.disabled = currentKCQuestion === 0;
+  kcNextBtn.disabled = kcAnswers[currentKCQuestion] === null;
+
+  if (currentKCQuestion === knowledgeCheckQuestions.length - 1) {
+    kcNextBtn.classList.add("hidden");
+    kcSubmitBtn.classList.remove("hidden");
+    kcSubmitBtn.disabled = kcAnswers[currentKCQuestion] === null;
+  } else {
+    kcNextBtn.classList.remove("hidden");
+    kcSubmitBtn.classList.add("hidden");
+  }
+}
+
+// Select Answer
+function selectKCAnswer(selectedOption) {
+  const options = kcOptions.querySelectorAll(".kc-option");
+  options.forEach((opt) => opt.classList.remove("selected"));
+  selectedOption.classList.add("selected");
+
+  kcAnswers[currentKCQuestion] = selectedOption.dataset.answer;
+  kcNextBtn.disabled = false;
+  kcSubmitBtn.disabled = false;
+}
+
+// Navigation
+kcPrevBtn.addEventListener("click", () => {
+  if (currentKCQuestion > 0) {
+    currentKCQuestion--;
+    displayKCQuestion();
+  }
+});
+
+kcNextBtn.addEventListener("click", () => {
+  if (currentKCQuestion < knowledgeCheckQuestions.length - 1) {
+    currentKCQuestion++;
+    displayKCQuestion();
+  }
+});
+
+// Submit Knowledge Check
+kcSubmitBtn.addEventListener("click", () => {
+  if (kcAnswers.includes(null)) {
+    alert("Please answer all questions before submitting.");
+    return;
+  }
+
+  // Calculate score
+  let correct = 0;
+  knowledgeCheckQuestions.forEach((q, index) => {
+    if (kcAnswers[index] === q.correct) {
+      correct++;
+    }
+  });
+
+  const percentage = Math.round(
+    (correct / knowledgeCheckQuestions.length) * 100
+  );
+
+  // Show results
+  kcResultName.textContent = kcStudentName;
+  kcScoreValue.textContent = `${correct}/${knowledgeCheckQuestions.length}`;
+  kcScorePercent.textContent = `${percentage}%`;
+
+  kcQuestionScreen.classList.add("hidden");
+  kcResultsScreen.classList.remove("hidden");
+
+  // Note: Email sending skipped as template not created
+  console.log(
+    `Knowledge Check completed by ${kcStudentName}: ${correct}/${knowledgeCheckQuestions.length} (${percentage}%)`
+  );
+});
+
+// ============================================
+// FEEDBACK SYSTEM - UNIT QUICK FEEDBACK
+// ============================================
+
+// DOM Elements - Feedback
+const feedbackModal = document.getElementById("feedbackModal");
+const feedbackPrompt = document.getElementById("feedbackPrompt");
+const fbCloseBtn = document.getElementById("fbCloseBtn");
+const fbUnitTitle = document.getElementById("fbUnitTitle");
+const feedbackForm = document.getElementById("feedbackForm");
+const fbStudentName = document.getElementById("fbStudentName");
+const fbStarRating = document.getElementById("fbStarRating");
+const fbRating = document.getElementById("fbRating");
+const fbImprovements = document.getElementById("fbImprovements");
+const fbWordCount = document.getElementById("fbWordCount");
+const fbError = document.getElementById("fbError");
+const fbSuccess = document.getElementById("fbSuccess");
+const fbMaybeLater = document.getElementById("fbMaybeLater");
+const promptGiveFeedback = document.getElementById("promptGiveFeedback");
+const promptMaybeLater = document.getElementById("promptMaybeLater");
+
+let currentFeedbackUnit = null;
+let currentFeedbackScore = null;
+
+// Star Rating functionality
+function initStarRating(container, hiddenInput) {
+  const stars = container.querySelectorAll(".star");
+
+  stars.forEach((star, index) => {
+    star.addEventListener("click", () => {
+      const rating = index + 1;
+      hiddenInput.value = rating;
+
+      stars.forEach((s, i) => {
+        if (i < rating) {
+          s.classList.add("selected");
+          s.textContent = "★";
+        } else {
+          s.classList.remove("selected");
+          s.textContent = "☆";
+        }
+      });
+    });
+
+    star.addEventListener("mouseenter", () => {
+      stars.forEach((s, i) => {
+        if (i <= index) {
+          s.textContent = "★";
+        } else {
+          s.textContent = "☆";
+        }
+      });
+    });
+  });
+
+  container.addEventListener("mouseleave", () => {
+    const currentRating = parseInt(hiddenInput.value) || 0;
+    stars.forEach((s, i) => {
+      if (i < currentRating) {
+        s.textContent = "★";
+      } else {
+        s.textContent = "☆";
+      }
+    });
+  });
+}
+
+initStarRating(fbStarRating, fbRating);
+
+// Word count
+fbImprovements.addEventListener("input", () => {
+  const words = fbImprovements.value
+    .trim()
+    .split(/\s+/)
+    .filter((w) => w.length > 0);
+  fbWordCount.textContent = words.length;
+});
+
+// Show feedback prompt after quiz completion
+function showFeedbackPrompt(unitNumber, unitTitle, quizScore) {
+  currentFeedbackUnit = { number: unitNumber, title: unitTitle };
+  currentFeedbackScore = quizScore;
+
+  // Show prompt immediately (delay already handled in proceedToFinish)
+  feedbackPrompt.classList.remove("hidden");
+}
+
+// Prompt buttons
+promptGiveFeedback.addEventListener("click", () => {
+  feedbackPrompt.classList.add("hidden");
+  openFeedbackModal();
+});
+
+promptMaybeLater.addEventListener("click", () => {
+  feedbackPrompt.classList.add("hidden");
+});
+
+// Open feedback modal
+function openFeedbackModal() {
+  if (!currentFeedbackUnit) return;
+
+  fbUnitTitle.textContent = `Unit ${currentFeedbackUnit.number}`;
+  feedbackForm.classList.remove("hidden");
+  fbSuccess.classList.add("hidden");
+  feedbackForm.reset();
+  fbRating.value = "";
+  fbWordCount.textContent = "0";
+  fbError.classList.add("hidden");
+
+  // Reset stars
+  fbStarRating.querySelectorAll(".star").forEach((s) => {
+    s.classList.remove("selected");
+    s.textContent = "☆";
+  });
+
+  feedbackModal.classList.remove("hidden");
+}
+
+// Close feedback modal
+fbCloseBtn.addEventListener("click", () => {
+  feedbackModal.classList.add("hidden");
+});
+
+fbMaybeLater.addEventListener("click", () => {
+  feedbackModal.classList.add("hidden");
+});
+
+// Submit feedback
+feedbackForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Validate
+  const name = fbStudentName.value.trim();
+  const rating = fbRating.value;
+  const difficulty = document.querySelector('input[name="difficulty"]:checked');
+  const improvements = fbImprovements.value.trim();
+  const words = improvements.split(/\s+/).filter((w) => w.length > 0);
+
+  if (!name || name.length < 2) {
+    showError(fbError, "Please enter your name (at least 2 characters)");
+    return;
+  }
+
+  if (!rating) {
+    showError(fbError, "Please select a star rating");
+    return;
+  }
+
+  if (!difficulty) {
+    showError(fbError, "Please select quiz difficulty");
+    return;
+  }
+
+  if (words.length < 5) {
+    showError(
+      fbError,
+      `Please provide at least 5 words of feedback (currently: ${words.length} words)`
+    );
+    return;
+  }
+
+  // Send email
+  try {
+    const stars = "⭐".repeat(parseInt(rating));
+
+    await emailjs.send(
+      EMAIL_CONFIG.serviceId,
+      EMAIL_CONFIG.unitFeedbackTemplateId,
+      {
+        student_name: name,
+        unit_number: currentFeedbackUnit.number,
+        unit_title: currentFeedbackUnit.title,
+        quiz_score: currentFeedbackScore,
+        date: new Date().toLocaleString(),
+        flashcard_stars: stars,
+        flashcard_rating: rating,
+        quiz_difficulty: difficulty.value,
+        improvements: improvements,
+      }
+    );
+
+    // Show success
+    feedbackForm.classList.add("hidden");
+    fbSuccess.classList.remove("hidden");
+
+    setTimeout(() => {
+      feedbackModal.classList.add("hidden");
+    }, 3000);
+  } catch (error) {
+    console.error("Error sending feedback:", error);
+    showError(fbError, "Failed to send feedback. Please try again.");
+  }
+});
+
+// ============================================
+// FEEDBACK SYSTEM - FINAL COURSE FEEDBACK
+// ============================================
+
+// DOM Elements - Final Feedback
+const finalFeedbackModal = document.getElementById("finalFeedbackModal");
+const ffCloseBtn = document.getElementById("ffCloseBtn");
+const finalFeedbackForm = document.getElementById("finalFeedbackForm");
+const ffStudentName = document.getElementById("ffStudentName");
+const ffStarRating = document.getElementById("ffStarRating");
+const ffRating = document.getElementById("ffRating");
+const ffLikedMost = document.getElementById("ffLikedMost");
+const ffToImprove = document.getElementById("ffToImprove");
+const ffLikedCount = document.getElementById("ffLikedCount");
+const ffImproveCount = document.getElementById("ffImproveCount");
+const ffError = document.getElementById("ffError");
+const ffSuccess = document.getElementById("ffSuccess");
+
+let big100Score = null;
+
+initStarRating(ffStarRating, ffRating);
+
+// Word counts
+ffLikedMost.addEventListener("input", () => {
+  const words = ffLikedMost.value
+    .trim()
+    .split(/\s+/)
+    .filter((w) => w.length > 0);
+  ffLikedCount.textContent = words.length;
+});
+
+ffToImprove.addEventListener("input", () => {
+  const words = ffToImprove.value
+    .trim()
+    .split(/\s+/)
+    .filter((w) => w.length > 0);
+  ffImproveCount.textContent = words.length;
+});
+
+// Show final feedback prompt after BIG 100
+function showFinalFeedbackPrompt(score) {
+  big100Score = score;
+
+  // Show prompt immediately (delay already handled in proceedToFinish)
+  feedbackPrompt.querySelector("p").textContent =
+    "💬 Final course feedback? (30 sec) - Help future students 🎓!";
+  feedbackPrompt.classList.remove("hidden");
+
+  // Override prompt buttons for final feedback
+  const tempGive = promptGiveFeedback.cloneNode(true);
+  const tempLater = promptMaybeLater.cloneNode(true);
+
+  promptGiveFeedback.parentNode.replaceChild(tempGive, promptGiveFeedback);
+  promptMaybeLater.parentNode.replaceChild(tempLater, promptMaybeLater);
+
+  tempGive.addEventListener("click", () => {
+    feedbackPrompt.classList.add("hidden");
+    openFinalFeedbackModal();
+  });
+
+  tempLater.addEventListener("click", () => {
+    feedbackPrompt.classList.add("hidden");
+  });
+}
+
+// Open final feedback modal
+function openFinalFeedbackModal() {
+  finalFeedbackForm.classList.remove("hidden");
+  ffSuccess.classList.add("hidden");
+  finalFeedbackForm.reset();
+  ffRating.value = "";
+  ffLikedCount.textContent = "0";
+  ffImproveCount.textContent = "0";
+  ffError.classList.add("hidden");
+
+  ffStarRating.querySelectorAll(".star").forEach((s) => {
+    s.classList.remove("selected");
+    s.textContent = "☆";
+  });
+
+  finalFeedbackModal.classList.remove("hidden");
+}
+
+// Close final feedback modal
+ffCloseBtn.addEventListener("click", () => {
+  finalFeedbackModal.classList.add("hidden");
+});
+
+// Submit final feedback
+finalFeedbackForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Validate
+  const name = ffStudentName.value.trim();
+  const rating = ffRating.value;
+  const recommend = document.querySelector('input[name="recommend"]:checked');
+  const likedMost = ffLikedMost.value.trim();
+  const toImprove = ffToImprove.value.trim();
+  const likedWords = likedMost.split(/\s+/).filter((w) => w.length > 0);
+  const improveWords = toImprove.split(/\s+/).filter((w) => w.length > 0);
+
+  if (!name || name.length < 2) {
+    showError(ffError, "Please enter your name (at least 2 characters)");
+    return;
+  }
+
+  if (!rating) {
+    showError(ffError, "Please select an overall rating");
+    return;
+  }
+
+  if (likedWords.length < 10) {
+    showError(
+      ffError,
+      `"What you liked" needs at least 10 words (currently: ${likedWords.length} words)`
+    );
+    return;
+  }
+
+  if (improveWords.length < 10) {
+    showError(
+      ffError,
+      `"What to improve" needs at least 10 words (currently: ${improveWords.length} words)`
+    );
+    return;
+  }
+
+  if (!recommend) {
+    showError(ffError, "Please select if you would recommend this course");
+    return;
+  }
+
+  // Send email
+  try {
+    const stars = "⭐".repeat(parseInt(rating));
+
+    await emailjs.send(
+      EMAIL_CONFIG.serviceId,
+      EMAIL_CONFIG.finalFeedbackTemplateId,
+      {
+        student_name: name,
+        big100_score: big100Score,
+        date: new Date().toLocaleString(),
+        overall_stars: stars,
+        overall_rating: rating,
+        liked_most: likedMost,
+        to_improve: toImprove,
+        would_recommend: recommend.value,
+      }
+    );
+
+    // Show success
+    finalFeedbackForm.classList.add("hidden");
+    ffSuccess.classList.remove("hidden");
+
+    setTimeout(() => {
+      finalFeedbackModal.classList.add("hidden");
+    }, 5000);
+  } catch (error) {
+    console.error("Error sending final feedback:", error);
+    showError(ffError, "Failed to send feedback. Please try again.");
+  }
+});
+
+// Helper function to show errors
+function showError(errorElement, message) {
+  errorElement.textContent = message;
+  errorElement.classList.remove("hidden");
+  setTimeout(() => {
+    errorElement.classList.add("hidden");
+  }, 5000);
+}
+
+// ============================================
+// INTEGRATE WITH EXISTING QUIZ SYSTEM
+// ============================================
+// Feedback is now triggered directly from proceedToFinish() function above
+// This ensures accurate score capture and proper timing
+
+console.log("✅ Knowledge Check and Feedback systems initialized!");
+console.log("📧 EmailJS configured with Service ID:", EMAIL_CONFIG.serviceId);

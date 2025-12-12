@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cybersecurity Study & Practice - NCFE Level 3</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body>
     <!-- Loading Overlay -->
@@ -20,9 +22,19 @@
          =========================== -->
     <div id="homepage" class="homepage">
       <header class="header">
-        <h1>🛡️ Cybersecurity Study & Practice – NCFE Level 3</h1>
+        <h1>🛡️ Cybersecurity Study & Practice - NCFE Level 3</h1>
         <p class="subtitle">Choose a unit to begin</p>
       </header>
+
+      <!-- Knowledge Check Section -->
+      <div class="knowledge-check-section">
+        <button class="knowledge-check-btn" id="knowledgeCheckBtn">
+          📋 New Student? Knowledge Check
+        </button>
+        <p class="kc-description">
+          Test your baseline knowledge with 40 questions
+        </p>
+      </div>
 
       <div class="unit-cards">
         <!-- Unit 1 -->
@@ -355,12 +367,325 @@
       </div>
     </div>
 
+    <!-- ===========================
+         KNOWLEDGE CHECK MODAL
+         =========================== -->
+    <div id="knowledgeCheckModal" class="modal-overlay hidden">
+      <div class="modal-content knowledge-check-modal">
+        <button class="modal-close" id="kcCloseBtn">×</button>
+
+        <!-- Intro Screen -->
+        <div id="kcIntroScreen" class="kc-screen">
+          <h2>📋 Knowledge Check</h2>
+          <p>
+            Before you begin, help us understand your current knowledge level!
+          </p>
+          <div class="kc-input-group">
+            <label for="kcStudentName">👤 Your Name:</label>
+            <input
+              type="text"
+              id="kcStudentName"
+              placeholder="Enter your first name"
+              required
+            />
+          </div>
+          <p class="kc-info">
+            This assessment has 40 questions. Answer all questions - no time
+            limit.
+          </p>
+          <p class="kc-info-small">
+            Note: Results won't be emailed (feature coming soon)
+          </p>
+          <button class="kc-btn-primary" id="kcStartBtn">
+            Start Knowledge Check
+          </button>
+        </div>
+
+        <!-- Question Screen -->
+        <div id="kcQuestionScreen" class="kc-screen hidden">
+          <div class="kc-progress-bar">
+            <div class="kc-progress-fill" id="kcProgressFill"></div>
+          </div>
+          <p class="kc-progress-text" id="kcProgressText">Question 1 / 40</p>
+
+          <div class="kc-question-container">
+            <h3 id="kcQuestion" class="kc-question"></h3>
+            <div class="kc-options" id="kcOptions"></div>
+          </div>
+
+          <div class="kc-navigation">
+            <button class="kc-btn-secondary" id="kcPrevBtn" disabled>
+              ← Previous
+            </button>
+            <button class="kc-btn-primary" id="kcNextBtn" disabled>
+              Next →
+            </button>
+            <button class="kc-btn-primary hidden" id="kcSubmitBtn">
+              Submit
+            </button>
+          </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="kcResultsScreen" class="kc-screen hidden">
+          <div class="kc-results-icon">✅</div>
+          <h2>Knowledge Check Complete!</h2>
+          <p id="kcThankYou">Thank you, <span id="kcResultName"></span>!</p>
+          <div class="kc-score-display">
+            <div class="kc-score-value" id="kcScoreValue">0/40</div>
+            <div class="kc-score-percent" id="kcScorePercent">0%</div>
+          </div>
+          <p class="kc-results-message">You can now begin studying!</p>
+          <button class="kc-btn-primary" id="kcCloseResults">
+            Close & Start Learning
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================
+         UNIT FEEDBACK MODAL
+         =========================== -->
+    <div id="feedbackModal" class="modal-overlay hidden">
+      <div class="modal-content feedback-modal">
+        <button class="modal-close" id="fbCloseBtn">×</button>
+        <h2>💬 Quick Feedback - <span id="fbUnitTitle">Unit 1</span></h2>
+        <p class="fb-subtitle">Help us improve! (Takes ~30 sec)</p>
+
+        <form id="feedbackForm">
+          <div class="fb-input-group">
+            <label for="fbStudentName"
+              >👤 Your Name: <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="fbStudentName"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="fb-input-group">
+            <label>⭐ Rate this unit: <span class="required">*</span></label>
+            <div class="star-rating" id="fbStarRating">
+              <span class="star" data-rating="1">☆</span>
+              <span class="star" data-rating="2">☆</span>
+              <span class="star" data-rating="3">☆</span>
+              <span class="star" data-rating="4">☆</span>
+              <span class="star" data-rating="5">☆</span>
+            </div>
+            <input type="hidden" id="fbRating" required />
+          </div>
+
+          <div class="fb-input-group">
+            <label
+              >📊 How difficult was the quiz?
+              <span class="required">*</span></label
+            >
+            <div class="radio-group">
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="difficulty"
+                  value="Too Easy"
+                  required
+                />
+                <span>Too Easy</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="difficulty" value="Just Right" />
+                <span>Just Right</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="difficulty" value="Too Hard" />
+                <span>Too Hard</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="fb-input-group">
+            <label for="fbImprovements"
+              >💬 What could we improve? <span class="required">*</span></label
+            >
+            <textarea
+              id="fbImprovements"
+              rows="4"
+              placeholder="Tell us what would make this unit better..."
+              required
+            ></textarea>
+            <div class="char-count">
+              <span id="fbWordCount">0</span> / 5 words minimum
+            </div>
+          </div>
+
+          <div class="fb-error hidden" id="fbError"></div>
+
+          <div class="fb-buttons">
+            <button type="button" class="fb-btn-secondary" id="fbMaybeLater">
+              Maybe Later
+            </button>
+            <button type="submit" class="fb-btn-primary">
+              Submit Feedback
+            </button>
+          </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="fbSuccess" class="fb-success hidden">
+          <div class="success-icon">✅</div>
+          <h3>Thank you for your feedback!</h3>
+          <p>Your input helps us improve the course.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================
+         FEEDBACK PROMPT BANNER
+         =========================== -->
+    <div id="feedbackPrompt" class="feedback-prompt hidden">
+      <p>💬 Quick feedback? (30 sec) - Help us improve this unit!</p>
+      <div class="prompt-buttons">
+        <button class="prompt-btn-primary" id="promptGiveFeedback">
+          Give Feedback
+        </button>
+        <button class="prompt-btn-secondary" id="promptMaybeLater">
+          Maybe Later
+        </button>
+      </div>
+    </div>
+
+    <!-- ===========================
+         FINAL FEEDBACK MODAL
+         =========================== -->
+    <div id="finalFeedbackModal" class="modal-overlay hidden">
+      <div class="modal-content final-feedback-modal">
+        <button class="modal-close" id="ffCloseBtn">×</button>
+        <h2>💬 FINAL COURSE FEEDBACK</h2>
+        <p class="ff-subtitle">
+          Congratulations on completing the course! Help us improve for future
+          students. (~30 sec)
+        </p>
+
+        <form id="finalFeedbackForm">
+          <div class="ff-input-group">
+            <label for="ffStudentName"
+              >👤 Your Name: <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="ffStudentName"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="ff-input-group">
+            <label
+              >⭐ Overall course rating: <span class="required">*</span></label
+            >
+            <div class="star-rating" id="ffStarRating">
+              <span class="star" data-rating="1">☆</span>
+              <span class="star" data-rating="2">☆</span>
+              <span class="star" data-rating="3">☆</span>
+              <span class="star" data-rating="4">☆</span>
+              <span class="star" data-rating="5">☆</span>
+            </div>
+            <input type="hidden" id="ffRating" required />
+          </div>
+
+          <div class="ff-input-group">
+            <label for="ffLikedMost"
+              >💬 What did you like MOST about this course?
+              <span class="required">*</span></label
+            >
+            <textarea
+              id="ffLikedMost"
+              rows="4"
+              placeholder="Tell us what worked well..."
+              required
+            ></textarea>
+            <div class="char-count">
+              <span id="ffLikedCount">0</span> / 10 words minimum
+            </div>
+          </div>
+
+          <div class="ff-input-group">
+            <label for="ffToImprove"
+              >💬 What should we IMPROVE? <span class="required">*</span></label
+            >
+            <textarea
+              id="ffToImprove"
+              rows="4"
+              placeholder="What could be better..."
+              required
+            ></textarea>
+            <div class="char-count">
+              <span id="ffImproveCount">0</span> / 10 words minimum
+            </div>
+          </div>
+
+          <div class="ff-input-group">
+            <label
+              >👍 Would you recommend this course?
+              <span class="required">*</span></label
+            >
+            <div class="radio-group">
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="recommend"
+                  value="Definitely"
+                  required
+                />
+                <span>Definitely</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="recommend" value="Probably" />
+                <span>Probably</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="recommend" value="Probably Not" />
+                <span>Probably Not</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="recommend" value="No" />
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="ff-error hidden" id="ffError"></div>
+
+          <div class="ff-buttons">
+            <button type="submit" class="ff-btn-primary">
+              Submit Final Feedback
+            </button>
+          </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="ffSuccess" class="ff-success hidden">
+          <div class="success-icon">🌟</div>
+          <h3>Thank you for completing the course!</h3>
+          <p>
+            Your feedback will help future students have an even better
+            experience.
+          </p>
+          <p class="ff-success-final">
+            Best of luck in your cybersecurity career!
+          </p>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
+
     <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-separator"></div>
       <div class="footer-content">
         <p class="footer-credit">
+          Coded by
           <a
             href="https://github.com/PatrycjaOosthuizen"
             target="_blank"
