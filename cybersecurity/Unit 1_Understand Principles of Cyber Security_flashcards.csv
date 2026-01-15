@@ -1,61 +1,61 @@
 question,answer
-"In the context of IT, what does 'security' refer to?","The protection of computer systems and networks from breaches, damage, and theft of information."
-"What is the purpose of 'confidentiality' in cyber security?","To ensure that data is protected by preventing the unauthorised disclosure of information."
-"Name two measures used to assist with confidentiality.","Multi-factor authentication, strong passwords, encryption, segregation of data, or assigning appropriate user privilege levels."
-"What is the principle of 'integrity' in cyber security?","Ensuring the accuracy, trustworthiness, and validity of information by prohibiting unauthorised alteration or theft of data."
-"List two measures used to ensure data integrity.","Regular backups, effective access privileges, version controls, or input validation."
-"What does the principle of 'availability' mean in cyber security?","Information should be accessible to authorised personnel as and when it is needed."
-"Name two methods used to protect organisations from loss of availability.","Regular updates, DDoS protection, redundant systems, firewalls, proxy servers, adequate bandwidths, or access controls."
-"Define a 'cyber security threat'.","A malicious act that seeks to damage data, steal data, or disrupt digital life in general."
-"A weakness that can be exploited by cyber criminals to gain unauthorised access to a computer system is known as a _____.","vulnerability"
-"What is 'cyber risk'?","The potential exposure to loss or harm from an organisation's information or communications systems."
-"Define a 'cyber security hazard'.","Anything that could lead to a breach or theft of data, such as how an organisation operates online or the access it provides."
-"According to a 2021 UK government study, what were the most common types of cyber attacks reported by organisations?","Phishing attacks were the most common, followed by impersonation."
-"What are the three main categories of consequences of inadequate cyber security?","Economic, reputational, and legal consequences."
-"List two examples of economic costs that can result from a cyber attack.","Theft of intellectual property, theft of financial information, disruption to trading, or costs associated with repairing systems."
-"How can a cyber attack cause reputational damage to an organisation?","It can erode the trust that customers, clients, suppliers, and partners have in the organisation."
-"What is 'malicious software' (malware)?","An umbrella term that describes all types of malicious software designed to steal data or damage software and systems."
-"What is 'cloud computing'?","The delivery of on-demand computing services over the internet, using a provider's servers instead of on-premises ones."
-"What are the three main models of cloud computing?","Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS)."
-"What is a 'breach' in cyber security?","The act of successfully exploiting a vulnerability in a computer or device to gain access to its files, data, and network."
-"What is the primary function of a 'firewall'?","To work as a filtration system for data, scanning packets for malicious code or viruses before they enter a computer or network."
-"This type of firewall examines elements of each data packet and compares them to a database of trusted information. What is it called?","Stateful inspection."
-"What is 'encryption'?","The process of encoding data to prevent theft, ensuring it can only be accessed with a secret encryption key."
-"What is the difference between symmetric and asymmetric encryption?","Symmetric encryption uses a single key to encrypt and decrypt data, while asymmetric encryption uses a public key to encrypt and a private key to decrypt."
-"What does BYOD stand for?","Bring Your Own Device."
-"What is a Denial of Service (DoS) attack?","An attack where users are unable to access information systems, devices, or network resources due to the actions of a cyber threat actor."
-"How does a Distributed Denial of Service (DDoS) attack differ from a DoS attack?","A DDoS attack occurs when multiple computers, often a botnet, operate together to attack one target."
-"What is 'penetration testing' (pen testing)?","A way of evaluating security by using the same tools and techniques as hackers to discover vulnerabilities and flaws."
-"This type of pen test simulates the actions a hacker might take after gaining access to a network or the actions of a malicious insider.","Internal network penetration test."
-"What is the goal of a 'bad actor' in cyber security?","To cause damage or steal data."
-"These bad actors are stereotypical hackers who may act alone or work as hackers-for-hire, often advertising on the Dark Web.","Black hats."
-"What is a 'script kiddie'?","A bad actor who lacks the skills to write their own code and relies on scripts acquired from other sources for unsophisticated attacks."
-"What motivates a 'hacktivist'?","They are politically, socially, or ideologically motivated, targeting victims for publicity or to effect change."
-"What defines an 'insider threat'?","A bad actor who is already within an organisation, such as a disgruntled employee or a contractor making a mistake."
-"What is a 'white hat hacker'?","An ethical hacker who is a paid employee or contractor working to find vulnerabilities in a system with the owner's permission to better secure it."
-"How does a 'grey hat hacker' differ from a white hat hacker?","A grey hat hacker looks for vulnerabilities without the owner's permission, but may report them for a reward or exploit them if ignored."
-"What is the primary motivation for most bad actors?","Personal or financial gain."
-"Besides money, what might motivate an ethical hacker?","The thrill of hacking, earning a reputation, the challenge of defeating black hats, or a desire to make the internet safer."
-"Why are financial institutions particularly vulnerable to cyber attacks?","Because hackers can gain direct access to financial information like credit card and bank account numbers to steal money."
-"Why is the healthcare sector a common target for cyber attacks?","It stores large amounts of personal information in electronic health records and is often not well-equipped to fend off attacks."
-"The _____ virus was a 2017 ransomware attack that exploited a vulnerability in the Windows operating system, costing the NHS an estimated £92 million.","WannaCry"
-"Why are educational institutions considered an easy target for cyber criminals?","They tend to have less budget for security, many users, and often focus only on perimeter security."
-"What makes retailers vulnerable to insider attacks?","Their high turnover of staff and the use of seasonal workers."
-"Besides theft of intellectual property, how else can cyber criminals harm the manufacturing sector?","They could shut down a plant's operations or make equipment produce faulty products without managers' knowledge."
-"What is a primary motivation for attacks on government departments and utilities by foreign governments?","To steal state secrets, learn how to control systems for a future attack, or in the event of war."
-"What is the first stage of the Cyber Kill Chain?","Reconnaissance/survey, which involves investigating the target to identify potential vulnerabilities."
-"In the Cyber Kill Chain, what happens during the 'Weaponisation' stage?","The attacker decides how to exploit a found vulnerability, either by creating or purchasing software."
-"The stage where malicious software is sent to the victim, for example via a phishing email, is called the _____ stage.","Delivery/intrusion"
-"What occurs during the 'Exploitation/breach' stage of a cyber attack?","The inserted malware is activated, potentially installing additional tools, modifying certificates, or escalating privileges."
-"During which stage of an attack does an attacker try to conceal their presence by clearing logs and laying false trails?","Anti-forensics/command and control."
-"What is the final stage of the Cyber Kill Chain, where the attacker fulfils their purpose, such as data theft or destruction?","Actions on objective."
-"What is the philosophy of 'security by design'?","Designing a system or product to be secure from the ground up, rather than adding security features later."
-"According to NCSC principles, what is the first step before creating a secure system design?","To 'Establish the context' by understanding the system's purpose, operational needs, and acceptable risk level."
-"In security by design, what does it mean to 'reduce the attack surface'?","To reduce the number of places where hackers can get in, for example by removing unnecessary default configurations."
-"What is the purpose of designing a system so that privileged users have a separate management infrastructure?","To protect them from targeted attacks like spear phishing by separating their high-privilege actions from general activities like email."
-"In security design, why is it important for a system to be resilient to attack and failure?","To prevent 'down time' which can be expensive and difficult to recover from."
-"Why should security monitoring be independent of the system being monitored?","To ensure that if the system is compromised, the attacker will not know that the breach has been detected."
-"What security by design principle helps to contain an attack and protect the most sensitive data?","Using a zoned or segmented network approach."
-"What is the primary consequence of not considering cyber security during the design phase?","The organisation is left to take a reactive approach, dealing with attacks as they occur rather than preventing them."
-"What is a major advantage of the security by design approach?","It is much cheaper to solve security issues at the beginning, before they have caused damage."
-"What is a primary disadvantage of security by design?","The upfront costs are higher and it may take longer to build the system."
+"In the context of IT, what does 'security' refer to?","Keeping computer systems and networks safe from hackers, damage, and people stealing your information."
+What is the purpose of 'confidentiality' in cyber security?,Making sure only the right people can see private information - keeping secrets secret!
+Name two measures used to assist with confidentiality.,"Using strong passwords, requiring multiple ways to prove who you are (like a password AND a code from your phone), or scrambling data so others can't read it."
+What is the principle of 'integrity' in cyber security?,Making sure information stays accurate and hasn't been changed or tampered with by someone who shouldn't be touching it.
+List two measures used to ensure data integrity.,"Making backup copies of important files regularly, controlling who can change files, or checking that information entered into a system makes sense."
+What does the principle of 'availability' mean in cyber security?,Information should be accessible to authorised personnel when they need it.
+Name two methods used to protect organisations from loss of availability.,"Keeping software updated, having backup systems ready to take over if something fails, using firewalls to block bad traffic, or having enough internet bandwidth."
+Define a 'cyber security threat'.,"A malicious act that seeks to damage data, steal data, or disrupt digital life in general."
+A weakness that can be exploited by cyber criminals to gain unauthorised access to a computer system is known as a _____.,vulnerability
+What is 'cyber risk'?,"The risk that an organisation could suffer loss or harm if its computer or communication systems, or the information they store, are compromised."
+Define a 'cyber security hazard'.,Anything that could lead to data being stolen or leaked - like leaving passwords written down or using unsecure websites.
+"According to a 2021 UK government study, what were the most common types of cyber attacks reported by organisations?","Phishing attacks were the most common, where attackers send fraudulent messages to trick people, followed by impersonation attacks."
+What are the three main categories of consequences of inadequate cyber security?,"Economic consequences, reputational damage, and legal consequences."
+List two examples of economic costs that can result from a cyber attack.,"Losses can include theft of intellectual property (like business ideas, designs, or inventions) or money, disruption to business operations, or the costs of repairing damaged systems."
+How can a cyber attack cause reputational damage to an organisation?,"Reputation is damaged when customers, partners, and suppliers lose trust after a data breach, making them hesitant to do business with the company."
+What is 'malicious software' (malware)?,"Software designed to harm computers or steal information, like viruses, spyware, and ransomware."
+What is 'cloud computing'?,"Cloud computing is using the internet to access and run programs, store data, and use computing power on someone else’s servers."
+What are the three main models of cloud computing?,"Cloud services include Infrastructure as a Service (IaaS), which provides virtualized computing resources; Platform as a Service (PaaS), which offers a platform for building applications; and Software as a Service (SaaS), which delivers ready-made software online, like renting hardware, using a platform to build apps, or accessing applications such as Google Docs."
+What is a 'breach' in cyber security?,"A breach in cybersecurity is when someone gains unauthorised access to a computer, network, or sensitive data."
+What is the primary function of a 'firewall'?,"A firewall is like a security guard for your computer or network, scanning incoming data and blocking anything dangerous or suspicious, such as malicious code or viruses."
+This type of firewall examines elements of each data packet and compares them to a database of trusted information. What is it called?,Stateful inspection.
+What is 'encryption'?,"Encryption is the process of scrambling data into a secret code so that only someone with the correct key can read it, protecting it from theft or unauthorised access."
+What is the difference between symmetric and asymmetric encryption?,"Symmetric encryption uses one key to lock and unlock data, while asymmetric encryption uses a public key to lock it and a private key to unlock it (like a mailbox)."
+What does BYOD stand for?,Bring Your Own Device - when employees use their personal phones or laptops for work.
+What is a Denial of Service (DoS) attack?,"A denial-of-service (DoS) attack happens when a system or website is overwhelmed with fake traffic, preventing real users from accessing information, devices, or network resources, like blocking a shop entrance with too many people."
+How does a Distributed Denial of Service (DDoS) attack differ from a DoS attack?,"A Distributed Denial-of-Service (DDoS) attack uses a botnet( a network of malware-infected computers controlled by a hacker) to attack a single target at the same time, making the attack more powerful and harder to stop than a regular DoS attack."
+What is 'penetration testing' (pen testing)?,Penetration testing is hiring ethical hackers to deliberately test your systems for weak spots before real attackers can exploit them - like a fire drill for cyber security.
+This type of pen test simulates the actions a hacker might take after gaining access to a network or the actions of a malicious insider.,Internal network penetration test.
+What is the goal of a 'bad actor' in cyber security?,"To cause damage, steal data, or disrupt systems for malicious purposes."
+"These bad actors are stereotypical hackers who may act alone or work as hackers-for-hire, often advertising on the Dark Web.",Black hats - malicious hackers who operate with criminal intent.
+What is a 'script kiddie'?,"A script kiddie is a bad actor who lacks coding skills and relies on pre-made tools or scripts created by others to carry out unsophisticated attacks, like using cheat codes in a game."
+What motivates a 'hacktivist'?,They hack to make a political or social point - like digital protestors trying to bring attention to a cause they believe in.
+What defines an 'insider threat'?,Someone who already works for the company and either deliberately causes harm (angry employee) or accidentally messes things up (makes a mistake).
+What is a 'white hat hacker'?,"A white hat hacker is an ethical hacker, often a paid employee or contractor, who is authorised to test a company’s systems for vulnerabilities to improve security."
+How does a 'grey hat hacker' differ from a white hat hacker?,"A grey hat hacker looks for vulnerabilities without permission and may report them for a reward or exploit them if ignored, operating in a moral grey area."
+What is the primary motivation for most bad actors?,Money! Most cyber criminals are in it for financial gain.
+"Besides money, what might motivate an ethical hacker?","The fun challenge of solving puzzles, building a good reputation in the security community, competing against malicious hackers, or genuinely wanting to make the internet safer."
+Why are financial institutions particularly vulnerable to cyber attacks?,Because that's literally where the money is - banks have direct access to people's account numbers and credit cards.
+Why is the healthcare sector a common target for cyber attacks?,Healthcare organisations store large amounts of valuable personal medical information in electronic health records but often have weaker cybersecurity defences because resources are focused on patient care.
+"The _____ virus was a 2017 ransomware attack that exploited a vulnerability in the Windows operating system, costing the NHS an estimated £92 million.",WannaCry
+Why are educational institutions considered an easy target for cyber criminals?,"Schools and universities often have tight budgets for security, lots of users sharing networks, and they tend to only secure the perimeter while leaving internal systems vulnerable."
+What makes retailers vulnerable to insider attacks?,"They hire lots of temporary workers during busy seasons, so they have many employees who might not be well-trained or fully verified."
+"Besides theft of intellectual property, how else can cyber criminals harm the manufacturing sector?",They could remotely shut down production facilities or manipulate equipment to produce defective products without anyone realising until it's too late.
+What drives foreign governments to launch attacks on government agencies and critical infrastructure?,"Espionage - stealing secrets, learning how to control critical infrastructure for potential future attacks, or preparing for possible conflict."
+What is the first stage of the Cyber Kill Chain?,"Reconnaissance - doing homework on the target, like a burglar checking which houses have unlocked windows before breaking in."
+"In the Cyber Kill Chain, what happens during the 'Weaponisation' stage?",The attacker decides how they'll exploit a weakness they found and either creates or buys the hacking tools they'll need.
+"The stage where malicious software is sent to the victim, for example via a phishing email, is called the _____ stage.",Delivery/intrusion - getting the weapon to the target.
+What occurs during the 'Exploitation/breach' stage of a cyber attack?,"Once activated, the malware begins its attack by installing additional tools, escalating user privileges, and embedding itself deeper into the system."
+At what stage of a cyber attack does the attacker try to hide their activity by deleting logs and leaving false traces?,Anti-forensics/command and control - where attackers cover their tracks to avoid detection.
+"What is the final stage of the Cyber Kill Chain, where the attacker fulfils their purpose, such as data theft or destruction?","Actions on objective - where the attacker achieves their goal, whether that's stealing data, destroying files, or demanding ransom."
+What is the philosophy of 'security by design'?,"Security by design is the philosophy of building security into a system from the very beginning during development, rather than adding it later, like constructing a house with locks on the doors instead of installing them after a break-in."
+"According to NCSC principles, what is the first step before creating a secure system design?","Understanding the context - figuring out what the system needs to do, who will use it, and how much risk is acceptable before you start building."
+"In security by design, what does it mean to 'reduce the attack surface'?",Minimize the number of ways hackers can get in - remove unnecessary features and turn off anything you don't actually need.
+What is the purpose of designing a system so that privileged users have a separate management infrastructure?,"Keep admin accounts separate from everyday activities like email, so if someone falls for a phishing scam in their regular account, hackers don't automatically get admin access too."
+"In security design, why is it important for a system to be resilient to attack and failure?","Because when systems go down, businesses lose money and trust - plus it can be really hard to get everything back up and running."
+Why should security monitoring be independent of the system being monitored?,"So if hackers break into the main system, they won't know you've spotted them - like having security cameras the burglar doesn't know about."
+What security by design principle helps to contain an attack and protect the most sensitive data?,"Network segmentation - dividing your network into zones so if hackers get into one area, they can't automatically access everything else."
+What is the primary consequence of not considering cyber security during the design phase?,"You end up constantly playing catch-up and firefighting, dealing with problems after they happen instead of preventing them."
+What is a major advantage of the security by design approach?,It's way cheaper to fix security issues during planning than after a breach has happened - prevention costs less than cure!
+What is a primary disadvantage of security by design?,"A primary disadvantage of security by design is that it can increase development time and costs, since building security measures from the start requires extra planning, resources, and testing."
