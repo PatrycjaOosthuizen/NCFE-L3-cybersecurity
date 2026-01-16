@@ -1,72 +1,73 @@
-question,answer
-"What type of cyber security testing uses automated software to scan for and find system vulnerabilities like cross-site scripting and SQL injections?","Vulnerability scanning."
-"Which type of security testing assesses the general security level of a system by detecting weak points and loopholes using both automated and manual tools?","Security scanning."
-"What is the term for simulating a cyber attack to check for vulnerabilities, often focusing on applications or infrastructure?","Penetration testing (pen testing)."
-"A type of penetration testing where testers attempt scams on employees to test security policies and training effectiveness is known as _____.","Social engineering testing."
-"What is the term for a team exercise where a group of hackers tries to break into a system to test the organisation's response capabilities?","Ethical hacking / red teaming."
-"What is a primary reason for conducting cyber security testing regarding organisational weaknesses?","To identify hidden weaknesses or vulnerabilities before malicious attackers can find them."
-"According to the source, security standards like ISO 27001, GDPR, and PCI DSS often require organisations to perform what kind of activity regularly?","Regular security testing, such as pen tests or vulnerability scanning."
-"Pro of Penetration Testing: Because pen testers use the same methods as hackers, what can they find that other tests might miss?","They can find points of entry created by combining smaller, less dangerous vulnerabilities."
-"Con of Penetration Testing: If a pen test is not performed correctly, what potential damage can it cause?","It can crash servers, expose sensitive data, or corrupt crucial production data."
-"Con of Penetration Testing: What is a potential issue if employees know a test is going to take place?","The results can be misleading as employees will prepare, making the organisation appear stronger than it is."
-"Pro of Vulnerability Scanning: How can regular vulnerability scans provide feedback on the effectiveness of your security?","If scans expose many vulnerabilities, it signals that systems or software are flawed and need rethinking."
-"Con of Vulnerability Scanning: What is a significant limitation of automated vulnerability scanners regarding newly discovered weaknesses?","They won't find every vulnerability, especially if it's newly discovered or too complex for an automated tool."
-"Con of Vulnerability Scanning: A common issue with the results of automated scans is the generation of _____, which may require an expert to filter out.","False positives."
-"Pro of Red Team Testing: Red team exercises are a good way to test the ability of which internal group to detect specific types of attacks?","The IT team or Security Operations Centre (SOC)."
-"Con of Red Team Testing: Why is a red team exercise not useful for finding all vulnerabilities in a system?","An attacker will only find and exploit the vulnerability needed to achieve their specific goal, potentially missing others."
-"Pro of Social Engineering Testing: What does this type of testing help employees to prevent in both their personal and professional lives?","It helps them prevent social engineering attacks."
-"Con of Social Engineering Testing: Why must this type of testing be combined with other methods like vulnerability or pen testing?","It focuses only on social engineering attacks and does not cover technical vulnerabilities."
-"What term describes actions taken in response to risks found during cyber security testing?","Mitigations."
-"What is a common mitigation strategy involving software that prevents attacks exploiting known bugs?","Patching known vulnerabilities with the latest version of the software through regular updates."
-"Which security control limits system functionality to the minimum needed for business operation and should be applied to every device?","Secure configuration."
-"What is the purpose of a user access control mitigation strategy?","To limit users' permissions so they can only access the specific files and folders necessary for their job."
-"In a mitigation strategy, what does the principle 'High availability first' mean?","The strategy should first be implemented for high-risk users and computers before being rolled out to others."
-"What is the purpose of an escalation plan in a mitigation strategy?","To quickly escalate issues to people with the authority to make critical decisions, such as taking a system offline."
-"What is the term for retesting a system after changes have been made to ensure vulnerabilities have been successfully dealt with?","Remediation verification testing."
-"What is the primary question that remediation verification testing aims to answer?","'Did we fix it?'"
-"In a security testing report, what is the purpose of the executive summary?","To provide a high-level, non-technical view of the vulnerabilities found and their possible business impact."
-"Which section of a security testing report would contain recommendations for fixing vulnerabilities, often organised by difficulty?","Discussion or analysis of remediation measures."
-"Which section of a security testing report discusses long-term ways an organisation can prevent vulnerabilities, such as appraising existing controls?","Strategic recommendations."
-"Besides ethical reasons, why must organisations report the outcomes of cyber security testing?","For regulatory compliance (e.g., GDPR) and to re-establish trust with clients and customers after a breach."
-"What common network vulnerability occurs when known security bugs are not fixed with the latest software version?","Unpatched software."
-"Vulnerability Type: An attacker interferes with database queries to view, modify, or delete data.","SQL injection."
-"Vulnerability Type: An attacker manipulates a website to return malicious JavaScript to users, compromising their interaction with the application.","Cross-site scripting (XSS)."
-"What is a 'zero-day' attack?","An attack that exploits a software vulnerability for which no patch currently exists."
-"What system vulnerability arises from a lack of subnet monitoring and allows an attacker to gain full network access after compromising one subnet?","Weak network segmentation."
-"In cloud security, what is the term for when an attacker steals user account credentials, also known as session riding?","Account hijacking."
-"What is the first broad step in the vulnerability management process after a vulnerability has been identified through testing?","Alert management (escalation)."
-"After a vulnerability is found and analysed, what is the next critical step in the management process?","Prioritise what vulnerabilities need to be dealt with first."
-"What is the difference between remediation and mitigation when responding to a vulnerability?","Remediation fully fixes or patches the vulnerability, while mitigation lessens the likelihood or impact when a full fix is not yet available."
-"What term describes any safeguard or countermeasure used to avoid, detect, counteract, or minimise security risks?","A security control."
-"Perimeter fencing, locks, and security guards are examples of what type of security control?","Physical security controls."
-"Usernames, passwords, two-factor authentication, and antivirus software are examples of what type of security control?","Cyber security controls."
-"What is the principle of 'least privilege' as a cyber security control?","Individuals or processes are granted only the privileges they need to perform their assigned tasks, and no more."
-"A system that divides a network into different segments or subnets, each acting as its own small network, is known as _____.","Network segmentation."
-"What is the term for systems of cyber security controls, including the processes and documentation for their implementation and management?","Cyber security frameworks or standards."
-"Which type of security framework is often used when an organisation is new to cyber security and needs a basic set of controls?","Control frameworks."
-"Which type of security framework is used to assess the state of an overall security program and measure its maturity against industry comparisons?","Programme frameworks."
-"Frameworks that focus on identifying, measuring, and quantifying risk to prioritise security activities are known as _____.","Risk frameworks."
-"Which control framework breaks down 20 defensive actions into Basic, Foundational, and Organisational categories?","The Center for Internet Security (CIS) controls."
-"In the CIS controls, what is the purpose of the first six 'basic controls'?","To identify the security environment by inventorying hardware, software, and user permissions."
-"Which step in the NCSC 10-step framework involves ensuring employees can only access information relevant to their job?","Managing user privileges."
-"Which step in the NCSC 10-step framework involves detecting attempted attacks to enable prompt incident response?","Monitoring."
-"The NIST Cybersecurity Framework (NIST CSF) core is made up of what five functions?","Identify, Protect, Detect, Respond, and Recover."
-"In the NIST CSF, what is a 'Framework Profile'?","A list of outcomes an organisation has chosen from the framework's categories and subcategories based on its business needs."
-"In the NIST CSF, what are the 'Implementation Tiers' used for?","They are used by an organisation to clarify how it manages cyber security risk, ranging from Partial (Tier 1) to Adaptive (Tier 4)."
-"For an organisation new to managing a security program, which type of framework, like CIS or NCSC, is generally a good choice?","A control framework."
-"For an organisation aiming to build a mature security program and make industry comparisons, which type of framework, like NIST CSF, is more suitable?","A programme framework."
-"After a security control is applied, what is the essential next step?","To conduct testing to make sure it is effective against the intended vulnerability."
-"What does NTFS stand for in the context of Windows file systems?","New Technology File System."
-"When manually removing spyware in Windows 10, what is the first step you should take to prevent more data from being sent?","Disconnect from the internet."
-"When manually removing spyware in Windows 10, why should you restart the computer in Safe Mode?","Safe Mode loads only essential system files, which can prevent the spyware from running and make it easier to remove."
-"What should you consider regarding risk when justifying the implementation of a cyber security control?","How the control mitigates a serious risk and the relationship between that risk and business objectives."
-"What should you consider regarding regulation when justifying the implementation of a cyber security control?","Whether the control helps the organisation meet its obligations under regulations like UK GDPR."
-"What is a primary reason why a cyber security control might not be applied, even if it is technically possible?","The control might block information or websites that employees need to do their jobs, or the cost may outweigh the risk."
-"What is a common form of penetration testing that aims to detect technical vulnerabilities?","Application penetration testing."
-"What form of penetration testing examines servers, firewalls, and other hardware?","Infrastructure penetration testing."
-"In social engineering testing, what is a 'physical test'?","A test where a tester physically tries to gain access to a secure building or area."
-"A common use for _____ is checking systems that face the internet, like corporate web servers and VPN endpoints.","vulnerability scanning"
-"If an organisation wants to see how real attackers would act against them in a high-level test, what type of exercise should be used?","A red team exercise."
-"In Windows, what tool can you use to encrypt an entire disk on a remote device?","BitLocker Drive Encryption."
-"When setting NTFS permissions in Windows Explorer, after right-clicking a file or folder and selecting 'Properties', which tab do you click?","The Security tab."
-"After manually removing suspected spyware in Windows 10, what is the final step?","Restart the computer to reboot in normal mode."
+question,answer,,,
+What type of cyber security testing uses automated software to scan for and find system vulnerabilities like cross-site scripting and SQL injections?,Vulnerability scanning - automated tools that hunt for known security weaknesses in your systems.,,,
+Which type of security testing assesses the general security level of a system by detecting weak points and loopholes using both automated and manual tools?,Security scanning - a broader assessment that combines automated tools with manual checks to find weak spots.,,,
+"What is the term for simulating a cyber attack to check for vulnerabilities, often focusing on applications or infrastructure?","Penetration testing (pen testing) - ethical hackers deliberately trying to break into systems to find vulnerabilities, it’s like a fire drill for security.",,,
+A type of penetration testing where testers attempt scams on employees to test security policies and training effectiveness is known as _____.,Social engineering testing.,,,
+What is the term for a team exercise where a group of hackers tries to break into a system to test the organisation's response capabilities?,"Ethical hacking / red teaming - a full-scale simulation where attackers try everything they can think of, and defenders try to stop them.",,,
+What is a primary reason for conducting cyber security testing regarding organisational weaknesses?,To identify hidden weaknesses or vulnerabilities before malicious attackers can find and exploit them.,,,
+"According to the source, security standards like ISO 27001, GDPR, and PCI DSS often require organisations to perform what kind of activity regularly?","Regular security testing, such as pen tests or vulnerability scanning, to maintain compliance.",,,
+"Pro of Penetration Testing: Because pen testers use the same methods as hackers, what can they find that other tests might miss?","They can find points of entry created by combining smaller, less dangerous vulnerabilities - weaknesses that only show up when linked together.",,,
+"Con of Penetration Testing: If a pen test is not performed correctly, what potential damage can it cause?","It can crash servers, expose sensitive data, or corrupt crucial production data - which is why only qualified professionals should do it.",,,
+Con of Penetration Testing: What is a potential issue if employees know a test is going to take place?,"The results can be misleading as employees will prepare and be extra careful, making the organisation appear stronger than it really is in day-to-day operations.",,,
+Pro of Vulnerability Scanning: How can regular vulnerability scans provide feedback on the effectiveness of your security?,"If scans expose many vulnerabilities, it signals that systems or software are flawed and need rethinking - like a health check-up revealing underlying problems.",,,
+Con of Vulnerability Scanning: What is a significant limitation of automated vulnerability scanners regarding newly discovered weaknesses?,"They won't find every vulnerability, especially if it's newly discovered or too complex for an automated tool to detect.",,,
+"Con of Vulnerability Scanning: A common issue with the results of automated scans is the generation of _____, which may require an expert to filter out.",False positives - alerts about threats that don't actually exist.,,,
+Pro of Red Team Testing: Red team exercises are a good way to test the ability of which internal group to detect specific types of attacks?,The IT team or Security Operations Centre (SOC) - seeing if your defenders can spot and stop real attack techniques.,,,
+Con of Red Team Testing: Why is a red team exercise not useful for finding all vulnerabilities in a system?,"An attacker will only find and exploit the vulnerability needed to achieve their specific goal, potentially missing other weaknesses - they stop once they've 'won'.",,,
+Pro of Social Engineering Testing: What does this type of testing help employees to prevent in both their personal and professional lives?,It helps them recognise and prevent social engineering attacks - learning to spot manipulation attempts and phishing scams.,,,
+Con of Social Engineering Testing: Why must this type of testing be combined with other methods like vulnerability or pen testing?,It focuses only on social engineering attacks and doesn't cover technical vulnerabilities in software or systems.,,,
+What term describes actions taken in response to risks found during cyber security testing?,Mitigations - steps taken to reduce or eliminate the risks discovered.,,,
+What is a common mitigation strategy involving software that prevents attacks exploiting known bugs?,Patching known vulnerabilities by installing the latest version of the software through regular updates.,,,
+Which security control limits system functionality to the minimum needed for business operation and should be applied to every device?,"Secure configuration - turning off unnecessary features and only enabling what's actually needed, reducing potential attack points.",,,
+What is the purpose of a user access control mitigation strategy?,"To limit users' permissions so they can only access the specific files and folders necessary for their job, following the principle of least privilege.",,,
+"In a mitigation strategy, what does the principle 'High availability first' mean?",The strategy should first be implemented for high-risk users and computers (like executives or critical servers) before being rolled out to everyone else.,,,
+What is the purpose of an escalation plan in a mitigation strategy?,"To quickly escalate issues to people with the authority to make critical decisions, such as taking a system offline during an active attack.",,,
+What is the term for retesting a system after changes have been made to ensure vulnerabilities have been successfully dealt with?,Remediation verification testing - checking that the fixes actually worked.,,,
+What is the primary question that remediation verification testing aims to answer?,'Did we fix it?' - confirming the vulnerability is actually gone.,,,
+"In a security testing report, what is the purpose of the executive summary?","To provide a high-level, non-technical view of the vulnerabilities found and their possible business impact for managers and executives.",,,
+"Which section of a security testing report would contain recommendations for fixing vulnerabilities, often organised by difficulty?","Discussion or analysis of remediation measures - practical advice on how to fix problems, usually prioritised.",,,
+"Which section of a security testing report discusses long-term ways an organisation can prevent vulnerabilities, such as appraising existing controls?","Strategic recommendations - the big-picture changes needed to improve security long-term, not just quick fixes.",,,
+"Besides ethical reasons, why must organisations report the outcomes of cyber security testing?","For regulatory compliance (e.g., GDPR requires reporting breaches) and to re-establish trust with clients and customers after a breach.",,,
+What common network vulnerability occurs when known security bugs are not fixed with the latest software version?,"Unpatched software - when updates are available but haven't been installed, leaving systems exposed to known exploits.",,,
+"Vulnerability Type: An attacker interferes with database queries to view, modify, or delete data.",SQL injection - inserting malicious code into database queries to manipulate or steal data.,,,
+"Vulnerability Type: An attacker manipulates a website to return malicious JavaScript to users, compromising their interaction with the application.","Cross-site scripting (XSS) - injecting malicious scripts into websites that run in other users' browsers, potentially stealing their data.",,,
+What is a 'zero-day' attack?,An attack that exploits a software vulnerability for which no patch currently exists - the developers have 'zero days' of warning to fix it.,,,
+What system vulnerability arises from a lack of subnet monitoring and allows an attacker to gain full network access after compromising one subnet?,"Weak network segmentation - if your network isn't properly divided, hackers can move freely from one area to another once they're in.",,,
+"In cloud security, what is the term for when an attacker steals user account credentials, also known as session riding?","Account hijacking - taking over someone's cloud account, often by stealing their session cookies or login credentials.",,,
+What is the first broad step in the vulnerability management process after a vulnerability has been identified through testing?,Alert management (escalation) - making sure the right people know about the vulnerability quickly.,,,
+"After a vulnerability is found and analysed, what is the next critical step in the management process?","Prioritise what vulnerabilities need to be dealt with first - focusing on the most serious or easily exploited ones, since you can't fix everything at once.",,,
+What is the difference between remediation and mitigation when responding to a vulnerability?,"Remediation fully fixes or patches the vulnerability, while mitigation lowers the risk or impact when a full fix isn't yet available.",,,
+Which term describes the ability to identify or discover a cyber attack while it is happening or after it has occurred?, Detect, counteract, or minimise security risks?,A security control - any measure that helps protect against threats.
+Which term describes a security measure or action used to reduce the risk of a cyber attack?,Mitigate / Prevent,,,
+"Perimeter fencing, locks, and security guards are examples of what type of security control?","Physical security controls - protecting the actual buildings, rooms, and equipment.",,,
+"Usernames, passwords, two-factor authentication, and antivirus software are examples of what type of security control?","Cyber security controls - protecting digital systems, networks, and data.",,,
+What is the principle of 'least privilege' as a cyber security control?,"Individuals or processes are granted only the privileges they need to perform their assigned tasks, and no more - don't give people access they don't actually need.",,,
+"A system that divides a network into different segments or subnets, each acting as its own small network, is known as _____.",Network segmentation.,,,
+"What is the term for systems of cyber security controls, including the processes and documentation for their implementation and management?",Cyber security frameworks or standards - structured approaches to implementing and managing security controls.,,,
+Which type of security framework is often used when an organisation is new to cyber security and needs a basic set of controls?,"Control frameworks - they provide a straightforward checklist of security measures to implement, perfect for getting started.",,,
+Which type of security framework is used to assess the state of an overall security program and measure its maturity against industry comparisons?,Programme frameworks - they help you see how your security programme compares to others and where you can improve.,,,
+"Frameworks that focus on identifying, measuring, and quantifying risk to prioritise security activities are known as _____.",Risk frameworks - helping organisations understand which risks matter most to their business.,,,
+Which control framework breaks down 20 defensive actions into Basic, Foundational controls - are security actions that build on basic protections to make a system stronger., and Organisational categories?,"The Center for Internet Security (CIS) controls - a prioritised list of the most important security actions, from simple to advanced.",
+"In the CIS controls, what is the purpose of the first six 'basic controls'?","To identify the security environment by inventorying hardware, software, and user permissions - you can't protect what you don't know you have.",,,
+Which step in the NCSC 10-step framework involves ensuring employees can only access information relevant to their job?,"Managing user privileges - controlling who can access what, following the principle of least privilege.",,,
+Which step in the NCSC 10-step framework involves detecting attempted attacks to enable prompt incident response?,"Monitoring - keeping watch for suspicious activity so you can respond quickly, like security cameras and alarms.",,,
+The NIST Cybersecurity Framework (NIST CSF) core is made up of what five functions?,"Identify, Protect, Detect, Respond, and Recover - the five main things you need to do to manage cyber security risk.",,,
+"In the NIST CSF, what is a 'Framework Profile'?","A list of security actions an organisation picks from the framework based on its needs, its own customised security plan.",,,
+"In the NIST CSF, what are the 'Implementation Tiers' used for?","They are used by an organisation to clarify how it manages cyber security risk, ranging from Partial (Tier 1) to Adaptive (Tier 4) - essentially a maturity rating.",,,
+"For an organisation new to managing a security program, which type of framework, like CIS or NCSC, is generally a good choice?",A control framework - they're easier to follow when you're just starting out.,,,
+"For an organisation aiming to build a mature security program and make industry comparisons, which type of framework, like NIST CSF, is more suitable?",A programme framework - they're more comprehensive and better for organisations with established security programmes.,,,
+"After a security control is applied, what is the essential next step?",To conduct testing to make sure it's effective against the intended vulnerability - always verify your fixes worked.,,,
+What does NTFS stand for in the context of Windows file systems?,New Technology File System - the file system used by modern Windows computers.,,,
+"When manually removing spyware in Windows 10, what is the first step you should take to prevent more data from being sent?",Disconnect from the internet - cutting off the spyware's ability to send your data to the attacker or receive new instructions.,,,
+"When manually removing spyware in Windows 10, why should you restart the computer in Safe Mode?","Safe Mode loads only essential system files, which can prevent the spyware from running and make it easier to remove.",,,
+What risk factors should you evaluate when deciding to implement a cybersecurity control?,How the control reduces an important risk and helps protect what matters most to the business.,,,
+Which laws or rules need to be considered before implementing a cybersecurity measure?,"Whether the control helps the organisation follow laws and regulations like UK GDPR - some controls are required by law, not optional.",,,
+"What is a primary reason why a cyber security control might not be applied, even if it is technically possible?","The control might block information or websites that employees need to do their jobs, or the cost may outweigh the risk - security has to balance with usability and budget.",,,
+What is a common form of penetration testing that aims to detect technical vulnerabilities?,Application penetration testing - specifically testing software applications for security flaws.,,,
+"What form of penetration testing examines servers, firewalls, and other hardware?","Infrastructure penetration testing - testing the physical and network components of your IT systems, not just the software.",,,
+"In social engineering testing, what is a 'physical test'?","A test where a tester physically tries to gain access to a secure building or area - testing physical security alongside digital security, like tailgating through secure doors.",,,
+"A common use for _____ scanning is checking systems that face the internet, like corporate web servers and VPN endpoints.",vulnerability,vulnerability scanning,,
+"If an organisation wants to see how real attackers would act against them in a high-level test, what type of exercise should be used?","A red team exercise - the most realistic simulation, where attackers use any techniques they can think of.",,,
+"In Windows, what tool can you use to encrypt an entire disk on a remote device?","BitLocker Drive Encryption - built-in Windows encryption for protecting entire drives, especially useful for laptops that might be lost or stolen.",,,
+"When setting NTFS permissions in Windows Explorer, after right-clicking a file or folder and selecting 'Properties', which tab do you click?","The Security tab - where you can control who has permission to read, write, or delete files.",,,
+"After manually removing suspected spyware in Windows 10, what is the final step?",Restart the computer to reboot in normal mode - returning to regular operation now that the spyware should be gone.,,,
