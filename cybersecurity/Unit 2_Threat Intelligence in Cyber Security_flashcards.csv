@@ -71,3 +71,33 @@ Some ransomware attacks do not encrypt files but instead use a '_____' to post a
 What is a 'Business Email Compromise' (BEC) attack?,"An attack where a hacker targets a corporate executive with communications that appear to be from a trusted source, usually requesting a wire transfer or sensitive information."
 "In DNS poisoning, what does the attacker compromise to redirect a user to a fake website?","The victim's DNS server - the system that translates website names into IP addresses, like a phonebook that matches names to phone numbers."
 A honeybot or 'bot-in-the-middle attack' involves a bot passing messages between two users without their knowledge. What is a primary goal of this attack?,"To gather information from the conversation, insert malicious links, or manipulate what each person thinks the other is saying."
+What is another name for vulnerability in cyber security?,The attack surface - the weaknesses that can be exploited.
+What are Indicators of Compromise (IoCs)?,Pieces of forensic data (unusual activities in log entries or files) that identify potentially malicious activity on a system or network.
+What are examples of IoCs (Indicators of Compromise)?,"Unusual network traffic, large numbers of requests for the same file, bundles of data in the wrong place, mobile device profile changes."
+What can IoCs indicate?,That an attack is in progress or a data breach has already taken place - signs of compromise.
+What is the deep web?,"Websites, databases, files, and content that cannot be indexed by search engines like Google or Bing."
+What valuable insight can the deep web provide?,"Tools and services advertised and requested by cyber criminals, identifying new malware and exploits - understanding the threat actor marketplace."
+How does deep web intelligence help prioritise security work?,It helps cyber professionals prioritise which systems need urgent patching based on what's being discussed.
+What is the dark web?,"A small portion of the Deep Web that is intentionally hidden and accessible only with special software like Tor or I2P. Not all activity is illegal, but it is secretive and harder to track."
+What is the difference between the Deep Web and the Dark Web?,"Deep Web = everything hidden from search engines, Dark Web = hidden + anonymous, often used for illegal activity"
+How do cyber security professionals use the dark web?,"To find out if stolen data (login credentials, intellectual property) is being advertised for sale - monitoring for their organisation's data."
+What is IRC (Internet Relay Chat)?,An instant messaging application launched in 1988 designed for large-scale real-time communication.
+Why is IRC popular with threat actors?,"It's designed for large user bases to communicate in real time and share plain text, including blocks of source code."
+What are paste sites?,"Sites where users can share plain text blocks as links, allowing easy access and editing."
+What are information sharing platforms?,"Sites providing information about threat actors' current activity, either government-funded or independent."
+What are examples of information sharing platforms?,"UK National Cyber Security Centre's Cyber Security Information Sharing Partnership, Financial Services Information Sharing and Analysis Center, AlienVault's Open Threat Exchange, US CERT's Automated Indicator Sharing platform, and Asia Pacific Intelligence Centre."
+What are 'Google dork' queries?,Advanced search functions used to identify different types of public information using specific search operators.
+What is an example of a Google dork query?,"""sensitive but unclassified"" filetype:pdf site:publicintelligence.net - returns only PDFs from that site containing those words."
+Why are viruses particularly hard to clean up?,Because the virus is executed from inside the legitimate program - intertwined with good files.
+How can viruses be removed?,"With special antivirus programs, but often the only solution is to quarantine or delete the infected file."
+What is most modern malware actually?,A combination of traditional types such as Trojans or worms - hybrid threats.
+What are rootkits?,Programs that aim to modify the underlying operating system and hide from anti-malware programs.
+How do you eliminate rootkit-type malware?,The controlling software needs to be eliminated from the computer's memory - deeper removal required.
+What is the 'dump site' strategy for large organisations?,"Criminals steal data but don't encrypt files; instead, they make a small amount of stolen data public as proof, then demand ransom to avoid publishing all data."
+What was the CIH or Chernobyl virus designed to do?,"Cause massive data corruption by overwriting critical information on infected system drives, and in some cases destroyed the system BIOS requiring physical hardware replacement."
+When was the CIH virus released and what did it target?,"First released in 1998, installed on Windows 95 computers as a network worm."
+What was Stuxnet designed to do?,Infiltrate an Iranian centrifuge plant and trick centrifuges into spinning themselves apart - physical damage through cyber attack.
+What motivated the 1987 Christmas virus?,Written for 'fun' - displayed holiday messages but also crashed large servers by overloading them.
+What is the Mirai worm?,"A worm that infects Linux-based Internet of Things devices and uses them as part of a botnet in large-scale network attacks. Mirai worm been used to attack Twitter, Spotify, Netflix, and others - high-profile DDoS attacks."
+Case Study: What happened in the May 2020 Singapore OSINT incident?,A woman filmed ignoring Covid-19 mask mandate was arrested; amateur cyber sleuths used OSINT to identify her as CEO of a digital security firm.
+What was the problem with the Singapore OSINT investigation?,"They identified the wrong woman - false accusations led to racist comments, threats, and business loss for the falsely accused CEO."

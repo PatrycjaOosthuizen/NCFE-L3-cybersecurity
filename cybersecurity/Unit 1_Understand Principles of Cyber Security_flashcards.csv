@@ -59,3 +59,33 @@ What security by design principle helps to contain an attack and protect the mos
 What is the primary consequence of not considering cyber security during the design phase?,"You end up constantly playing catch-up and firefighting, dealing with problems after they happen instead of preventing them."
 What is a major advantage of the security by design approach?,It's way cheaper to fix security issues during planning than after a breach has happened - prevention costs less than cure!
 What is a primary disadvantage of security by design?,"A primary disadvantage of security by design is that it can increase development time and costs, since building security measures from the start requires extra planning, resources, and testing."
+What are the main types of data that cyber security protects?,"Sensitive data, personally identifiable information (PII), health information, intellectual property, financial data, and governmental and industry information."
+What is personally identifiable information (PII)?,"Information that could be used to identify a specific individual - like names, addresses, dates of birth, and identification numbers."
+Why is protected health information often targeted by cyber blackmailers?,"Because health information is highly sensitive and personal, making individuals more likely to pay to prevent its public disclosure."
+What are the three main categories of cyber attack consequences?,"Economic costs, reputational damage, and legal consequences."
+"Besides customers, who else can be affected by an organisation's reputational damage?","Suppliers, partners, investors, and other third parties such as government bodies."
+What is the purpose of the reconnaissance stage in the Cyber Kill Chain?,Investigating the target to identify potential vulnerabilities - like a burglar checking which houses have unlocked windows.
+What is 'timestomping'?,Overwriting data with false timestamps to hide when files were actually accessed or modified - covering tracks.
+What is Netflix's Chaos Monkey?,An openly available tool used to test how systems will perform under high load or when components fail - proactive failure testing.
+"According to a 2021 UK government study, what percentage of UK businesses reported a breach or attack in the previous 12 months?",39% (four out of every 10) - and 26% of charities.
+How frequently did organisations that suffered breaches experience them?,Around a quarter experienced breaches at least once a week - showing attacks are persistent.
+What was the most common type of attack reported in the 2021 UK study?,"Phishing attacks at around 81% of organisations, followed by impersonation at around 25%."
+"In the Rendezvous Inn case study, what was the initial attack vector?","The CEO clicked on a link in a phishing email pretending to be from HMRC, entering their credentials on a fake site."
+What other data did attackers steal from the Rendezvous Inn?,Details of people who had stayed at the hotel in the past - guest information.
+What were the potential consequences of the Rendezvous Inn attack?,"Economic loss, reputational damage, potential legal consequences for failing to protect guest data, and inability to pay bills."
+What type of malware was WannaCry?,"Ransomware that works by encrypting data and holding it hostage, promising to return it only if a ransom is paid."
+Had Microsoft released a patch to protect against WannaCry before the attack?,"Yes, almost two months before the attack began - the human factor of not updating left systems vulnerable."
+How much did WannaCry cost the NHS?,"An estimated £92 million after 19,000 appointments were cancelled."
+How many countries were affected by WannaCry?,Computer systems in 150 countries were affected.
+What was a particularly cruel aspect of the WannaCry attack?,"The criminals had no way to track ransom payments to specific computers, so even those who paid didn't get their files back."
+Morrison Case Study: How did the Morrisons employee steal the data?,Used a portable storage device to copy personal information of thousands of staff.
+What is packet filtering in firewalls?,"Running incoming packets against a group of filters, removing packets matching identified threats and allowing others through to their destination."
+What security risks can firewalls help prevent?,"Backdoors, macros, remote logins, spam, and viruses."
+What are macros in the context of security risks?,Scripts that applications can run to streamline complicated procedures into one executable rule - which can be exploited.
+What does Infrastructure as a Service (IaaS) offer?,"Infrastructure of virtual servers, network, operating systems and data storage drives - removing the need for keeping hardware in the office."
+What is Platform as a Service (PaaS)?,Where organisations can develop and run their own applications using the infrastructure and software framework provided by cloud providers.
+How does Software as a Service (SaaS) work?,"Organisations or individuals use software over the internet, paying using subscription or a pay-per-use model - no local installation needed."
+What is software in computer terms?,"All instructions that tell a computer what to do - the entire set of programs, procedures, and routines associated with computer system operation."
+What is an operating system?,"The most important software that runs on a computer, managing the computer's memory and processes, as well as all software and hardware."
+What is a domain in computing?,"A group of computers, printers and devices that are interconnected and governed as a whole - like a workplace network."
+What is an exploit in cyber security?,A broad term describing any malicious application or script that can be used to take advantage of a computer's vulnerability.

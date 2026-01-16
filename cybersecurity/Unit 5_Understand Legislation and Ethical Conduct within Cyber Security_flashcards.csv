@@ -1,68 +1,86 @@
-question,answer
-"What is the primary goal of the General Data Protection Regulation (GDPR)?","It is a Europe-wide regulation designed to strengthen data protection for individuals."
-"The UK's version of the GDPR, brought into domestic law post-Brexit, is known as the _____.","UK GDPR"
-"Under GDPR, what two types of protective measures are organisations required to put in place?","Organisations must implement both technical measures (like firewalls) and organisational measures (like policies and procedures)."
-"What is the role of the Data Protection Act 2018 (DPA) in relation to the GDPR?","The DPA 2018 works with the GDPR to safeguard all personal or sensitive information held about an individual."
-"According to the DPA, data must not be kept longer than is necessary, meaning it would be wrong to keep information about past customers for more than a _____ at most.","few years"
-"What specific offence is described in section 170 of the Data Protection Act 2018?","Knowingly or recklessly obtaining or disclosing personal data without consent."
-"How does the Directive on security of network and information systems (NIS) differ from GDPR?","While GDPR focuses on the security of personal data, the NIS is concerned with the security of information systems themselves."
-"Under the NIS regulations, what is the maximum fine for non-compliance?","Failure to meet the requirements can result in fines up to a maximum of £17 million."
-"What UK government body publishes guidance for complying with the NIS regulations?","The National Cyber Security Centre (NCSC)."
-"What does the Computer Misuse Act (1990) make illegal?","It makes it a crime to access or modify data stored on a computer system without appropriate consent or permission."
-"Under the Computer Misuse Act, what does the offence of 'unauthorised access to computer material' refer to?","This refers to entering a computer system without permission, also known as hacking."
-"What does the offence of 'unauthorised modification of data' under the Computer Misuse Act cover?","It covers modifying or deleting data, as well as introducing malware or spyware onto a computer."
-"What is the lowest level of penalty under the Computer Misuse Act for unauthorised access to a computer?","Up to two years in prison and a £5000 fine."
-"If unauthorised access under the Computer Misuse Act causes harm to human welfare or national security, what is the maximum penalty?","The sentence could be up to life imprisonment."
-"What is the primary purpose of the Official Secrets Acts (1989)?","They are legal documents that aim to protect the UK against espionage and the leaking of sensitive government information."
-"What category of protected information under the Official Secrets Acts makes it a criminal offence to release information that damages the armed forces?","Defence."
-"What category of protected information under the Official Secrets Acts makes it an offence to release information that endangers UK interests or citizens abroad?","International relations."
-"What does the 'piggybacking' ban, introduced by the Communications Act 2003, make illegal?","It makes it illegal for people to access and use Wi-Fi that they did not pay for, unless it has been made publicly available."
-"Section 127 of the Communications Act 2003 categorises social media as a public electronic communications network, allowing users to be punished for what?","Sending or posting grossly offensive, indecent, obscene, or menacing content."
-"What is the primary aim of the Police and Criminal Evidence Act 1984 (PACE)?","To balance the powers of the police with the rights and freedoms of the public in England and Wales."
-"Under Section 69 of PACE, what must be shown for a statement produced by a computer to be admissible as evidence in court?","It must be shown that the computer was operating properly and the statement is not inaccurate due to improper use."
-"The _____ expanded the categories of cyber crime by making ownership of any hacking software or exploit tools illegal.","Police and Justice Act (2006)"
-"Which act makes it an offence to intentionally intercept a communication in the UK without lawful authority?","The Investigatory Powers Act 2016."
-"What do the Privacy and Electronic Communications Regulations (PECR) give people specific rights over?","They give people specific privacy rights in relation to electronic communications, such as marketing calls and cookies."
-"What is the main challenge in creating international law for cyberspace?","To craft binding laws that apply internationally without violating the sovereignty of individual states."
-"What is the key question regarding Article 2.4 of the UN Charter in the context of cyberspace?","Whether hacking into foreign networks constitutes a 'use of force' forbidden by the charter."
-"The UN-General Assembly sub-groups discussing international cyberspace laws are the Group of Governmental Experts (GGE) and the _____.","Open-Ended Working Group (OEWG)"
-"What is the Cybersecurity Tech Accord?","An agreement among global technology companies to collaborate on improving the security, stability, and resilience of cyberspace."
-"Concept: Digital Sovereignty","The idea that individual countries should have the right to control their own cyberspace, including digital access and infrastructure, free from international interference."
-"Concept: Net Neutrality","The principle that internet service providers (ISPs) should treat all content flowing through their services equally, without creating 'fast lanes' or 'slow lanes'."
-"Concept: Zero Rating","The practice of providing free internet access under certain conditions, such as excluding access to certain websites or subsidising the service with advertising."
-"What is the International Organization for Standardization (ISO)?","An independent, non-governmental organisation that develops standards to ensure the quality, safety, and efficiency of products, services, and systems worldwide."
-"Which series of ISO standards applies specifically to the security industry?","The ISO/IEC 27000 series."
-"What is an Information Security Management System (ISMS)?","A set of policies and procedures, including all legal, physical, and technical controls, involved in an organisation's information risk management processes."
-"Which specific ISO standard details the requirements for establishing, implementing, and maintaining an ISMS?","ISO/IEC 27001."
-"ISO 27001 requires organisations to design and implement security controls to address _____ risks.","unacceptable"
-"How does ISO 27032 complement ISO 27001?","While ISO 27001 covers all aspects of information security, ISO 27032 focuses specifically on cybersecurity guidelines for information systems."
-"Which ISO standard provides a detailed overview of information security controls to help develop an ISMS?","ISO/IEC 27002."
-"Which ISO standard describes how to conduct an information security risk assessment in line with ISO 27001?","ISO/IEC 27005."
-"Which ISO standard extends an ISMS to cover privacy management and helps with GDPR compliance?","ISO/IEC 27701."
-"Which ISO standard provides a framework for a business continuity management system?","ISO 22301."
-"The ISO _____ family of standards provides principles and guidelines on managing risks faced by organisations.","31000"
-"How can an organisation use its ISO 27001 certification in the event of a data breach?","It can be used to demonstrate to a regulator that it had done all it could to prevent and recover from an attack."
-"What is meant by 'ethics' in a professional context?","Standards of behaviour that are based on an understanding or agreement of what is 'right' or 'wrong'."
-"What ethical duty requires a cyber security professional to protect personal, private, or proprietary information?","Maintaining confidentiality."
-"Why is it an ethical lapse for a cyber security professional to not strictly follow security procedures?","It sends the message that the procedures are not important and undermines the security culture of the organisation."
-"What is the ethical responsibility of a security specialist regarding information security within an organisation?","They have an ethical responsibility to promote information security and encourage good security practices among everyone involved."
-"Term: Conflict of Interest","A situation in which a person has the knowledge or power to make or influence a decision to their own advantage."
-"A conflict of interest where a networking administrator uses their position to secure a contract for a company they part-own is known as _____.","self-dealing"
-"What is 'moonlighting' in a professional context?","Using an employer's proprietary information to help run a side business."
-"An example of state-sponsored sabotage is the malware called _____, which was used to damage nuclear centrifuges in Iran.","Stuxnet"
-"What is 'hacking back'?","When an organisation retaliates against a hacking attack by hacking the attacker in return."
-"What is an example of unethical conduct involving the misuse of confidential information by a cyber security professional?","Stealing a company's trade secrets to sell for profit or use for blackmail."
-"Why is there a basic ethical duty for cyber professionals to disclose risks as soon as they are found?","So that those affected can make informed decisions to protect themselves."
-"What is 'whistleblowing'?","When an employee who knows their employer has done something wrong or unethical brings this to the attention of the authorities or the media."
-"One way cyber security laws enhance preparedness is by establishing common, mandatory standards of _____, creating a unified defence.","security"
-"What is one of the eight principles of the Data Protection Act?","Data must be collected and used fairly and inside the law."
-"What is another one of the eight principles of the Data Protection Act?","Data must only be held and used for the reasons given to the Information Commissioner."
-"A principle of the Data Protection Act states data cannot be given away or sold unless you said you would initially. What is this principle?","Data can only be used for those registered purposes."
-"According to the DPA, the data held must be acceptable, appropriate and not _____ when compared with its purpose.","beyond what is necessary"
-"A principle of the Data Protection Act requires data to be accurate and what else?","Kept up to date."
-"A principle of the Data Protection Act is that data must be kept _____ and secure.","safe"
-"A principle of the Data Protection Act states that data may not be transferred outside of the _____.","European Economic Area (EEA)"
-"Which act makes it an offence to send an electronic communication that conveys a threat or is grossly offensive with intent to cause distress?","The Malicious Communications Act 1988."
-"What does an ISMS conforming to ISO 27001 automatically do in relation to Article 32 of the GDPR?","It meets all the requirements, such as ensuring confidentiality, integrity, availability, and resilience of processing systems."
-"The _____ works to foster collaboration among global technology companies to protect users and defend against malicious threats.","Cybersecurity Tech Accord"
-"The Global Commission on the Stability of Cyberspace helps promote _____ among various cyberspace communities.","mutual awareness and understanding"
+question,answer,,
+What is the primary goal of the General Data Protection Regulation (GDPR)?,"A Europe-wide regulation designed to strengthen data protection for individuals, giving people more control over their personal information.",,
+"The UK's version of the GDPR, brought into domestic law post-Brexit, is known as the _____.",UK GDPR,,
+What date did the GDPR come into effect?,25 May 2018 - marking a major shift in data protection law across Europe.,,
+What types of data storage does the GDPR cover?,"Data stored on servers, databases, websites, and even on paper - it's not just about digital data.",,
+"Under GDPR, what two types of protective measures are organisations required to put in place?","Technical measures (like firewalls, encryption, and access controls) and organisational measures (like policies, procedures, and staff training).",,
+What is the role of the Data Protection Act 2018 (DPA) in relation to the GDPR?,"The DPA 2018 works alongside the GDPR to safeguard all personal or sensitive information held about an individual, providing the UK-specific implementation details.",,
+"According to the DPA, data must not be kept longer than is necessary, meaning it would be wrong to keep information about past customers for more than a _____ at most.",reasonable period,,
+What specific offence is described in section 170 of the Data Protection Act 2018?,"Knowingly or recklessly obtaining or disclosing personal data without consent - basically, deliberately accessing or sharing data you shouldn't.",,
+How does the Directive on security of network and information systems (NIS) differ from GDPR?,"While GDPR focuses on protecting personal data, the NIS is concerned with protecting the information systems themselves - the infrastructure and networks.",,
+"Under the NIS regulations, what is the maximum fine for non-compliance?",Up to £17 million - a serious penalty for failing to meet the requirements.,,
+What government body is responsible for publishing NIS compliance guidance in the UK?,The National Cyber Security Centre (NCSC) - the UK's technical authority on cyber security.,,
+What does the Computer Misuse Act (1990) make illegal?,"Accessing or modifying data stored on a computer system without appropriate consent or permission - essentially, hacking and related activities.",,
+"Under the Computer Misuse Act, what does the offence of 'unauthorised access to computer material' refer to?","Entering a computer system without permission, also known as hacking - even just logging in without authorisation.",,
+What does the offence of 'unauthorised modification of data' under the Computer Misuse Act cover?,"Modifying or deleting data, as well as introducing malware or spyware onto a computer - basically, changing things you shouldn't.",,
+What is the lowest level of penalty under the Computer Misuse Act for unauthorised access to a computer?,"Up to two years in prison and a £5,000 fine - even 'basic' hacking is taken seriously.",,
+"If unauthorised access under the Computer Misuse Act causes harm to human welfare or national security, what is the maximum penalty?",Up to life imprisonment - the most serious cyber crimes carry the same penalties as major physical crimes.,,
+What is the primary purpose of the Official Secrets Acts (1989)?,"Legal protection against espionage and the leaking of sensitive government information, safeguarding national security.",,
+What category of protected information under the Official Secrets Acts makes it a criminal offence to release information that damages the armed forces?,Defence - protecting information about military capabilities and operations.,,
+What category of protected information under the Official Secrets Acts makes it an offence to release information that endangers UK interests or citizens abroad?,International relations - protecting diplomatic and foreign affairs information.,,
+"What does the 'piggybacking' ban, introduced by the Communications Act 2003, make illegal?","Accessing and using Wi-Fi that you didn't pay for, unless it's been made publicly available - like using your neighbour's Wi-Fi without permission.",,
+"Section 127 of the Communications Act 2003 categorises social media as a public electronic communications network, allowing users to be punished for what?","Sending or posting grossly offensive, indecent, obscene, or menacing content - making online harassment and threats punishable.",,
+What is the primary aim of the Police and Criminal Evidence Act 1984 (PACE)?,To balance the powers of the police with the rights and freedoms of the public in England and Wales - ensuring fair law enforcement.,,
+"Under Section 69 of PACE, what must be shown for a statement produced by a computer to be admissible as evidence in court?",That the computer was operating properly and the statement isn't inaccurate due to improper use - ensuring digital evidence is reliable.,,
+The _____ expanded the categories of cyber crime by making ownership of any hacking software or exploit tools illegal.,Police and Justice Act (2006),,
+Which act makes it an offence to intentionally intercept a communication in the UK without lawful authority?,"The Investigatory Powers Act 2016 - protecting communications privacy, though law enforcement can obtain warrants.",,
+What do the Privacy and Electronic Communications Regulations (PECR) give people specific rights over?,"Electronic communications privacy, such as controlling marketing calls, emails, texts, and website cookies.",,
+What is the main challenge in creating international law for cyberspace?,Crafting binding laws that apply internationally without violating the sovereignty of individual states - balancing global cooperation with national independence.,,
+What is the key question regarding Article 2.4 of the UN Charter in the context of cyberspace?,"Whether hacking into foreign networks constitutes a 'use of force' forbidden by the charter - essentially, can cyber attacks be acts of war?",,
+The UN-General Assembly sub-groups discussing international cyberspace laws are the Group of Governmental Experts (GGE) and the _____.,Open-Ended Working Group (OEWG),,
+What is the Cybersecurity Tech Accord?,"An agreement among global technology companies to collaborate on improving the security, stability, and resilience of cyberspace - tech companies working together.",,
+Concept: Digital Sovereignty,"The idea that individual countries should have the right to control their own cyberspace, including digital access and infrastructure, free from international interference.",,
+Concept: Net Neutrality,"The principle that internet service providers (ISPs) should treat all content equally, without creating 'fast lanes' for some websites and 'slow lanes' for others.",,
+Concept: Zero Rating,"The practice of providing free internet access under certain conditions, such as excluding certain websites or subsidising the service with advertising - free internet with strings attached.",,
+What is the International Organization for Standardization (ISO)?,"An independent, non-governmental organisation that develops standards to ensure quality, safety, and efficiency of products, services, and systems worldwide.",,
+Which series of ISO standards applies specifically to the security industry?,The ISO/IEC 27000 series - a family of standards dedicated to information security management.,,
+What is an Information Security Management System (ISMS)?,"A set of policies and procedures, including all legal, physical, and technical controls, for managing an organisation's information security risks systematically.",,
+"Which specific ISO standard details the requirements for establishing, implementing, and maintaining an ISMS?",ISO/IEC 27001, and maintaining an ISMS?,ISO/IEC 27001 - the main standard organisations get certified against to prove their information security management.
+ What is the 'liberty vs responsibility' debate in cyberspace?,The tension between individual freedom online and the need for accountability and responsible behaviour - balancing free expression with preventing harm.,,
+How does ISO 27032 complement ISO 27001?,"While ISO 27001 covers all aspects of information security broadly, ISO 27032 focuses specifically on cybersecurity guidelines for information systems.",,
+Which ISO standard provides a detailed overview of information security controls to help develop an ISMS?,"ISO/IEC 27002 - essentially a catalogue of security controls you can choose from, like a menu of security measures.",,
+Which ISO standard describes how to conduct an information security risk assessment in line with ISO 27001?,ISO/IEC 27005 - providing the methodology for identifying and evaluating security risks.,,
+Which ISO standard extends an ISMS to cover privacy management and helps with GDPR compliance?,"ISO/IEC 27701 - adding privacy protections on top of security, helping organisations meet both ISO 27001 and GDPR requirements.",,
+Which ISO standard provides a framework for a business continuity management system?,"ISO 22301 - ensuring organisations can keep operating during and after disasters, including cyber incidents.",,
+Why would digital sovereignty make it difficult to prosecute international cyber crimes?,"If every nation had their own laws and regulations, there would be no agreement on what constitutes a cyber crime - especially problematic when governments are the perpetrators.",,
+How can an organisation use its ISO 27001 certification in the event of a data breach?,"It can demonstrate to regulators that it had done all it could to prevent and recover from an attack, potentially reducing fines and showing due diligence.",,
+What does ISO/IEC 27011 provide?,Information security management guidelines specifically for telecommunications organisations.,,
+What does ISO/IEC 27017 cover?,Code of practice for information security controls specifically for cloud services.,,
+What does ISO/IEC 27021 address?,Competence requirements for information security management systems professionals - the skills and knowledge security professionals need.,,
+What does ISO/IEC 27033 cover?,IT network security - specific guidance for protecting networks.,,
+What does ISO/IEC 27034 address?,Application security - protecting software applications from threats,,
+What does ISO/IEC 27035 cover?,Information security incident management - how to handle security incidents systematically.,,
+ What does ISO/IEC 27039 address?,Intrusion prevention - stopping attackers before they can breach systems.,,
+ What does ISO/IEC 27040 cover?,Storage security - protecting data storage systems and infrastructure.,,
+ What does ISO 27799 provide?,Guidelines for health industry organisations on protecting personal health information using ISO/IEC 27002 - sector-specific guidance.,,
+What is meant by 'ethics' in a professional context?,Standards of behaviour based on understanding or agreement of what is 'right' or 'wrong' - the moral principles guiding professional conduct.,,
+How can ISO standards help organisations win business?,"Some businesses require ISO certification as a condition of doing business, especially government bodies - it's a competitive advantage.",,
+How does ISO certification help draw in customers and clients?,"It gives assurance that their data is safe and reduces the organisation's information security and data protection risks, improving reputation.",,
+ How many control guidelines does ISO 27001 include?,"114 controls across 13 areas - though organisations aren't required to implement all of them, just those relevant to their needs.",,
+"What ethical duty requires a cyber security professional to protect personal, private, or proprietary information?",Maintaining confidentiality., or proprietary information?,Maintaining confidentiality - keeping secrets secret and not misusing privileged access to information.
+Why is failing to follow security procedures considered unethical for a cybersecurity professional?,"It sends the message that procedures aren’t important and undermines the organisation’s security culture, effectively leading by bad example.",,
+What ethical duty does a security specialist have to protect information within an organisation?,"To promote good security practices and help everyone follow them, being an advocate rather than just an enforcer.",,
+Term: Conflict of Interest,"A conflict of interest occurs when someone can use their knowledge or influence to benefit themselves, which compromises their objectivity.",,
+A conflict of interest where a networking administrator uses their position to secure a contract for a company they part-own is known as _____.,self-dealing,,
+What is 'moonlighting' in a professional context?,Using an employer's confidential information to help run a side business - essentially stealing company knowledge for personal profit.,,
+"An example of state-sponsored sabotage is the malware called _____, which was used to damage nuclear centrifuges in Iran.",Stuxnet,,
+What is an example of state-sponsored sabotage?,Stuxnet malware used by the US and Israel in 2010 to damage around one-fifth of nuclear centrifuges in Iran - government-level cyber warfare.,,
+What is 'hacking back'?,"When an organisation retaliates against a hacking attack by hacking the attacker in return - essentially vigilante cyber warfare, which is usually illegal.",,
+What is an example of unethical conduct involving the misuse of confidential information by a cyber security professional?,Stealing a company's trade secrets to sell for profit or use for blackmail - abusing privileged access for personal gain.,,
+Why is there a basic ethical duty for cyber professionals to disclose risks as soon as they are found?,So that those affected can make informed decisions to protect themselves - hiding known vulnerabilities is unethical and potentially illegal.,,
+What is 'whistleblowing'?,When an employee who knows their employer has done something wrong or unethical brings this to the attention of authorities or the media - speaking up about wrongdoing.,,
+What makes ‘whistleblowing' ethically complex?,You might need to steal proprietary information (a crime) to expose wrongdoing - choosing between breaking the law and exposing unethical behaviour.,,
+What is the Edward Snowden example of whistleblowing complexity?,He exposed unethical NSA surveillance but committed crimes by stealing documentation and potentially endangered lives and national security - hero or criminal?,,
+"One way cyber security laws enhance preparedness is by establishing common, mandatory standards of _____, creating a unified defence.", security, creating a unified defence.,security
+What is one of the eight principles of the Data Protection Act?,Data must be collected and used fairly and within the law - no sneaky or deceptive data collection.,,
+What is another one of the eight principles of the Data Protection Act?,Data must only be held and used for the reasons given to the Information Commissioner - you can't collect data for one purpose then use it for something else.,,
+A principle of the Data Protection Act states data cannot be given away or sold unless you said you would initially. What is this principle?,Data can only be used for those registered purposes - no surprise sharing or selling of personal information.,,
+"According to the DPA, the data held must be acceptable, appropriate and not _____ when compared with its purpose.",beyond what is necessary,,
+A principle of the Data Protection Act requires data to be accurate and what else?,"Kept up to date - old, incorrect data is not only useless but potentially harmful.",,
+A principle of the Data Protection Act is that data must be kept _____ and secure.,"safe - protected from unauthorised access, loss, or damage through appropriate technical and organisational measures.",,
+A principle of the Data Protection Act states that data may not be transferred outside of the _____.,European Economic Area (EEA) - unless adequate protections are in place.,,
+Which act makes it an offence to send an electronic communication that conveys a threat or is grossly offensive with intent to cause distress?,The Malicious Communications Act 1988 - protecting people from threatening or abusive messages.,,
+What does an ISMS conforming to ISO 27001 automatically do in relation to Article 32 of the GDPR?,"It meets all the requirements, such as ensuring confidentiality, integrity, availability, and resilience of processing systems - ISO 27001 helps achieve GDPR compliance.",,
+The _____ works to foster collaboration among global technology companies to protect users and defend against malicious threats.,Cybersecurity Tech Accord,,
+The Global Commission on the Stability of Cyberspace helps promote _____ among various cyberspace communities.,mutual awareness and understanding,,
+What ethical principle does the Dave case study illustrate?,"Using employer resources (computer time) for personal projects - the ethics depend on various contextual factors like permission, compensation, and impact.",,
