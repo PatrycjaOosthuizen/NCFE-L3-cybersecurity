@@ -1,6 +1,8 @@
 question,answer
+What is the primary goal of 'security' in the context of cyber systems?,To protect computer systems
 "In the context of IT, what does 'security' refer to?","Keeping computer systems and networks safe from hackers, damage, and people stealing your information."
-What is the purpose of 'confidentiality' in cyber security?,Making sure only the right people can see private information - keeping secrets secret!
+The process of verifying a user’s identity before granting access is known as _____.,authentication
+What is the purpose of 'confidentiality' in cyber security?,Making sure that information is kept private and accessible only to authorised individuals.
 Name two measures used to assist with confidentiality.,"Using strong passwords, requiring multiple ways to prove who you are (like a password AND a code from your phone), or scrambling data so others can't read it."
 What is the principle of 'integrity' in cyber security?,Making sure information stays accurate and hasn't been changed or tampered with by someone who shouldn't be touching it.
 List two measures used to ensure data integrity.,"Making backup copies of important files regularly, controlling who can change files, or checking that information entered into a system makes sense."
@@ -43,6 +45,7 @@ Why are educational institutions considered an easy target for cyber criminals?,
 What makes retailers vulnerable to insider attacks?,"They hire lots of temporary workers during busy seasons, so they have many employees who might not be well-trained or fully verified."
 "Besides theft of intellectual property, how else can cyber criminals harm the manufacturing sector?",They could remotely shut down production facilities or manipulate equipment to produce defective products without anyone realising until it's too late.
 What drives foreign governments to launch attacks on government agencies and critical infrastructure?,"Espionage - stealing secrets, learning how to control critical infrastructure for potential future attacks, or preparing for possible conflict."
+Malware that disguises itself as a safe program but contains hidden malicious code is known as a _____.,Trojan
 What is the first stage of the Cyber Kill Chain?,"Reconnaissance - doing homework on the target, like a burglar checking which houses have unlocked windows before breaking in."
 "In the Cyber Kill Chain, what happens during the 'Weaponisation' stage?",The attacker decides how they'll exploit a weakness they found and either creates or buys the hacking tools they'll need.
 "The stage where malicious software is sent to the victim, for example via a phishing email, is called the _____ stage.",Delivery/intrusion - getting the weapon to the target.
@@ -85,7 +88,18 @@ What are macros in the context of security risks?,Scripts that applications can 
 What does Infrastructure as a Service (IaaS) offer?,"Infrastructure of virtual servers, network, operating systems and data storage drives - removing the need for keeping hardware in the office."
 What is Platform as a Service (PaaS)?,Where organisations can develop and run their own applications using the infrastructure and software framework provided by cloud providers.
 How does Software as a Service (SaaS) work?,"Organisations or individuals use software over the internet, paying using subscription or a pay-per-use model - no local installation needed."
+"For PaperCorp, understanding that cyber criminals may want to steal the PaperX formula is part of which security principle?",Understand the threat model.
+"In the PaperCorp case, separating the production control network from the office network is an example of applying which principle?",Reduce the attack surface.
+"In the PaperCorp case study, why is it important to 'understand the role of suppliers'?",Because each supplier could introduce security risks if their own systems are not well protected.
 What is software in computer terms?,"All instructions that tell a computer what to do - the entire set of programs, procedures, and routines associated with computer system operation."
 What is an operating system?,"The most important software that runs on a computer, managing the computer's memory and processes, as well as all software and hardware."
 What is a domain in computing?,"A group of computers, printers and devices that are interconnected and governed as a whole - like a workplace network."
 What is an exploit in cyber security?,A broad term describing any malicious application or script that can be used to take advantage of a computer's vulnerability.
+What is cloud computing?,"Using remote servers over the internet to store, manage, and process data instead of on local computers."
+Microsoft 365 and Zoom are examples of which cloud computing service model?,Software as a Service (SaaS) because users access the software online while the provider handles all maintenance and updates.
+Amazon Web Services (AWS) providing virtual servers so businesses don't need physical hardware is an example of what service model?,"Infrastructure as a Service (IaaS) because AWS provides virtual servers and computing resources online, eliminating the need for businesses to own and manage physical hardware."
+What are the two main types of software?,System software and application software.
+What is system software?,"Manages and controls computer hardware and provides a platform for other software (e.g., Windows, Linux, device drivers)."
+What is application software?,"Performs specific tasks for users (e.g., Microsoft Word, Zoom, Photoshop)."
+What is a 'domain' in the context of the internet?,"The unique name that identifies a website or online network, which translates human-readable names into IP addresses."
+"In a web address, what does the 's' in 'https://' signify?",It stands for 'secure' and means the data sent is encrypted using SSL or TLS.
