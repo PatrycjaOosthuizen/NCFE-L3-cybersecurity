@@ -3029,23 +3029,37 @@ body {
 
   /* What to do next Card - FIT ON SCREEN */
   .next-steps {
-    min-width: auto !important; /* Remove min-width on mobile */
-    max-width: 100% !important; /* Use full width available */
-    width: calc(100% - 40px) !important; /* Account for padding */
-    padding: 24px 20px !important; /* Reduce padding on mobile */
-    margin: 16px auto !important; /* Smaller margins */
+    min-width: auto !important;
+    max-width: 100% !important; /* Full width */
+    width: calc(100% - 8px) !important; /* Only 4px margin each side */
+    padding: 16px 8px !important; /* Absolute minimum padding = MAXIMUM text */
+    margin: 12px auto !important;
   }
 
   .next-steps h4 {
-    font-size: 1.1em !important; /* Smaller heading */
-    margin-bottom: 16px !important;
+    font-size: 1.1em !important;
+    margin-bottom: 12px !important;
+    padding: 0 2px !important;
+  }
+
+  .next-steps ol {
+    padding-left: 0 !important;
+    margin: 0 !important;
   }
 
   .next-steps ol li {
-    font-size: 0.9em !important; /* Smaller list items */
-    margin-bottom: 12px !important;
-    line-height: 1.5 !important;
-    padding-left: 30px !important;
+    font-size: 0.85em !important; /* Smaller font = more text per line */
+    margin-bottom: 8px !important;
+    line-height: 1.35 !important; /* Tighter line spacing */
+    padding-left: 20px !important; /* Minimal space for numbers = MAX text space */
+  }
+
+  .next-steps ol li:before {
+    left: 2px !important; /* Numbers very close to edge */
+  }
+
+  .next-steps ol li:last-child {
+    margin-bottom: 0 !important;
   }
 
   /* Build Your PDP Button - Match Other Buttons */
