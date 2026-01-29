@@ -2926,6 +2926,197 @@ body {
   box-shadow: 0 6px 12px rgba(33, 150, 243, 0.4);
 }
 
+/* ===========================
+   MOBILE RESPONSIVE STYLES - PDP PAGES
+   Match homepage font sizes on mobile devices
+   =========================== */
+
+@media (max-width: 768px) {
+  /* PDP Main Header - Match Homepage */
+  .pdp-header h2 {
+    font-size: 1.5em !important; /* Match homepage main heading */
+  }
+
+  .pdp-subtitle {
+    font-size: 0.95em !important; /* Match homepage subtitle */
+  }
+
+  /* Section Cards - Match Homepage Unit Cards */
+  .section-card h3 {
+    font-size: 1em !important; /* Match homepage unit card headings */
+  }
+
+  .section-title {
+    font-size: 0.95em !important; /* Match homepage card titles */
+  }
+
+  .section-description {
+    font-size: 0.85em !important; /* Match homepage card descriptions */
+  }
+
+  .section-icon {
+    font-size: 2em !important; /* Smaller icons on mobile */
+  }
+
+  /* Method Chooser Page - Match Homepage */
+  .method-header h2 {
+    font-size: 1.4em !important;
+  }
+
+  .method-subtitle {
+    font-size: 0.9em !important;
+  }
+
+  .method-card h3 {
+    font-size: 1.2em !important;
+  }
+
+  .method-card .card-description {
+    font-size: 0.9em !important;
+  }
+
+  .method-card .card-features li {
+    font-size: 0.85em !important;
+  }
+
+  .method-card .card-icon {
+    font-size: 2.5em !important;
+  }
+
+  /* Prompt Display Page - Match Homepage */
+  .prompt-header h2 {
+    font-size: 1.4em !important;
+  }
+
+  .prompt-subtitle {
+    font-size: 0.9em !important;
+  }
+
+  /* AI Platform Section */
+  .ai-platform-section h3 {
+    font-size: 1.3em !important;
+  }
+
+  .platform-subtitle {
+    font-size: 0.85em !important;
+  }
+
+  .ai-platform-card h4 {
+    font-size: 1.1em !important;
+  }
+
+  .ai-platform-card .platform-subtitle {
+    font-size: 0.8em !important;
+  }
+
+  .platform-logo {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .platform-note {
+    font-size: 0.85em !important;
+  }
+
+  /* Success Screen - Match Homepage */
+  .ai-success-message h3 {
+    font-size: 1.4em !important;
+  }
+
+  .success-subtitle {
+    font-size: 1em !important;
+  }
+
+  /* What to do next Card - FIT ON SCREEN */
+  .next-steps {
+    min-width: auto !important; /* Remove min-width on mobile */
+    max-width: 100% !important; /* Use full width available */
+    width: calc(100% - 40px) !important; /* Account for padding */
+    padding: 24px 20px !important; /* Reduce padding on mobile */
+    margin: 16px auto !important; /* Smaller margins */
+  }
+
+  .next-steps h4 {
+    font-size: 1.1em !important; /* Smaller heading */
+    margin-bottom: 16px !important;
+  }
+
+  .next-steps ol li {
+    font-size: 0.9em !important; /* Smaller list items */
+    margin-bottom: 12px !important;
+    line-height: 1.5 !important;
+    padding-left: 30px !important;
+  }
+
+  /* Build Your PDP Button - Match Other Buttons */
+  .pdp-btn {
+    font-size: 1em !important; /* Match Study Flashcards / Take Quiz */
+    padding: 12px 20px !important;
+  }
+
+  /* All Card Buttons on Mobile */
+  .card-btn {
+    font-size: 0.95em !important;
+    padding: 12px 20px !important;
+  }
+
+  /* Copy Prompt Button */
+  .copy-prompt-btn {
+    font-size: 1em !important;
+    padding: 14px 20px !important;
+  }
+
+  /* Platform Buttons */
+  .platform-btn {
+    font-size: 0.9em !important;
+    padding: 10px 16px !important;
+  }
+
+  /* Success Go Back Button */
+  .success-btn {
+    font-size: 1em !important;
+    padding: 14px 28px !important;
+  }
+
+  /* Back Links */
+  .back-link {
+    font-size: 0.9em !important;
+  }
+
+  /* General PDP View Container */
+  .pdp-view {
+    padding: 24px 16px !important;
+  }
+
+  /* Prompt Box Textarea */
+  .prompt-box textarea {
+    font-size: 0.85em !important;
+    min-height: 300px !important; /* Smaller on mobile */
+  }
+
+  /* Warning Modal on Mobile */
+  .copy-warning-modal {
+    max-width: 90% !important;
+    margin: 20px !important;
+  }
+
+  .copy-warning-modal h2 {
+    font-size: 1.3em !important;
+  }
+
+  .copy-warning-modal .warning-message {
+    font-size: 0.95em !important;
+  }
+
+  .copy-warning-modal .warning-note {
+    font-size: 0.85em !important;
+  }
+
+  .warning-icon {
+    font-size: 3em !important;
+  }
+}
+
 /* Modal styles removed - Go Back is now simple button navigation */
 
 /* ===========================
