@@ -1,0 +1,91 @@
+question,answer
+What term describes the collection of your social media posts, blogs, and online mentions that can be traced by third parties?,Digital footprint.
+Why is it important for a cyber security professional to maintain a positive digital identity?,"A negative digital identity can reflect badly on their employer, and they are held to a very high standard."
+What negative assumption might an employer make if a cyber security professional has no online presence at all?,That the person is not technologically knowledgeable or has something to hide.
+What are some ways you can establish a positive digital identity?,"Join professional platforms like LinkedIn and share interesting content, participate in online forums and communities positively, contribute to discussions about topics you care about, and make sure your online presence shows you're knowledgeable and professional."
+How might you be at risk from a negative digital identity?,"Posting controversial or inappropriate content without thinking, complaining about work on social media, having old negative posts resurface during job searches, and damaging relationships with colleagues or future employers."
+Pre-employment checks or 'vetting' are a key part of _____ carried out by human resources teams.,due diligence
+What is the legal obligation for UK employers regarding 'Right to work checks'?,To ensure they are not employing anyone who does not have permission to work in the UK.
+"What type of check, such as a Disclosure and Barring Service (DBS) check, might an employer conduct to verify a candidate's criminal history?",Criminal record check.
+Under what two conditions are UK employers permitted to ask a candidate for a health check before hiring?,"When it is a legal requirement for the job or if the job itself requires it (e.g., for insurance purposes)."
+What type of pre-employment check involves verifying an applicant's association with extreme groups or individuals?,"Online and social media checks, which may include a guilt by association check."
+Which UK law sets out the data protection principles that must be followed when carrying out pre-employment checks?,The Data Protection Act 2018.
+What is the most likely consequence if an employer discovers an applicant has lied about their qualifications on their CV?,The job offer will be withdrawn.
+Which standard pre-employment security screening is not a formal security clearance but is required for many government jobs?,Baseline Personnel Security Standard (BPSS).
+What are the four main areas checked as part of a Baseline Personnel Security Standard (BPSS)?,"Identity, nationality/immigration status, employment history (past 3 years), and unspent criminal convictions."
+What level of security clearance is required for roles involving proximity to public figures at risk from terrorist attack?,Counter Terrorist Check (CTC).
+"A _____ is required for people who will have long-term, frequent, and uncontrolled access to 'Secret' assets.",Security Check (SC)
+What does an Enhanced Security Check include in addition to the standard Security Check (SC) procedures?,"An internet questionnaire, a detailed interview by a trained Investigating Officer, and an assessment of personal finances."
+"Which is the highest level of security vetting, used for posts requiring frequent access to 'Top Secret' assets?",Developed Vetting (DV).
+"In addition to standard checks, a Developed Vetting (DV) includes a full review of personal finances and interviews with whom?","The applicant and their referees, conducted by a trained Investigating Officer."
+What is bias in the context of cybersecurity decision-making?,Having a preference or unfair opinion that can affect how you make decisions and handle security problems.
+What type of bias is demonstrated when people give more weight to information that supports what they already believe?,Confirmation bias.
+Give an example of confirmation bias in a cybersecurity context.,"Thinking a data breach was caused by an employee clicking a phishing link and only looking for evidence of that, while ignoring signs that the breach came from a software vulnerability or external hacker."
+What does the acronym PEBKAC stand for in the context of the fundamental attribution error?,Problem Exists Between Keyboard and Chair.
+Which bias involves blaming the user for a security incident without investigating other potential causes?,Fundamental attribution error.
+What is an example of fundamental attribution error?,"Automatically blaming employees for falling for phishing emails instead of recognizing that the security training is ineffective or the phishing detection system isn't working properly."
+What is aggregate bias?,Making assumptions about an individual using information that describes the broader group they are associated with.
+Give an example of aggregate bias in cybersecurity.,"Assuming older workers are bad with technology or younger workers are careless with security, rather than looking at their actual abilities and skills."
+"Which bias occurs when the aggressive or negative wording in a report influences a security team's focus, potentially causing them to miss other threats?",The framing effect.
+What is an example of the framing effect?,"Overreacting to a threat described as 'extremely serious and critical' while underestimating one described as 'low-level persistent threat,' even though the persistent threat might cause more damage over time."
+Why is being aware of bias important in cybersecurity?,It helps you make better and more objective decisions based on evidence rather than assumptions or prejudices.
+What is the 'security-by-design' mindset?,"A philosophy of building security into hardware and software from the beginning, rather than adding it later."
+What is a major benefit of the security-by-design approach regarding cost?,It is much cheaper to solve security issues at the beginning of a project before they have caused damage.
+What is a disadvantage of security-by-design?,"It can increase development time and costs upfront, since building security from the start requires extra planning, resources, and testing."
+"Practical, hands-on abilities like configuring a network or conducting a penetration test are known as what type of skills?",Hard' technical skills.
+Interpersonal skills such as the ability to think critically and get along with others are known as what type of skills?,'Soft' skills.
+Why is an understanding of coding languages like HTML and Javascript useful for a cyber security professional?,"It helps them understand how applications and websites are made, providing insight into how they are exploited."
+"Learning about LAN, WAN, and VPN is part of which core technical skill area in cyber security?",Networking.
+Studying common operating systems and using command-line interfaces like Linux's Terminal falls under which technical knowledge category?,Systems.
+What skill involves deliberately and systematically processing information to make better decisions and solve novel problems?,Critical thinking.
+Why is it beneficial for a cyber security expert to have an 'understanding of hacking'?,"To effectively protect a network, it helps to know how it can be exploited in the first place."
+What personal trait is crucial for a cyber security professional responsible for continuous network monitoring to detect vulnerabilities?,Attention to detail.
+What does the 'S' in SWOT analysis stand for?,Strengths.
+What does the 'W' in SWOT analysis stand for?,Weaknesses.
+What does the 'O' in SWOT analysis stand for?,Opportunities.
+What does the 'T' in SWOT analysis stand for?,Threats.
+"In a SWOT analysis, what section would 'passion for technology and continuous learning' fall under?",Strengths.
+"In a SWOT analysis, what section would 'limited professional network in cybersecurity' fall under?",Weaknesses.
+"In a SWOT analysis, what section would 'continuing certifications and training' fall under?",Opportunities.
+"In a SWOT analysis, what section would 'competition from candidates with formal qualifications' fall under?",Threats.
+"In a SWOT analysis, what are the two methods for evaluating the results?","Matching (e.g., strengths to opportunities) and converting negatives into positives."
+What does the acronym SOAR stand for in personal skills analysis?,"Strengths, Opportunities, Aspirations, Results."
+"In a SOAR analysis, which two components focus on the present timeframe?",Strengths and Opportunities.
+"In a SOAR analysis, which two components focus on internal factors?",Strengths and Aspirations.
+The 'Aspirations' section of a SOAR analysis aims to identify what?,Your near-term and realistic aspirations for the future based on your strengths and opportunities.
+What is the purpose of the 'Results' section in a SOAR analysis?,To show how you will know you have achieved your aspirations and to outline how you will track progress.
+What is the first step in assessing your skills against those required for a career in cyber security?,Looking at different job advertisements and job descriptions to see which skills frequently show up and where your own skills overlap.
+Who can you talk to for information about which skills are most in demand in cyber security?,"Employers, teachers, or recruiters in different fields of cyber security."
+Why is it important to be specific about your skills when assessing them?,"Instead of just saying 'I know how to code,' you should specify which coding languages you've mastered and give examples of how you've applied them in jobs, school, or personal projects."
+What does the acronym SMART stand for in the context of creating a personal development plan?,"Specific, Measurable, Achievable, Relevant, Time-bound."
+What does the 'S' in SMART goals represent?,Specific: The goal should be clear and well-defined.
+What does the 'M' in SMART goals represent?,Measurable: There must be a way to track progress and know when the goal is accomplished.
+What does the 'A' in SMART goals represent?,Achievable: The goal needs to be realistic and attainable.
+What does the 'R' in SMART goals represent?,Relevant: The goal should matter to you and align with other relevant goals.
+What does the 'T' in SMART goals represent?,Time-bound: The goal needs a target date or timeline.
+"Why should you avoid setting goals that someone else has power over, such as 'get that promotion'?",Because it depends on factors outside your control; a better goal would be to gain the skills needed to be considered for it.
+Give an example of a SMART goal for completing a certification.,"Complete NCFE Level 3 Cybersecurity by submitting all required assignments and receiving the certificate by February 2026, using existing study materials and scoring well on practice assessments."
+What is the definition of Continuing Professional Development (CPD)?,"The process of maintaining and developing the skills, knowledge, and experience needed in your work or profession."
+What can CPD involve?,"Improving existing skills, learning new skills, expanding knowledge in related areas, and documenting learning and development."
+What are some examples of formal CPD activities?,"Instructor-led training courses, workshops, seminars, and structured learning programs."
+What are some examples of informal CPD activities?,"Work-based learning, mentoring, e-learning courses, structured reading, and informal lunch-time courses."
+Why is CPD considered very important in the cyber security field?,Because the threat landscape is constantly changing with new techniques and malware being developed.
+What percentage of cyber security professionals find it difficult to keep up with changes in the field?,"Many professionals struggle, which is why adequate time for CPD needs to be set aside."
+Name three examples of cyber security CPD courses.,"National Online Safety Certificate in Cyber Security in Schools, GDPR courses on access control and intruder detection, Introduction to Intruder Detection Systems."
+What are some industry websites useful for keeping up to date with cyber security knowledge?,"National Cyber Security Centre, Wired Threat Level, Computer Weekly, The Hacker News, Infosecurity Magazine, CISO Mag."
+Name one of the professional security bloggers mentioned as a source for keeping up to date with industry knowledge.,"Brian Krebs (Krebs On Security), Graham Cluley, Bruce Schneier, or Troy Hunt."
+What does Brian Krebs focus on in his security blog?,Coverage of profit-seeking cyber criminals and investigative reporting.
+What is Bruce Schneier known for in the cyber security community?,"Writing a monthly newsletter called 'Crypt-o-gram' that provides commentary and insights into critical security issues, and being an internationally renowned security technologist."
+What type of information can you learn from Troy Hunt's website?,Analyses of different system breaches and useful hints on how to avoid being attacked.
+"Besides websites and blogs, what is another method mentioned for keeping up to date with industry knowledge in cyber security?","Information security companies, professional contacts, security-related social media, the dark web, or conferences."
+Why is building a network of professional contacts useful in cyber security?,To share information on new techniques or threats and to learn from others in the field.
+What social media platforms can be helpful for cyber security knowledge if used carefully?,Twitter and Reddit (particularly subreddits like r/netsec).
+Why might cyber security professionals educate themselves on dark web sources?,To learn what malware is available and get information on what organizations have been hacked recently.
+What types of live events are available for cyber security professionals?,"Conferences, lectures, discussions, workshops, networking events, educational courses, and sponsored meetups."
+Why might employers have a budget for cyber security conferences?,Because these events often count towards CPD requirements and help keep staff current with threats.
+What is a significant risk for a cyber security team that falls behind in their CPD?,They risk falling victim to the latest types of attack or leaving their organisation unprepared.
+How can CPD help you do your work more efficiently?,"By improving your knowledge and skills, you can handle security tasks more effectively and stay current with best practices."
+"On a personal level, how does keeping your CPD up to date benefit your career?","It helps you grow and develop your career, increase your skill level, and become more employable."
+Why does CPD provide motivation for professional development?,CPD courses are structured and goal-oriented, which helps you stay focused on improving your skills and progressing in your career.
+What happens to your knowledge if you don't keep CPD up to date?,"Your knowledge becomes outdated, making you less effective at protecting systems and less attractive to employers."
+Why is cybersecurity particularly vulnerable to knowledge becoming outdated?,Because hackers constantly develop new attack methods and find new vulnerabilities that require updated defense strategies.

@@ -22,6 +22,7 @@ const unitEmojis = {
   "Unit 3": "🧰",
   "Unit 4": "🚨",
   "Unit 5": "⚖️",
+  "Unit 6": "🎓",
 };
 
 // Unit full titles mapping
@@ -31,6 +32,7 @@ const unitFullTitles = {
   "Unit 3": "Cyber Security Testing, Vulnerabilities and Controls",
   "Unit 4": "Cyber Security Incident Response",
   "Unit 5": "Understand Legislation and Ethical Conduct within Cyber Security",
+  "Unit 6": "Personal and Professional Development in Cyber Security",
 };
 
 // Unit file name mapping
@@ -56,6 +58,10 @@ const unitFileNames = {
     flashcard:
       "Unit 5_Understand Legislation and Ethical Conduct within Cyber Security_flashcards.csv",
     quiz: "Unit_5_quiz.csv",
+  },
+  "Unit 6": {
+    flashcard: "Unit_6_Personal_Professional_Development_flashcards.csv",
+    quiz: null,
   },
 };
 
@@ -101,10 +107,10 @@ const skipBtn = document.getElementById("skipBtn");
 const nextQuestionBtn = document.getElementById("nextQuestionBtn");
 const finishQuizBtn = document.getElementById("finishQuizBtn");
 const quizProgressBarFillHeader = document.getElementById(
-  "quizProgressBarFillHeader"
+  "quizProgressBarFillHeader",
 );
 const quizProgressCounterHeader = document.getElementById(
-  "quizProgressCounterHeader"
+  "quizProgressCounterHeader",
 );
 const quizFinishScreen = document.getElementById("quizFinishScreen");
 const quizScoreValue = document.getElementById("quizScoreValue");
@@ -114,7 +120,7 @@ const retakeQuizBtn = document.getElementById("retakeQuizBtn");
 const quizHomeBtn = document.getElementById("quizHomeBtn");
 const quizReviewScreen = document.getElementById("quizReviewScreen");
 const reviewQuestionsContainer = document.getElementById(
-  "reviewQuestionsContainer"
+  "reviewQuestionsContainer",
 );
 const reviewBackBtn = document.getElementById("reviewBackBtn");
 const reviewRetakeBtn = document.getElementById("reviewRetakeBtn");
@@ -487,7 +493,7 @@ async function loadQuiz(unit, mode) {
     console.error("Error loading quiz:", error);
     console.error("Unit:", unit, "Mode:", mode, "File:", csvFile);
     alert(
-      `Error loading quiz: ${error.message}\n\nPlease check:\n1. File "${csvFile}" exists in the same folder as index.html\n2. Browser console (F12) for more details`
+      `Error loading quiz: ${error.message}\n\nPlease check:\n1. File "${csvFile}" exists in the same folder as index.html\n2. Browser console (F12) for more details`,
     );
     loadingOverlay.classList.add("hidden");
     returnToHomepageFromQuiz();
@@ -556,7 +562,7 @@ function shuffleAnswers(question) {
 
   // Find new position of correct answer
   const correctAnswerIndex = answerArray.findIndex(
-    (a) => a.letter === question.correct
+    (a) => a.letter === question.correct,
   );
   const newCorrectLetter = ["A", "B", "C", "D"][correctAnswerIndex];
 
@@ -824,13 +830,13 @@ function proceedToFinish() {
 
   // Calculate score (all unanswered count as wrong - use TOTAL questions)
   const correctAnswers = userAnswers.filter(
-    (a) => a && a.isCorrect && !a.wasSkipped && a.selectedAnswer
+    (a) => a && a.isCorrect && !a.wasSkipped && a.selectedAnswer,
   ).length;
   const wrongAnswers = userAnswers.filter(
-    (a) => a && !a.isCorrect && !a.wasSkipped && a.selectedAnswer
+    (a) => a && !a.isCorrect && !a.wasSkipped && a.selectedAnswer,
   ).length;
   const unansweredCount = userAnswers.filter(
-    (a) => !a || a.wasSkipped || !a.selectedAnswer
+    (a) => !a || a.wasSkipped || !a.selectedAnswer,
   ).length;
   const totalQuestions = quizQuestions.length;
   const accuracy =
@@ -848,7 +854,7 @@ function proceedToFinish() {
     "Total:",
     totalQuestions,
     "Accuracy:",
-    accuracy + "%"
+    accuracy + "%",
   );
 
   // Update scores
@@ -991,7 +997,7 @@ function goToSkippedQuestion(index) {
 function goToFirstSkipped() {
   // Find first unanswered question (skipped or null)
   const firstUnansweredIndex = userAnswers.findIndex(
-    (a) => !a || a.wasSkipped || !a.selectedAnswer
+    (a) => !a || a.wasSkipped || !a.selectedAnswer,
   );
 
   if (firstUnansweredIndex !== -1) {
@@ -1382,7 +1388,7 @@ kcSubmitBtn.addEventListener("click", () => {
   });
 
   const percentage = Math.round(
-    (correct / knowledgeCheckQuestions.length) * 100
+    (correct / knowledgeCheckQuestions.length) * 100,
   );
 
   // Show results
@@ -1395,7 +1401,7 @@ kcSubmitBtn.addEventListener("click", () => {
 
   // Note: Email sending skipped as template not created
   console.log(
-    `Knowledge Check completed by ${kcStudentName}: ${correct}/${knowledgeCheckQuestions.length} (${percentage}%)`
+    `Knowledge Check completed by ${kcStudentName}: ${correct}/${knowledgeCheckQuestions.length} (${percentage}%)`,
   );
 });
 
@@ -1555,7 +1561,7 @@ feedbackForm.addEventListener("submit", async (e) => {
   if (words.length < 5) {
     showError(
       fbError,
-      `Please provide at least 5 words of feedback (currently: ${words.length} words)`
+      `Please provide at least 5 words of feedback (currently: ${words.length} words)`,
     );
     return;
   }
@@ -1577,7 +1583,7 @@ feedbackForm.addEventListener("submit", async (e) => {
         flashcard_rating: rating,
         quiz_difficulty: difficulty.value,
         improvements: improvements,
-      }
+      },
     );
 
     // Show success
@@ -1707,7 +1713,7 @@ finalFeedbackForm.addEventListener("submit", async (e) => {
   if (likedWords.length < 10) {
     showError(
       ffError,
-      `"What you liked" needs at least 10 words (currently: ${likedWords.length} words)`
+      `"What you liked" needs at least 10 words (currently: ${likedWords.length} words)`,
     );
     return;
   }
@@ -1715,7 +1721,7 @@ finalFeedbackForm.addEventListener("submit", async (e) => {
   if (improveWords.length < 10) {
     showError(
       ffError,
-      `"What to improve" needs at least 10 words (currently: ${improveWords.length} words)`
+      `"What to improve" needs at least 10 words (currently: ${improveWords.length} words)`,
     );
     return;
   }
@@ -1741,7 +1747,7 @@ finalFeedbackForm.addEventListener("submit", async (e) => {
         liked_most: likedMost,
         to_improve: toImprove,
         would_recommend: recommend.value,
-      }
+      },
     );
 
     // Show success
@@ -1769,8 +1775,502 @@ function showError(errorElement, message) {
 // ============================================
 // INTEGRATE WITH EXISTING QUIZ SYSTEM
 // ============================================
-// Feedback is now triggered directly from proceedToFinish() function above
-// This ensures accurate score capture and proper timing
 
-console.log("✅ Knowledge Check and Feedback systems initialized!");
-console.log("📧 EmailJS configured with Service ID:", EMAIL_CONFIG.serviceId);
+// ===========================
+// ===========================
+// UNIT 6 - PDP FUNCTIONALITY - SIMPLIFIED FLOW
+// ===========================
+
+// AI PROMPTS FOR EACH SECTION
+const AI_PROMPTS = {
+  2.1: `I am a student exploring a career in cybersecurity. Ask me one question at a time, giving examples or hints to help me answer. Guide me to think about my:
+* Technical skills (programming languages, networking, operating systems, cybersecurity tools)
+* Practical experience (home labs, projects, Capture The Flag challenges, simulations)
+* Soft skills (communication, problem-solving, attention to detail, teamwork, adaptability)
+
+Technical Skills
+1. What programming languages do you know that could be useful in cybersecurity? (Example: Python, Java, C++)
+2. What networking skills do you have? (Example: TCP/IP, routers, switches, network troubleshooting)
+3. Are you familiar with any operating systems for cybersecurity tasks? (Example: Linux, Windows, macOS)
+4. Do you know how to use any cybersecurity tools or software? (Example: Wireshark, Nmap, Metasploit, firewalls)
+5. Do you have knowledge of security concepts or frameworks? (Example: encryption, threat modeling, incident response)
+
+Practical Experience
+1. Have you completed any hands-on projects or home labs related to cybersecurity? (Example: building a website, configuring a firewall, virtual lab setups)
+2. Have you participated in competitions, Capture The Flag (CTF) challenges, or hackathons?
+3. Have you contributed to open-source projects or personal coding projects that demonstrate your skills?
+4. Do you have experience analysing data, logs, or system behaviour?
+5. Have you done any internships, volunteering, or practical work that is relevant to cybersecurity?
+
+Soft Skills
+1. What problem-solving or analytical skills do you have that would help in cybersecurity?
+2. What communication or teamwork skills do you have? (Example: explaining technical issues clearly, working with a team on projects)
+3. What personal qualities help you succeed under pressure? (Example: attention to detail, persistence, adaptability)
+
+Achievements & Learning
+1. Have you completed any certifications, courses, or awards that demonstrate your skills? (Example: online courses, school achievements, coding certifications)
+2. Are there areas you feel you still need to develop to succeed in cybersecurity? (Example: advanced networking, SIEM tools, incident response, professional communication)
+
+After I answer all 15 questions, automatically:
+1. Generate 5 skills I already have that are useful or important in cybersecurity, based on my answers.
+2. Generate 3 additional skills I will need to develop for a career in cybersecurity, based on my answers.
+3. Remind me to use these answers to complete the worksheet unit 6 / 2.1 Identify skills required for a career in cybersecurity
+Do not ask for further clarification after the last question — just produce the lists. Start by asking me the first question now.`,
+
+  2.2: `I am a student completing a personal SWOT analysis to understand my skills and career potential. Ask me one question at a time, giving examples or hints to help me answer. Focus on the four areas of SWOT:
+* Strengths – Skills, qualities, or experiences I do well. (Examples: attention to detail, coding, problem-solving, teamwork, leadership.)
+* Weaknesses – Skills or areas I need to improve. (Examples: communication, confidence, cybersecurity terminology, time management.)
+* Opportunities – External factors I can take advantage of to improve or progress. (Examples: free online courses, mentorship, clubs, competitions, certifications.)
+* Threats – External factors that might make it harder to achieve my goals. (Examples: lack of mentorship, time constraints, competition, limited resources.)
+
+Ask me the following 5 guided questions for each SWOT area, giving examples if I am unsure:
+
+STRENGTHS
+1. What technical skills do you have that you are confident in? (Example: programming, networking, Linux/Windows, cybersecurity tools)
+2. What practical experiences or projects have you completed that show your abilities? (Example: home labs, school projects, competitions, CTFs)
+3. What personal qualities help you succeed in challenging tasks? (Example: attention to detail, problem-solving, persistence)
+4. What soft skills do you feel are your strongest? (Example: teamwork, communication, leadership, adaptability)
+5. Are there achievements or recognitions you are proud of that demonstrate your strengths? (Example: awards, certifications, completed courses)
+
+WEAKNESSES
+1. What technical skills do you feel you are lacking or not confident in? (Example: firewall management, SIEM tools, log analysis, advanced networking)
+2. Which soft skills could you improve to work more effectively in teams or projects? (Example: communication, time management, public speaking)
+3. Are there gaps in your practical experience that make you feel less prepared? (Example: few labs, limited hands-on practice, no CTF experience)
+4. Are there personal habits that sometimes hold you back? (Example: procrastination, difficulty prioritizing tasks)
+5. Do you find certain concepts or areas in cybersecurity difficult to understand? (Example: terminology, threat detection, incident response)
+
+OPPORTUNITIES
+1. What online courses, certifications, or resources are available to you to enhance your skills? (Example: free courses, vendor certifications like NSE4, YouTube tutorials)
+2. Are there clubs, communities, or competitions that could help you gain experience? (Example: cybersecurity clubs, CTF competitions, online forums)
+3. Can mentorship or networking opportunities help you progress? (Example: connecting with professionals, joining LinkedIn groups)
+4. Are there tools or software you could access to practice more effectively? (Example: virtual labs, simulation tools, coding platforms)
+5. Are there ways to gain practical experience through volunteering, internships, or personal projects? (Example: helping with small IT projects, participating in open-source projects)
+
+THREATS
+1. Are there time constraints that make it hard to dedicate hours to learning or practice? (Example: school, work, family commitments)
+2. Are there financial limitations affecting your ability to access courses, labs, or tools?
+3. Could lack of mentorship or guidance slow your progress?
+4. Is competition or high standards in cybersecurity a concern for you?
+5. Are there personal challenges that could prevent consistent learning or skill development? (Example: motivation, stress, limited access to equipment)
+
+After I answer all 20 questions across the four SWOT areas, automatically:
+1. Summarise my SWOT analysis in a clear, organised table or list.
+2. Suggest 5 actionable personal development ideas or goals based on my SWOT.
+3. Remind me to use these answers to complete the worksheet unit 6 / 2.2 Perform a personal skills analysis
+Start by asking me the first question for Strengths, giving examples and hints if I'm unsure.`,
+
+  2.3: `I am a student assessing my own skills against those required for a career in cybersecurity. Ask me guided questions one at a time, giving examples or hints to help me reflect on:
+* Technical skills (programming languages, networking, operating systems, cybersecurity tools)
+* Practical experience (home labs, projects, CTF challenges, simulations)
+* Soft skills (communication, problem-solving, attention to detail, teamwork, adaptability)
+* Achievements and learning gaps (certifications, completed courses, areas I need to improve)
+
+Ask questions like the following (15 in total):
+
+Technical Skills
+1. What programming languages do you already know that could help in cybersecurity? (Example: Python, Java, Bash)
+2. What networking knowledge or experience do you have? (Example: TCP/IP, routers, switches, configuring networks)
+3. Which operating systems are you comfortable using? (Example: Linux, Windows, macOS)
+4. Have you used any cybersecurity tools or software? (Example: Wireshark, Nmap, firewalls, SIEM tools)
+5. Do you understand any security concepts or frameworks? (Example: encryption, threat modeling, incident response)
+
+Practical Experience
+1. Have you completed any hands-on projects or home labs related to cybersecurity?
+2. Have you participated in Capture The Flag (CTF) competitions, hackathons, or challenges?
+3. Have you contributed to open-source projects, coding projects, or personal IT projects?
+4. Do you have experience analyzing data, logs, or system behavior for insights or security issues?
+5. Have you had internships, volunteering, or practical work relevant to cybersecurity?
+
+Soft Skills & Achievements
+1. What problem-solving or analytical skills do you feel confident about?
+2. What communication or teamwork skills do you have? (Example: explaining technical issues clearly, working in groups)
+3. What personal qualities help you succeed under pressure or in challenging tasks? (Example: attention to detail, persistence, adaptability)
+4. Have you completed any certifications, courses, or awards that show your skills? (Example: online courses, school achievements, coding certifications)
+5. Are there areas or skills you feel you still need to develop to succeed in cybersecurity? (Example: advanced networking, SIEM tools, incident response, professional communication)
+
+After I answer all 15 questions, automatically generate a table with at least 8 rows:
+| Your Skills | Skills Required for Cybersecurity | Assessment / Skills to Develop |
+Make sure the table compares my current skills to common cybersecurity requirements and highlights areas I need to improve. The student can then pick 3 of the most relevant rows. Do not ask for further clarification — just produce the table. Start by asking me the first question now.`,
+
+  2.4: `I am a student working on NCFE Level 3 Cybersecurity and need to answer 17 preparation questions before creating my personal development plan with 5 SMART goals.
+
+Please ask me these questions ONE AT A TIME and wait for my response before moving to the next question:
+
+SECTION 1: Understanding Where I Am Now
+1. What certifications or qualifications am I currently working on or have completed?
+2. What technical skills do I currently have? (programming languages, cybersecurity knowledge, tools)
+3. What practical experience do I have? (projects, home labs, hands-on practice)
+4. What are my strongest skills right now?
+5. What skills or knowledge do I feel I'm lacking?
+
+SECTION 2: Understanding My Career Goals
+6. What specific cybersecurity role am I aiming for?
+7. What skills does this role require that I don't have yet?
+8. What motivates me to pursue this career path?
+
+SECTION 3: Understanding My Constraints and Resources
+9. How many hours per week can I realistically dedicate to learning and development?
+10. What resources do I have access to? (free training, budget, equipment, software)
+11. What obstacles might prevent me from achieving my goals?
+12. When do I want to achieve my main career goal?
+
+SECTION 4: Identifying My Specific Goals
+13. What certification do I want to complete next and by when?
+14. What technical skill do I most need to develop for my target role?
+15. What practical project or hands-on experience would strengthen my portfolio?
+16. What soft skill do I need to improve?
+17. What else would help me become more employable in cybersecurity?
+
+After I answer all 17 questions, please automatically generate:
+1. Summarise my answers in a clear, organised format
+2. Suggest 5 potential SMART goals based on my answers
+3. Remind me to use these answers to complete the worksheet unit 6 / 2.4 Create a personal development plan
+Do not ask for further clarification after the last question — just produce the answers. Start by asking me the first question now.`,
+};
+
+// SECTION INFORMATION
+const SECTION_INFO = {
+  2.1: {
+    title: "Unit 6 | Section 2.1: Identify Skills",
+    fullTitle: "Identify skills required for a career in cybersecurity",
+    questions: 15,
+    icon: "🎯",
+  },
+  2.2: {
+    title: "Unit 6 | Section 2.2: Perform SWOT Analysis",
+    fullTitle: "Perform a personal skills analysis",
+    questions: 20,
+    icon: "📊",
+  },
+  2.3: {
+    title: "Unit 6 | Section 2.3: Skills Assessment",
+    fullTitle:
+      "Assess own skills against those required for a career in cybersecurity",
+    questions: 15,
+    icon: "⚖️",
+  },
+  2.4: {
+    title: "Unit 6 | Section 2.4: Create SMART PDP",
+    fullTitle: "Create a personal development plan",
+    questions: 17,
+    icon: "🎓",
+  },
+};
+
+// AI Platform URLs
+const AI_PLATFORMS = {
+  chatgpt: {
+    name: "ChatGPT",
+    url: "https://chat.openai.com/",
+  },
+  claude: {
+    name: "Claude",
+    url: "https://claude.ai/new",
+  },
+  gemini: {
+    name: "Google Gemini",
+    url: "https://gemini.google.com/",
+  },
+  deepseek: {
+    name: "DeepSeek",
+    url: "https://chat.deepseek.com/",
+  },
+};
+
+// State management
+let currentSection = null;
+let promptCopied = false; // Track if prompt has been copied
+
+// PDP DOM Elements
+const pdpView = document.getElementById("pdpView");
+const pdpBackBtn = document.getElementById("pdpBackBtn");
+const sectionChooser = document.getElementById("sectionChooser");
+const methodChooser = document.getElementById("methodChooser");
+const promptDisplay = document.getElementById("promptDisplay");
+const backToSections = document.getElementById("backToSections");
+const backToSections2 = document.getElementById("backToSections2");
+const methodSectionTitle = document.getElementById("methodSectionTitle");
+const promptSectionTitle = document.getElementById("promptSectionTitle");
+const useAIBtn = document.getElementById("useAIBtn");
+const downloadPdfBtn = document.getElementById("downloadPdfBtn");
+const copyPromptBtn = document.getElementById("copyPromptBtn");
+const aiPromptText = document.getElementById("aiPromptText");
+const aiPlatformSection = document.getElementById("aiPlatformSection");
+const aiSuccessMessage = document.getElementById("aiSuccessMessage");
+const copyWarningModal = document.getElementById("copyWarningModal");
+const copyWarningOkBtn = document.getElementById("copyWarningOkBtn");
+const copyWarningClose = document.getElementById("copyWarningClose");
+
+// =========================
+// PAGE 1: SECTION CHOOSER
+// =========================
+
+// PDP Button Click Handler - Show section chooser
+document.querySelectorAll(".pdp-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    showSectionChooser();
+  });
+});
+
+function showSectionChooser() {
+  homepage.classList.add("hidden");
+  pdpView.classList.remove("hidden");
+  sectionChooser.classList.remove("hidden");
+  methodChooser.classList.add("hidden");
+  promptDisplay.classList.add("hidden");
+  window.scrollTo(0, 0);
+}
+
+// Section Card Click Handlers - Entire card is clickable
+document.querySelectorAll(".section-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const section = card.dataset.section;
+    currentSection = section;
+    showMethodChooser(section);
+  });
+});
+
+// =========================
+// PAGE 2: METHOD CHOOSER
+// =========================
+
+function showMethodChooser(section) {
+  const sectionData = SECTION_INFO[section];
+  methodSectionTitle.textContent = sectionData.title;
+
+  sectionChooser.classList.add("hidden");
+  methodChooser.classList.remove("hidden");
+  promptDisplay.classList.add("hidden");
+  window.scrollTo(0, 0);
+}
+
+// Back to Sections Button
+backToSections.addEventListener("click", () => {
+  methodChooser.classList.add("hidden");
+  sectionChooser.classList.remove("hidden");
+  window.scrollTo(0, 0);
+});
+
+// Back to Sections Button 2 (from prompt display)
+backToSections2.addEventListener("click", () => {
+  promptDisplay.classList.add("hidden");
+  aiSuccessMessage.classList.add("hidden");
+  sectionChooser.classList.remove("hidden");
+  window.scrollTo(0, 0);
+});
+
+// Use AI Assistant Button
+useAIBtn.addEventListener("click", () => {
+  showPromptDisplay(currentSection);
+});
+
+// Make entire AI Assistant card clickable
+document.querySelectorAll(".method-card").forEach((card) => {
+  card.addEventListener("click", (e) => {
+    // Check if click is on the AI Assistant card (has useAIBtn inside)
+    if (card.querySelector("#useAIBtn")) {
+      showPromptDisplay(currentSection);
+    }
+    // Check if click is on the Download PDF card (has downloadPdfBtn inside)
+    else if (card.querySelector("#downloadPdfBtn")) {
+      const link = document.createElement("a");
+      link.href = "Unit_6_PDP_Questions.pdf";
+      link.download = "Unit_6_PDP_Questions.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  });
+});
+
+// Download PDF Button (keep for button click too)
+downloadPdfBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // Prevent card click from firing too
+  const link = document.createElement("a");
+  link.href = "Unit_6_PDP_Questions.pdf";
+  link.download = "Unit_6_PDP_Questions.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+
+// =========================
+// PAGE 3: PROMPT + AI PLATFORMS (Both visible)
+// =========================
+
+function showPromptDisplay(section) {
+  const sectionData = SECTION_INFO[section];
+  promptSectionTitle.textContent = `${sectionData.title}: AI Prompt`;
+  aiPromptText.value = AI_PROMPTS[section];
+
+  methodChooser.classList.add("hidden");
+  promptDisplay.classList.remove("hidden");
+  aiSuccessMessage.classList.add("hidden");
+
+  // Reset copy state
+  promptCopied = false;
+
+  // Reset copy button
+  copyPromptBtn.textContent = "📋 Copy prompt";
+  copyPromptBtn.style.background = "";
+
+  window.scrollTo(0, 0);
+}
+
+// Copy Prompt to Clipboard
+if (copyPromptBtn) {
+  copyPromptBtn.addEventListener("click", () => {
+    console.log("Copy button clicked!");
+    aiPromptText.select();
+    aiPromptText.setSelectionRange(0, 99999); // For mobile
+
+    try {
+      document.execCommand("copy");
+
+      // Mark as copied
+      promptCopied = true;
+      console.log("Prompt copied successfully, promptCopied =", promptCopied);
+
+      // Visual feedback
+      copyPromptBtn.textContent = "✓ Copied!";
+      copyPromptBtn.style.background = "#4caf50";
+
+      // Reset button after 2 seconds
+      setTimeout(() => {
+        copyPromptBtn.textContent = "📋 Copy prompt";
+        copyPromptBtn.style.background = "";
+      }, 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+      alert("Copy failed. Please try selecting and copying manually.");
+    }
+  });
+} else {
+  console.error("❌ copyPromptBtn not found!");
+}
+
+// =========================
+// PAGE 4: AI PLATFORM SELECTION (Already visible on page 3)
+// =========================
+
+// AI Platform Button Handlers - Check if copied first
+const aiCards = document.querySelectorAll(".ai-platform-card");
+console.log("Found", aiCards.length, "AI cards");
+
+aiCards.forEach((card) => {
+  card.addEventListener("click", (e) => {
+    console.log("AI card clicked! promptCopied =", promptCopied);
+
+    // Check if prompt has been copied
+    if (!promptCopied) {
+      console.log("Showing warning modal");
+      // Show warning modal
+      if (copyWarningModal) {
+        copyWarningModal.classList.remove("hidden");
+      } else {
+        console.error("❌ copyWarningModal not found!");
+        alert("Please copy the prompt first!");
+      }
+      return;
+    }
+
+    console.log("Prompt was copied, proceeding...");
+    // If copied, proceed
+    const platform = card.dataset.platform;
+    const platformData = AI_PLATFORMS[platform];
+
+    // Open AI platform in new tab
+    window.open(platformData.url, "_blank");
+
+    // Show success message
+    showSuccessInstructions(platformData.name);
+  });
+});
+
+// Close copy warning modal
+if (copyWarningOkBtn) {
+  copyWarningOkBtn.addEventListener("click", () => {
+    copyWarningModal.classList.add("hidden");
+  });
+} else {
+  console.error("❌ copyWarningOkBtn not found!");
+}
+
+// Close button (X) handler
+if (copyWarningClose) {
+  copyWarningClose.addEventListener("click", () => {
+    copyWarningModal.classList.add("hidden");
+  });
+}
+
+// Close modal when clicking outside
+if (copyWarningModal) {
+  copyWarningModal.addEventListener("click", (e) => {
+    if (e.target === copyWarningModal) {
+      copyWarningModal.classList.add("hidden");
+    }
+  });
+} else {
+  console.error("❌ copyWarningModal not found!");
+}
+
+// =========================
+// PAGE 5: SUCCESS SCREEN (Simplified - just "Go Back" button)
+// =========================
+
+function showSuccessInstructions(aiName) {
+  const sectionData = SECTION_INFO[currentSection];
+
+  aiSuccessMessage.innerHTML = `
+    <div class="success-content">
+      <div class="success-icon">✓</div>
+      <h3>✓ Prompt Copied Successfully!</h3>
+      <p class="success-subtitle">
+        ${aiName} is now open in a new tab
+      </p>
+      
+      <div class="next-steps">
+        <h4>📝 What to do next:</h4>
+        <ol>
+          <li>Paste the prompt into ${aiName} (Ctrl+V or Cmd+V)</li>
+          <li>Answer all ${sectionData.questions} questions one by one</li>
+          <li>${aiName} will provide personalized insights</li>
+          <li>Use the outputs to complete Unit 6 worksheet</li>
+        </ol>
+      </div>
+      
+      <button class="success-btn" id="successGoBackBtn">
+        ← Go Back
+      </button>
+    </div>
+  `;
+  aiSuccessMessage.classList.remove("hidden");
+
+  // Scroll to success message
+  setTimeout(() => {
+    aiSuccessMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, 100);
+
+  // Add event listener to Go Back button - returns to AI selection
+  document.getElementById("successGoBackBtn").addEventListener("click", () => {
+    aiSuccessMessage.classList.add("hidden");
+    window.scrollTo(0, 0);
+  });
+}
+
+// PDP Main Back Button (top left)
+pdpBackBtn.addEventListener("click", () => {
+  pdpView.classList.add("hidden");
+  homepage.classList.remove("hidden");
+  window.scrollTo(0, 0);
+});
+
+console.log("✅ Unit 6 PDP System Initialized!");
+console.log("📋 4 Section Prompts Loaded:", Object.keys(AI_PROMPTS));
+console.log("🔍 DOM Elements Check:");
+console.log("  copyPromptBtn:", copyPromptBtn);
+console.log("  copyWarningModal:", copyWarningModal);
+console.log(
+  "  AI cards count:",
+  document.querySelectorAll(".ai-platform-card").length,
+);

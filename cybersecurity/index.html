@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cybersecurity Study & Practice - NCFE Level 3</title>
+    <title>Cybersecurity Learn & Practice - NCFE Level 3</title>
     <link rel="stylesheet" href="styles.css" />
     <!-- EmailJS Library -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -22,7 +22,7 @@
          =========================== -->
     <div id="homepage" class="homepage">
       <header class="header">
-        <h1>🛡️ Cybersecurity Study & Practice - NCFE Level 3</h1>
+        <h1>🛡️ Cybersecurity Learn & Practice - NCFE Level 3</h1>
         <p class="subtitle">Choose a unit to begin</p>
       </header>
 
@@ -100,6 +100,21 @@
               📚 Study Flashcards
             </button>
             <button class="quiz-btn" data-unit="Unit 5">📝 Take Quiz</button>
+          </div>
+        </div>
+
+        <!-- Unit 6 - NEW -->
+        <div class="unit-card">
+          <h3 class="unit-card-title">
+            🎓 Unit 6 - Personal and Professional Development in Cyber Security
+          </h3>
+          <div class="unit-buttons">
+            <button class="study-btn" data-unit="Unit 6">
+              📚 Study Flashcards
+            </button>
+            <button class="pdp-btn" data-unit="Unit 6">
+              📋 Build Your PDP
+            </button>
           </div>
         </div>
       </div>
@@ -675,6 +690,226 @@
             Best of luck in your cybersecurity career!
           </p>
         </div>
+      </div>
+    </div>
+
+    <!-- ===========================
+         PDP VIEW - PAGE 1: SECTION CHOOSER
+         =========================== -->
+    <div id="pdpView" class="pdp-view hidden">
+      <button id="pdpBackBtn" class="back-btn">← Home</button>
+
+      <div class="pdp-header">
+        <h2>🎓 Build Your Personal Development Plan</h2>
+        <p class="pdp-subtitle">Choose a section to work on</p>
+      </div>
+
+      <!-- Section Chooser -->
+      <div id="sectionChooser" class="section-chooser">
+        <div class="section-grid">
+          <!-- Section 2.1 -->
+          <div class="section-card" data-section="2.1">
+            <div class="section-icon">🎯</div>
+            <h3>Unit 6 | Section 2.1</h3>
+            <p class="section-title">Identify Skills</p>
+            <p class="section-description">
+              15 questions about your technical and soft skills
+            </p>
+          </div>
+
+          <!-- Section 2.2 -->
+          <div class="section-card" data-section="2.2">
+            <div class="section-icon">📊</div>
+            <h3>Unit 6 | Section 2.2</h3>
+            <p class="section-title">Perform SWOT Analysis</p>
+            <p class="section-description">
+              20 questions analyzing your strengths and opportunities
+            </p>
+          </div>
+
+          <!-- Section 2.3 -->
+          <div class="section-card" data-section="2.3">
+            <div class="section-icon">⚖️</div>
+            <h3>Unit 6 | Section 2.3</h3>
+            <p class="section-title">Skills Assessment</p>
+            <p class="section-description">
+              15 questions comparing your skills to career requirements
+            </p>
+          </div>
+
+          <!-- Section 2.4 -->
+          <div class="section-card" data-section="2.4">
+            <div class="section-icon">🎓</div>
+            <h3>Unit 6 | Section 2.4</h3>
+            <p class="section-title">Create SMART PDP</p>
+            <p class="section-description">
+              17 questions to build your SMART goals
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 2: METHOD CHOOSER (Hidden initially) -->
+      <div id="methodChooser" class="method-chooser hidden">
+        <div class="method-header">
+          <button id="backToSections" class="back-link">
+            ← Choose Different Section
+          </button>
+          <h2 id="methodSectionTitle">Section 2.1: Identify Skills</h2>
+          <p class="method-subtitle">Choose your preferred method</p>
+        </div>
+
+        <div class="method-grid">
+          <!-- AI Assistant Card -->
+          <div class="method-card">
+            <div class="card-icon">🤖</div>
+            <h3>AI Assistant</h3>
+            <p class="card-description">Get guided help from AI</p>
+            <ul class="card-features">
+              <li>✓ Step-by-step guidance</li>
+              <li>✓ Get started quickly</li>
+              <li>✓ Smart suggestions</li>
+            </ul>
+            <button class="card-btn card-btn-ai" id="useAIBtn">
+              Use AI Assistant
+            </button>
+          </div>
+
+          <!-- Printable Worksheet Card -->
+          <div class="method-card">
+            <div class="card-icon">📄</div>
+            <h3>Printable Worksheet</h3>
+            <p class="card-description">Work on paper at your own pace</p>
+            <ul class="card-features">
+              <li>✓ Thoughtful reflection</li>
+              <li>✓ Print and fill by hand</li>
+              <li>✓ Take your time</li>
+            </ul>
+            <button class="card-btn card-btn-print" id="downloadPdfBtn">
+              Download PDF
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 3: PROMPT DISPLAY (Hidden initially) -->
+      <div id="promptDisplay" class="prompt-display hidden">
+        <div class="prompt-header">
+          <button id="backToSections2" class="back-link">
+            ← Choose Different Section
+          </button>
+          <h2 id="promptSectionTitle">Section 2.1: AI Prompt</h2>
+          <p class="prompt-subtitle">
+            Copy this prompt to use with any AI assistant
+          </p>
+        </div>
+
+        <div class="prompt-section">
+          <div class="prompt-box">
+            <textarea id="aiPromptText" readonly></textarea>
+          </div>
+          <button class="copy-prompt-btn" id="copyPromptBtn">
+            📋 Copy prompt
+          </button>
+        </div>
+
+        <!-- PAGE 4: AI PLATFORM SELECTION (Visible immediately) -->
+        <div id="aiPlatformSection" class="ai-platform-section">
+          <h3>Choose Your AI Assistant</h3>
+          <p class="platform-subtitle">Select which AI you'd like to use</p>
+
+          <div class="ai-platform-grid">
+            <!-- ChatGPT -->
+            <div class="ai-platform-card" data-platform="chatgpt">
+              <img
+                src="images/chatgpt-logo.png"
+                alt="ChatGPT"
+                class="platform-logo"
+              />
+              <h4>ChatGPT</h4>
+              <p class="platform-subtitle">OpenAI's assistant</p>
+              <button class="platform-btn platform-chatgpt">
+                Open ChatGPT →
+              </button>
+            </div>
+
+            <!-- Claude -->
+            <div class="ai-platform-card" data-platform="claude">
+              <img
+                src="images/claude-logo.png"
+                alt="Claude"
+                class="platform-logo"
+              />
+              <h4>Claude</h4>
+              <p class="platform-subtitle">Anthropic's assistant</p>
+              <button class="platform-btn platform-claude">
+                Open Claude →
+              </button>
+            </div>
+
+            <!-- Google Gemini -->
+            <div class="ai-platform-card" data-platform="gemini">
+              <img
+                src="images/gemini-logo.png"
+                alt="Google Gemini"
+                class="platform-logo"
+              />
+              <h4>Google Gemini</h4>
+              <p class="platform-subtitle">Google's AI assistant</p>
+              <button class="platform-btn platform-gemini">
+                Open Gemini →
+              </button>
+            </div>
+
+            <!-- DeepSeek -->
+            <div class="ai-platform-card" data-platform="deepseek">
+              <img
+                src="images/deepseek-logo.png"
+                alt="DeepSeek"
+                class="platform-logo"
+              />
+              <h4>DeepSeek</h4>
+              <p class="platform-subtitle">Advanced AI model</p>
+              <button class="platform-btn platform-deepseek">
+                Open DeepSeek →
+              </button>
+            </div>
+          </div>
+
+          <div class="platform-note">
+            💡 All these AI assistants are free to use! You may need to create
+            an account first.
+          </div>
+        </div>
+
+        <!-- PAGE 5: SUCCESS SCREEN (Shows after clicking AI) -->
+        <div id="aiSuccessMessage" class="ai-success-message hidden">
+          <!-- Content will be inserted by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================
+         NO MODAL NEEDED - Removed Go Back Modal
+         =========================== -->
+
+    <!-- ===========================
+         COPY WARNING MODAL
+         =========================== -->
+    <div id="copyWarningModal" class="modal-overlay hidden">
+      <div class="modal-content copy-warning-modal">
+        <button class="modal-close" id="copyWarningClose">×</button>
+        <div class="warning-header">
+          <div class="warning-icon">⚠️</div>
+          <h2>Please copy the prompt first!</h2>
+        </div>
+        <p class="warning-message">
+          Copy the prompt above, then choose your AI assistant.
+        </p>
+        <p class="warning-note">
+          This ensures you have the prompt ready to paste into the AI.
+        </p>
+        <button class="warning-btn" id="copyWarningOkBtn">OK, Got it!</button>
       </div>
     </div>
 

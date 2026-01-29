@@ -1,8 +1,8 @@
-# 🛡️ Cybersecurity Study & Practice Platform
+# 🛡️ CyberLab - Cybersecurity Learning Platform
 
 ## NCFE Level 3 Cybersecurity Course - Interactive Learning System
 
-A comprehensive web-based study platform designed for NCFE Level 3 Cybersecurity students, featuring interactive flashcards, practice quizzes, baseline knowledge assessment, and automated feedback collection with real-time email notifications to tutors.
+A comprehensive web-based study platform designed for NCFE Level 3 Cybersecurity students, featuring interactive flashcards, practice quizzes, comprehensive knowledge assessment, and AI-powered Personal Development Planning with multi-platform integration.
 
 ---
 
@@ -10,32 +10,30 @@ A comprehensive web-based study platform designed for NCFE Level 3 Cybersecurity
 
 - [Overview](#overview)
 - [Current Features](#current-features)
-- [New Features (December 2025)](#new-features-december-2025)
+- [Unit 6 PDP System](#unit-6-pdp-system)
 - [Technical Stack](#technical-stack)
 - [File Structure](#file-structure)
-- [How to Access](#-how-to-access)
 - [Usage Guide](#usage-guide)
 - [Unit Content](#unit-content)
 - [Quiz System](#quiz-system)
 - [Knowledge Check System](#knowledge-check-system)
-- [Feedback System](#feedback-system)
-- [EmailJS Info](#emailjs-integration)
+- [PDP AI Integration](#pdp-ai-integration)
 - [Browser Compatibility](#browser-compatibility)
-- [Customization](#customization)
-- [Future Development](#future-development)
-- [Known Issues](#known-issues)
 - [Version History](#version-history)
-- [Credits](#credits)
+- [About the Developer](#about-the-developer)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Support & Feedback](#support--feedback)
 
 ---
 
 ## 🎯 Overview
 
-This platform provides an interactive learning experience for students studying NCFE Level 3 Cybersecurity. It combines traditional flashcard-based learning with comprehensive quiz assessments, baseline knowledge testing, and automated feedback collection to help both students and tutors track learning progress and continuously improve course content.
+CyberLab provides an interactive learning experience for students studying NCFE Level 3 Cybersecurity. It combines traditional flashcard-based learning with comprehensive quiz assessments, baseline knowledge testing, and AI-powered Personal Development Planning to help students master cybersecurity concepts and plan their career path.
 
-**Current Status:** Fully functional standalone web application with feedback integration  
-**Current Version:** 2.0 (December 2025)  
-**Target Audience:** NCFE Level 3 Cybersecurity students (10-person class)  
+**Current Status:** Fully functional standalone web application with AI integration  
+**Current Version:** 3.0 (January 2026)  
+**Target Audience:** NCFE Level 3 Cybersecurity students  
 **Deployment:** Local/self-hosted website or GitHub Pages
 
 ---
@@ -50,16 +48,25 @@ This platform provides an interactive learning experience for students studying 
 - Keyboard navigation (SPACE to flip, ← → arrows to navigate)
 - Progress tracking with visual progress bar
 - Completion screen with animations
-- 5 comprehensive units covering all NCFE Level 3 topics
+- 6 comprehensive units covering all NCFE Level 3 topics
 
 **Features:**
 
-- ✅ Over 50 flashcards per unit (320+ total)
+- ✅ 91 flashcards across 6 units
 - ✅ Smooth flip animations
 - ✅ Keyboard shortcuts for efficient studying
-- ✅ Progress counter (e.g., "12 / 25")
+- ✅ Progress counter (e.g., "12 / 91")
 - ✅ Completion celebration with sparkle effects
 - ✅ "Take Quiz" prompt after completion
+
+**Units Covered:**
+
+- Unit 1: Understand Principles of Cyber Security
+- Unit 2: Threat Intelligence in Cyber Security
+- Unit 3: Cyber Security Testing, Vulnerabilities and Controls
+- Unit 4: Cyber Security Incident Response
+- Unit 5: Understand Legislation and Ethical Conduct within Cyber Security
+- Unit 6: Personal and Professional Development in Cyber Security
 
 ### 📝 Quiz System
 
@@ -76,64 +83,91 @@ This platform provides an interactive learning experience for students studying 
 
 1. **Unit Quizzes** (5 units)
    - Unit-specific questions
-   - 50 questions per unit
+   - 50 questions per unit (250+ total)
    - Immediate feedback
+   - Hint system with toggle button
 2. **BIG 100 Challenge**
-   - 100 questions covering all units
+   - 100 questions covering all 5 core units
    - Comprehensive final assessment
    - Mixed difficulty levels
+   - Full knowledge check
 
 **Features:**
 
 - ✅ Randomized answer order (A/B/C/D shuffled each attempt)
 - ✅ Skip questions (marked for review)
-- ✅ Review skipped questions anytime
+- ✅ Review skipped questions anytime with modal
 - ✅ Warning before finishing with unanswered or skipped questions
 - ✅ Previous/Next navigation (Next always enabled)
-- ✅ Detailed score breakdown
+- ✅ Detailed score breakdown with visual indicators
 - ✅ Review all questions after completion
-- ✅ **Automatic feedback prompt 3 seconds after completion**
+- ✅ Timer tracking for performance metrics
+
+**Hint System:**
+
+- 💡 "Need a hint?" button on every question
+- Click to toggle hint visibility
+- Arrow indicator (▼ / ▲) shows state
+- Hints provide guidance without giving away answer
+- Optional - students can choose to use or ignore
+
+**Skipped Questions Management:**
+
+- "📋 Skipped (X)" button appears when questions skipped
+- Click to open modal with full list
+- Shows question number and text for each skipped question
+- "Go to Question X" button for each item
+- Jump directly to any skipped question
+- Answer skipped questions anytime (automatically removes from list)
+- Warning dialog if attempting to finish with unanswered questions
+- Skipped count visible in warning: "You have X unanswered or skipped questions"
+- Options: "Review Skipped" or "Finish Anyway"
 
 ### 🎨 User Interface
 
 **Modern Design:**
 
 - Dark gradient background with glassmorphism effects
-- Color-coded units:
+- Color-coded system:
   - 🟢 Green (mint/teal gradient) = Flashcards & study buttons
-  - 🟣 Purple gradient = Quizzes & Knowledge Check
-  - 🟠 Orange gradient = Feedback prompts & skip button (high visibility)
+  - 🟣 Purple gradient = Quizzes, Knowledge Check, PDP AI buttons
+  - 🟠 Orange gradient = PDP Build button, warning prompts
+  - 🔵 Blue gradient = Success states
 - Responsive layout (works on desktop, tablet, mobile)
 - Smooth animations and transitions
-- Professional typography (Inter font family)
+- Professional typography (Segoe UI, Tahoma, Geneva)
 
 **Visual Feedback:**
 
-- ✅ Correct answers: Green highlighting
-- ❌ Wrong answers: Red highlighting
+- ✅ Correct answers: Green highlighting with checkmark
+- ❌ Wrong answers: Red highlighting with X
 - ⚠️ Skipped questions: Orange highlighting
 - 🎉 Confetti animation for high scores (80%+)
 - ✨ Sparkle effects for flashcard completion
-- 🟠 **Pulsing orange feedback prompts (centered, impossible to miss)**
+- 💫 Smooth card flip animations
+- 🌈 Gradient hover effects on interactive elements
 
 ### 📊 Progress Tracking
 
 **Current Tracking:**
 
-- Quiz progress bar (top of quiz screen)
-- Question counter (e.g., "42 / 89")
+- Quiz progress bar (header - top of screen)
+- Question counter in header (e.g., "42 / 50")
+- Footer progress bar with current question indicator
 - Skipped questions counter with review button
 - Score calculation (correct/total)
 - Accuracy percentage
+- Time tracking (displayed on results)
 
 **Score Breakdown:**
 
 ```
-✓ Correct: 40 (green)
-✗ Wrong: 5 (red)
-⚠️ Skipped/Unanswered: 5 (orange)
+✓ Correct: 40 (green indicator)
+✗ Wrong: 5 (red indicator)
+⚠️ Skipped/Unanswered: 5 (orange indicator)
 
 Score: 40/50 (80%)
+Time: 5 minutes 23 seconds
 ```
 
 ### 🎯 Smart Features
@@ -141,17 +175,10 @@ Score: 40/50 (80%)
 **Navigation:**
 
 - Next button always enabled (auto-skips unanswered questions)
-- Previous button to review earlier questions
-- Skip button to explicitly mark questions
-- Finish button on last question
-
-**Skipped Questions Management:**
-
-- "📋 Skipped (X)" button appears when questions skipped
-- Click to see full list of skipped questions
-- Jump directly to any skipped question
-- Answer skipped questions anytime (removes from list)
-- Warning dialog if attempting to finish with unanswered questions
+- Previous button to review earlier questions (disabled on Q1)
+- Skip button to explicitly mark questions for review
+- Finish button appears on last question
+- Warning modal if unanswered questions exist
 
 **Completion Features:**
 
@@ -161,1584 +188,767 @@ Score: 40/50 (80%)
   - 50-79%: "🚀 Good Progress! Keep pushing forward!"
   - <50%: "🌱 Keep Growing! Review and try again!"
 - Option to retake quiz (answers reshuffled)
-- **Automatic feedback prompt appears 3 seconds after results**
 - Review mode to see all questions and correct answers
-- Return to homepage
+- Review screen shows:
+  - Your answer (highlighted red if wrong)
+  - Correct answer (highlighted green)
+  - Explanation for each question
+  - Question number and navigation
+- Return to homepage button
+- Three action buttons: Review Questions | Retake Quiz | Home
 
 ---
 
-## 🆕 New Features (December 2025)
+## 🆕 Unit 6 PDP System
 
-### 📋 Knowledge Check Quiz
+### 📋 Personal Development Plan Builder
 
-**40-Question Baseline Assessment for New Students:**
+**Complete 4-Section System:**
 
-- Optional entry-level assessment quiz
-- Multiple-choice format (A/B/C/D)
-- Tests fundamental cybersecurity concepts
-- No pass/fail - completion-based
-- Immediate results display
-- Score calculation with percentage
-- Can be retaken anytime
+Unit 6 offers a comprehensive Personal Development Plan system with 67 total questions across 4 sections, designed to help students assess their skills, analyze their strengths/weaknesses, and create actionable career development goals.
 
-**Purpose:**
+### Section 2.1: Identify Skills (15 Questions)
 
-- Assess baseline knowledge before starting course
-- Identify areas needing focus
-- Help students understand their starting point
-- Build confidence before tackling units
+**Purpose:** Evaluate your current technical and soft skills
 
-**Access:**
+**Question Categories:**
 
-- Prominent purple button on homepage: "📋 New Student? Knowledge Check"
-- Appears in its own centered section below header
-- Description: "Test your baseline knowledge with 40 questions"
-- Optional - students can skip and access course directly
+- **Technical Skills (5 questions):**
+  - Programming languages (Python, Java, C++)
+  - Networking knowledge (TCP/IP, routers, switches)
+  - Operating systems (Linux, Windows, macOS)
+  - Cybersecurity tools (Wireshark, Nmap, Metasploit, firewalls)
+  - Security concepts (encryption, threat modeling, incident response)
 
-**Features:**
+- **Practical Experience (5 questions):**
+  - Hands-on projects and home labs
+  - CTF competitions and hackathons
+  - Open-source contributions and coding projects
+  - Data/log analysis experience
+  - Internships and practical work
 
-- ✅ Name input required (minimum 2 characters)
-- ✅ Progress bar showing completion (Question X/40)
-- ✅ Previous/Next navigation
-- ✅ All 40 questions must be answered before submission
-- ✅ Results show score (X/40) and percentage
-- ✅ Clean, professional UI with purple gradient theme
-- ✅ Mobile responsive
+- **Soft Skills (3 questions):**
+  - Problem-solving and analytical abilities
+  - Communication and teamwork skills
+  - Personal qualities under pressure (attention to detail, persistence)
 
-**Workflow:**
+- **Achievements & Learning (2 questions):**
+  - Certifications, courses, awards
+  - Areas needing development
 
-```
-Click "📋 Knowledge Check" button
-        ↓
-Enter your name
-        ↓
-Answer all 40 questions (with Previous/Next)
-        ↓
-Submit on last question
-        ↓
-View results immediately (score + percentage)
-        ↓
-Start learning or retake!
-```
+**AI Output:**
 
-**Note:** Results are displayed on-screen but not emailed to tutors (can be added in Phase 2 if needed)
+- 5 existing skills you have
+- 3 additional skills to develop
+- Worksheet completion reminder
+
+### Section 2.2: Perform SWOT Analysis (20 Questions)
+
+**Purpose:** Conduct comprehensive personal SWOT analysis
+
+**Question Categories:**
+
+- **Strengths (5 questions):**
+  - Technical skills confidence
+  - Practical projects and experiences
+  - Personal qualities in challenging tasks
+  - Strongest soft skills
+  - Achievements and recognitions
+
+- **Weaknesses (5 questions):**
+  - Technical skill gaps
+  - Soft skills needing improvement
+  - Practical experience limitations
+  - Personal habits holding you back
+  - Difficult cybersecurity concepts
+
+- **Opportunities (5 questions):**
+  - Available courses and certifications
+  - Clubs, communities, competitions
+  - Mentorship and networking possibilities
+  - Tools and software access
+  - Volunteering and project opportunities
+
+- **Threats (5 questions):**
+  - Time constraints
+  - Financial limitations
+  - Lack of mentorship/guidance
+  - Competition concerns
+  - Personal challenges to learning
+
+**AI Output:**
+
+- SWOT table or organized list
+- 5 actionable personal development goals
+- Worksheet completion reminder
+
+### Section 2.3: Skills Assessment (15 Questions)
+
+**Purpose:** Compare your skills against career requirements
+
+**Question Categories:**
+
+- **Technical Skills (5 questions):**
+  - Programming languages for cybersecurity
+  - Networking knowledge and experience
+  - Operating system proficiency
+  - Cybersecurity tools usage
+  - Security concepts understanding
+
+- **Practical Experience (5 questions):**
+  - Completed projects and home labs
+  - CTF/hackathon participation
+  - Open-source contributions
+  - Data/log analysis capabilities
+  - Relevant work experience
+
+- **Soft Skills & Achievements (5 questions):**
+  - Problem-solving confidence
+  - Communication abilities
+  - Personal success qualities
+  - Completed certifications/courses
+  - Skills requiring development
+
+**AI Output:**
+
+- Comparison table (8+ rows):
+  - Your Skills
+  - Required Skills for Cybersecurity
+  - Assessment / Skills to Develop
+- Student selects 3 most relevant rows
+- Worksheet completion reminder
+
+### Section 2.4: Create SMART PDP (17 Questions)
+
+**Purpose:** Build actionable SMART goals for career development
+
+**Question Categories:**
+
+- **Current State (5 questions):**
+  - Current certifications/qualifications
+  - Technical skills inventory
+  - Practical experience summary
+  - Strongest current skills
+  - Knowledge/skill gaps
+
+- **Career Goals (3 questions):**
+  - Target cybersecurity role
+  - Missing skills for target role
+  - Career motivation
+
+- **Resources (4 questions):**
+  - Weekly learning time available
+  - Access to resources (training, budget, equipment)
+  - Potential obstacles
+  - Timeline for main goal
+
+- **Specific Goals (5 questions):**
+  - Next certification and deadline
+  - Priority technical skill to develop
+  - Portfolio project/experience needed
+  - Soft skill improvement target
+  - Other employability factors
+
+**AI Output:**
+
+- Summary of all answers
+- 5 SMART goals based on responses
+- Worksheet completion reminder
+
+### 🎨 PDP User Interface
+
+**Page 1: Section Chooser**
+
+- 4 clickable section cards in 2x2 grid (1 column on mobile)
+- Each card shows:
+  - Section number and icon (🎯 📊 ⚖️ 🎓)
+  - Section title (formatted as "Unit 6 | Section 2.X: Title")
+  - Question count and description
+- Dark teal background (#2a2a3e) with hover effects
+- Cards grow and glow on hover
+- "← Home" button at top-left
+
+**Page 2: Method Chooser**
+
+- "← Choose Different Section" button (returns to Page 1)
+- Section title displays selected section
+- 2 method cards side-by-side:
+  1. **AI Assistant** (Purple gradient)
+     - 🤖 Robot icon
+     - "Get guided help from AI"
+     - 3 feature bullets
+     - "Use AI Assistant" button
+  2. **Printable Worksheet** (Green gradient)
+     - 📄 Document icon
+     - "Work on paper at your own pace"
+     - 3 feature bullets
+     - "Download PDF" button
+- Both entire cards are clickable (not just buttons)
+- PDF downloads `Unit_6_PDP_Questions.pdf` (67 questions)
+
+**Page 3: Prompt + AI Platforms**
+
+- "← Choose Different Section" button (returns to Page 1)
+- Section title with ": AI Prompt" suffix
+- **Prompt Section:**
+  - Dark textarea with full AI prompt (400px min-height)
+  - Scrollable if needed
+  - "📋 Copy prompt" button (purple gradient)
+  - Button changes to "✓ Copied!" (green) for 2 seconds after clicking
+- **AI Platform Cards (visible immediately):**
+  - Heading: "Choose Your AI Assistant"
+  - 4 cards in 2x2 grid:
+    - ChatGPT (green #10a37f) - logo + "Open ChatGPT →"
+    - Claude (orange #d97757) - logo + "Open Claude →"
+    - Gemini (gradient) - logo + "Open Gemini →"
+    - DeepSeek (blue #0066cc) - logo + "Open DeepSeek →"
+  - Each with 60x60px logo
+  - Entire cards clickable
+  - Note: "💡 All these AI assistants are free to use!"
+
+**Copy Warning Modal:**
+
+- Triggers if user clicks AI platform before copying prompt
+- White background modal (matches "Skipped Questions" style)
+- ⚠️ Warning icon at top
+- "Please copy the prompt first!" heading
+- Clear message text
+- "This ensures you have the prompt ready to paste into the AI."
+- "OK, Got it!" button (purple gradient)
+- × close button in top-right
+- Click outside modal to close
+
+**Page 4: Success Screen**
+
+- Appears after clicking AI platform (if prompt copied)
+- Green success border and background tint
+- Large checkmark icon
+- "✓ Prompt Copied Successfully!" heading
+- "[AI Name] is now open in a new tab" subheading
+- **Centered "What to do next:" card:**
+  - Teal/dark blue background (#2a3f4e)
+  - Centered heading with 📝 emoji
+  - 4 numbered instructions:
+    1. Paste the prompt into [AI] (Ctrl+V or Cmd+V)
+    2. Answer all [X] questions one by one
+    3. [AI] will provide personalized insights
+    4. Use the outputs to complete Unit 6 worksheet
+  - List centered on page with numbers
+- "← Go Back" button (green) - returns to AI selection
+
+### 🤖 AI Platform Details
+
+**ChatGPT (OpenAI)**
+
+- URL: https://chat.openai.com/
+- Free account available
+- Opens in new tab when clicked
+
+**Claude (Anthropic)**
+
+- URL: https://claude.ai/new
+- Free account available
+- Opens in new tab when clicked
+
+**Google Gemini**
+
+- URL: https://gemini.google.com/
+- Free to use with Google account
+- Opens in new tab when clicked
+
+**DeepSeek**
+
+- URL: https://chat.deepseek.com/
+- Free advanced AI model
+- Opens in new tab when clicked
 
 ---
 
-### 💬 Automated Feedback System
+## 🔧 Technical Stack
 
-**Two-Tier Feedback Collection with EmailJS Integration:**
+**Frontend Technologies:**
 
-#### 1. **Unit Quick Feedback** (After Each Unit Quiz)
+- **HTML5** - Semantic structure and accessibility
+- **CSS3** - Modern styling with flexbox and grid
+- **JavaScript (ES6+)** - Pure vanilla, no frameworks
+- **CSV Processing** - PapaParse for data loading
 
-**Triggers:** Automatically 3 seconds after completing any Unit 1-5 quiz
+**Key Features:**
 
-**Prompt Design:**
+- ✅ No build process required
+- ✅ No dependencies (except CSV parsing)
+- ✅ Runs directly in browser
+- ✅ No server needed
+- ✅ Fully client-side application
 
-- 🟠 Centered orange banner (impossible to miss!)
-- Gentle pulsing animation (breathing effect)
-- Message: "💬 Quick feedback? (30 sec) - Help us improve this unit!"
-- Two white buttons: [Give Feedback] [Maybe Later]
-- Positioned in center of screen (not bottom)
+**File Sizes:**
 
-**Modal Form - 4 Required Fields:**
-
-1. **👤 Student Name** (text input)
-
-   - Minimum 2 characters
-   - Example: "John Doe"
-
-2. **⭐ Star Rating** (1-5 clickable stars)
-
-   - Gold stars with hover effects
-   - Click to select rating
-   - Visual feedback (filled/empty stars)
-
-3. **📊 Quiz Difficulty** (radio buttons)
-
-   - Options: Too Easy / Just Right / Too Hard
-   - Single selection required
-
-4. **💬 What could we improve?** (textarea)
-   - Minimum 5 words required
-   - Real-time word counter (e.g., "3 / 5 words")
-   - Placeholder: "Tell us what would make this unit better..."
-
-**Time to Complete:** ~30 seconds
-
-**Email to Tutor (via EmailJS):**
-
-```
-Subject: Unit 1 Quick Feedback - John
-
-Student: John
-Unit: Unit 1 - Understand Principles of Cyber Security
-Quiz Score: 42/50 (84%)
-Date: December 11, 2025 - 11:45 AM
-
-Flashcard/Learning Experience Rating: ⭐⭐⭐⭐ (4/5)
-Quiz Difficulty: Just Right
-Improvements Suggested: "Add more real-world examples and practical scenarios to help understand the concepts better"
-```
-
-**User Experience:**
-
-- ✅ Orange gradient theme (matches skip button for consistency)
-- ✅ Can dismiss with "Maybe Later" (no pressure)
-- ✅ Form validation prevents submission with missing fields
-- ✅ Word counter updates in real-time
-- ✅ Success message shows for 3 seconds
-- ✅ Modal auto-closes after submission
-- ✅ Email sent instantly to tutor
-
----
-
-#### 2. **Final Course Feedback** (After BIG 100)
-
-**Triggers:** Automatically 3 seconds after completing BIG 100 Challenge
-
-**Prompt Design:**
-
-- 🟠 Same centered orange banner with pulsing
-- Message: "🎓 Final course feedback? (30 sec) - Help future students!"
-- Same button design as unit feedback
-
-**Modal Form - 5 Required Fields:**
-
-1. **👤 Student Name** (text input)
-
-   - Minimum 2 characters
-
-2. **⭐ Overall Course Rating** (1-5 stars)
-
-   - Gold stars with hover effects
-   - Rate entire course experience
-
-3. **💬 What did you like MOST about this course?** (textarea)
-
-   - Minimum 10 words required
-   - Real-time word counter (e.g., "8 / 10 words")
-   - Placeholder: "Tell us what worked well..."
-
-4. **💬 What should we IMPROVE?** (textarea)
-
-   - Minimum 10 words required
-   - Real-time word counter
-   - Placeholder: "What could be better..."
-
-5. **👍 Would you recommend this course?** (radio buttons)
-   - Options: Definitely / Probably / Probably Not / No
-   - Single selection required
-
-**Time to Complete:** ~30 seconds
-
-**Email to Tutor (via EmailJS):**
-
-```
-Subject: FINAL Course Feedback - John
-
-Student: John
-Course: NCFE Level 3 Cybersecurity
-BIG 100 Score: 85/100 (85%)
-Completion Date: December 11, 2025 - 3:30 PM
-
-OVERALL RATING: ⭐⭐⭐⭐⭐ (5/5)
-
-WHAT THEY LIKED MOST:
-"I really appreciated the structured approach with clear explanations and the ability to practice with quizzes. The flashcards were extremely helpful for retention."
-
-WHAT TO IMPROVE:
-"More practical hands-on scenarios and real-world case studies would make the content even more engaging and applicable to actual cybersecurity work."
-
-WOULD RECOMMEND: Definitely
-```
-
-**User Experience:**
-
-- ✅ Larger, celebration-themed modal
-- ✅ Same orange gradient for consistency
-- ✅ Two text areas with separate word counts
-- ✅ Clear field labels with emojis
-- ✅ Success message shows for 5 seconds
-- ✅ Congratulatory tone
-- ✅ Modal auto-closes after submission
-
----
-
-### 📧 EmailJS Integration
-
-**Automated Email Delivery to Tutors:**
-
-**What is EmailJS?**
-
-- Third-party email service that sends emails from JavaScript
-- No backend server required
-- Free tier: 200 emails per month (perfect for a 10-student class)
-- Professional, reliable delivery
-
-**Email Flow:**
-
-```
-Student completes quiz
-        ↓
-Waits 3 seconds
-        ↓
-Orange feedback prompt appears
-        ↓
-Student fills form and submits
-        ↓
-EmailJS sends email to tutor (instant)
-        ↓
-Success message shows to student
-        ↓
-Tutor receives professional HTML email
-```
-
-**Security & Privacy:**
-
-**How It's Secure:**
-
-- ✅ Tutor email addresses stored ONLY in EmailJS dashboard (not in code)
-- ✅ Only EmailJS service/template IDs in GitHub code (safe to be public)
-- ✅ Free tier: 200 emails/month
-- ✅ Can add multiple tutors via BCC without changing code
-- ✅ `.gitignore` file protects sensitive credentials
-- ✅ `.env.example` shows configuration format (without real values)
-
-**Email Privacy:**
-
-- Tutor emails: In EmailJS dashboard only
-- Student emails: Not collected at all
-- Public repository: Safe (no email addresses exposed)
-
-**Adding More Tutors:**
-
-1. Login to EmailJS dashboard
-2. Edit email template
-3. Add tutor emails to BCC field (comma-separated)
-4. Save - NO code changes needed!
-
-**Current Quota Usage:**
-
-- Maximum per student: 6 emails (5 units + final)
-- For 10 students: 60 emails max
-- Free tier limit: 200 emails/month
-- Usage: 30% of free tier ✅
-
----
-
-## 💻 Technical Stack
-
-### Frontend
-
-- **HTML5** - Semantic structure
-- **CSS3** - Modern styling with custom properties
-  - Flexbox and Grid layouts
-  - CSS animations and transitions (pop-in, pulse, confetti)
-  - Media queries for responsiveness
-  - Glassmorphism effects
-  - Orange gradient feedback prompts
-  - Purple gradient quizzes
-  - Green/teal gradient flashcards
-- **JavaScript (Vanilla ES6+)** - No frameworks/libraries
-  - Arrow functions, destructuring, template literals
-  - CSV parsing for data loading
-  - Event-driven architecture
-  - EmailJS SDK integration
-  - Real-time word counting
-  - Form validation
-
-### External Services
-
-- **EmailJS** - Email delivery service
-  - Automated feedback emails to tutors
-  - Free tier (200 emails/month)
-  - No backend server required
-  - HTML email templates
-  - Variable substitution
-
-### Data Storage
-
-- **CSV Files** - Question and flashcard data
-  - Easy to update and maintain
-  - Human-readable format
-  - No database required
-  - Version control friendly
-
-### Browser APIs Used
-
-- Fetch API (CSV loading, EmailJS requests)
-- Canvas API (confetti animation)
-- History API (navigation)
-- LocalStorage API (none - refreshing loses progress)
+- `index.html` - ~30KB (full structure)
+- `styles.css` - ~3000+ lines (complete styling)
+- `script.js` - ~2200+ lines (all functionality)
 
 ---
 
 ## 📁 File Structure
 
 ```
-cybersecurity-study/
-│
-├── index.html                           # Main HTML file (600+ lines)
-├── styles.css                           # All CSS styling (2300+ lines)
-├── script.js                            # All JavaScript logic (1700+ lines)
-│
-├── my_knowledge_check.csv               # Knowledge Check questions (40)
-├── logo-transparent-mint.png            # Footer logo (clickable → GitHub)
-│
-├── .gitignore                           # Git exclusions (.env protection)
-├── .env.example                         # EmailJS config template (safe)
-├── README.md                            # This comprehensive documentation
-├── FUTURE_FEATURES.md                   # Phase 2 development roadmap
-│
-├── Unit 1_Understand Principles of Cyber Security_flashcards.csv (60 cards)
-├── Unit 2_Threat Intelligence in Cyber Security_flashcards.csv (72 cards)
-├── Unit 3_Cyber Security Testing, Vulnerabilities and Controls_flashcards.csv (71 cards)
-├── Unit 4_Cyber Security Incident Response_flashcards.csv (50 cards)
-├── Unit 5_Understand Legislation and Ethical Conduct within Cyber Security_flashcards.csv (67 cards)
-│
-├── Unit_1_quiz.csv                      # Unit 1 quiz questions (50)
-├── Unit_2_quiz.csv                      # Unit 2 quiz questions (50)
-├── Unit_3_quiz.csv                      # Unit 3 quiz questions (50)
-├── Unit_4_quiz.csv                      # Unit 4 quiz questions (50)
-├── Unit_5_quiz.csv                      # Unit 5 quiz questions (50)
-└── big_100_quiz.csv                     # Comprehensive final quiz (100)
+CyberLab/
+├── index.html                          # Main application
+├── styles.css                          # All styling
+├── script.js                           # All functionality
+├── Unit_6_PDP_Questions.pdf           # Printable worksheet (67 questions)
+├── images/
+│   ├── logo-transparent-mint.png      # Platform logo
+│   ├── chatgpt-logo.png               # ChatGPT AI logo
+│   ├── claude-logo.png                # Claude AI logo
+│   ├── gemini-logo.png                # Google Gemini logo
+│   └── deepseek-logo.png              # DeepSeek logo
+├── Unit 1_Understand Principles of Cyber Security_flashcards.csv
+├── Unit 2_Threat Intelligence in Cyber Security_flashcards.csv
+├── Unit 3_Cyber Security Testing, Vulnerabilities and Controls_flashcards.csv
+├── Unit 4_Cyber Security Incident Response_flashcards.csv
+├── Unit 5_Understand Legislation and Ethical Conduct within Cyber Security_flashcards.csv
+├── Unit_6_Personal_Professional_Development_flashcards.csv
+├── Unit_1_quiz.csv
+├── Unit_2_quiz.csv
+├── Unit_3_quiz.csv
+├── Unit_4_quiz.csv
+├── Unit_5_quiz.csv
+└── BIG_100_quiz.csv
 ```
-
-### CSV File Formats
-
-**Flashcards CSV:**
-
-```csv
-question,answer
-"What is encryption?","Encryption is the process of converting data into a coded format..."
-"Define CIA Triad","CIA stands for Confidentiality, Integrity, and Availability..."
-```
-
-**Quiz CSV:**
-
-```csv
-question_id,unit,question,answer_a,answer_b,answer_c,answer_d,correct,explanation_correct,hint
-1,1,"What is a firewall?","A wall","A security system","A virus","A hacker",B,"A firewall is a network security system that monitors and controls incoming and outgoing network traffic...","Think about network security devices..."
-```
-
-**Knowledge Check CSV:**
-
-```csv
-question_id,question,answer_a,answer_b,answer_c,answer_d,correct,explanation_correct
-MKC001,"What does malware refer to?","Software designed to harm","A programming language","Hardware components","Secure software",A,"That's right! Malware is short for malicious software, designed to harm or exploit computer systems..."
-```
-
----
-
-## 🌐 How to Access
-
-**For Students & Tutors:**
-Simply visit the website: [https://lnp-cybersecurity.netlify.app/]
-
-That's it! No installation needed.
 
 ---
 
 ## 📖 Usage Guide
 
-### For Students
+### For New Students
 
-#### **Studying with Flashcards:**
+1. **Start with Knowledge Check:**
+   - Click "📋 BIG 100 Challenge" on homepage
+   - Complete 100-question baseline assessment
+   - Review your score and identify weak areas
 
-1. Click "📚 Study Flashcards" on any unit card
-2. Read the question on the front of the card
-3. Think about the answer
-4. Press **SPACE** or **click** the card to flip
-5. Review the answer on the back
-6. Use **← →** arrow keys to navigate (or click Previous/Next)
-7. Complete all cards to see progress and celebration
-8. Click "Take Quiz" when ready to test knowledge
+2. **Study with Flashcards:**
+   - Choose a unit from the homepage
+   - Click "📚 Study Flashcards"
+   - Use SPACE to flip cards
+   - Use ← → arrows to navigate
+   - Track progress with counter
 
-**Keyboard Shortcuts:**
+3. **Test with Quizzes:**
+   - After studying, click "📝 Take Quiz"
+   - Answer 50 questions per unit
+   - Use hints if needed
+   - Skip difficult questions for review
+   - See detailed results and explanations
 
-- `SPACE` - Flip card
-- `→` (Right Arrow) - Next card
-- `←` (Left Arrow) - Previous card
-- `ESC` - Exit flashcards
+4. **Plan Your Career:**
+   - Click "🎓 Build Your PDP" on Unit 6 card
+   - Choose section (Skills, SWOT, Assessment, or Goals)
+   - Select AI Assistant or Download PDF
+   - If AI: Copy prompt, choose platform, complete with AI
+   - If PDF: Download and complete worksheet offline
 
----
+### For Exam Preparation
 
-#### **Taking the Knowledge Check:**
+1. **Complete all unit flashcards** (91 total)
+2. **Take all unit quizzes** (250+ questions)
+3. **Focus on areas with low scores**
+4. **Retake quizzes until 80%+ consistently**
+5. **Complete BIG 100 as final test**
 
-1. Click "📋 New Student? Knowledge Check" button (purple section below header)
-2. Enter your name (required)
-3. Click "Start Knowledge Check"
-4. Answer all 40 questions:
-   - Click A, B, C, or D to select answer
-   - Use "Previous" to review earlier questions
-   - Use "Next" to move forward
-5. On question 40, click "Submit"
-6. View your results immediately:
-   - Score (e.g., 32/40)
-   - Percentage (e.g., 80%)
-   - Celebration or encouragement message
+### For Career Planning (Unit 6 PDP)
 
-**Tips:**
+1. **Section 2.1** - Identify your current skills
+2. **Section 2.2** - Perform SWOT analysis
+3. **Section 2.3** - Compare skills to requirements
+4. **Section 2.4** - Create SMART goals
 
-- This is optional - you can skip it
-- No pass/fail - just for your information
-- Can retake as many times as you want
-- Results help you know where to focus
-
----
-
-#### **Taking Quizzes:**
-
-1. Click "🧠 Take Quiz" on any unit card
-2. Read each question carefully
-3. Click your answer choice (A/B/C/D)
-4. See immediate feedback:
-   - ✅ Green = Correct (explanation shown)
-   - ❌ Red = Wrong (correct answer shown)
-5. Read the explanation to understand the concept
-6. Click "💡 Show Hint" if you're stuck (optional)
-7. Click "Next" to continue to next question
-8. Review skipped questions:
-   - Click "📋 Skipped (X)" button if shown
-   - Jump to any skipped question
-   - Answer it to remove from skipped list
-9. Click "Finish Quiz" on last question
-10. View your score and breakdown
-
-**After Quiz Completion:**
-
-- Results display immediately
-- Wait 3 seconds
-- 🟠 Orange feedback prompt appears
-- Choose to give feedback or click "Maybe Later"
-
----
-
-#### **Providing Feedback:**
-
-**When Prompted (3 seconds after quiz):**
-
-1. **Orange prompt appears** in center of screen
-2. Click **"Give Feedback"** button (or "Maybe Later" to skip)
-3. **Fill out form:**
-   - Enter your name
-   - Click stars to rate (1-5)
-   - Select difficulty (Too Easy / Just Right / Too Hard)
-   - Write improvements (at least 5 words - counter shows progress)
-4. Click **"Submit Feedback"**
-5. See **success message** ("Thank you for your feedback!")
-6. Form closes automatically
-
-**What Happens:**
-
-- ✅ Email sent instantly to tutor
-- ✅ Tutor receives your feedback + quiz score
-- ✅ Your feedback helps improve the course
-- ✅ Takes only ~30 seconds
-
-**For Final Feedback (After BIG 100):**
-
-- Similar process but 5 fields instead of 4
-- Text areas need 10 words minimum (instead of 5)
-- Includes "What you liked most" and "Would you recommend"
-
----
-
-#### **Navigation Tips:**
-
-- Use keyboard shortcuts for faster studying
-- Review skipped questions using the "📋 Skipped" button
-- Retake quizzes to improve your score (answers shuffle each time)
-- Use hints if you're stuck on a question
-- Give feedback to help improve the course!
-- Check footer for GitHub link (click logo)
-
----
-
-### For Tutors
-
-#### **Receiving Feedback:**
-
-Feedback emails are automatically sent to your inbox when students complete quizzes and submit feedback.
-
-**When Students Submit Feedback:**
-
-- Email arrives within 10 seconds
-- Subject line shows student name + unit/course
-- Body includes all feedback + quiz score
-- Professional HTML formatting
-
-**No setup required** - the website administrator has already configured email delivery.
-
-**Email Monitoring:**
-
-- Check inbox regularly
-- Review patterns in feedback
-- Identify common improvement suggestions
-- Track which units need work
-- See student satisfaction levels
-
-**To Add More Tutors:**
-Contact the website administrator to add additional tutor email addresses.
-
-#### **Managing Email Quota:**
-
-**Free Tier Limits:**
-
-- 200 emails per month
-- Current usage: ~60 max (10 students × 6 feedbacks)
-- Usage: 30% ✅ Well within limits
-
-**If You Need More:**
-
-- Upgrade to paid plan (~$5/month for 1000 emails)
-- Or create multiple free accounts
-- Or switch to Phase 2 (Firebase) for unlimited tracking
+Each section can be completed with AI assistance or via printable worksheet.
 
 ---
 
 ## 📚 Unit Content
 
-### 🔐 Unit 1: Understand Principles of Cyber Security
-
-**Topics Covered:**
+### Unit 1: Understand Principles of Cyber Security
 
 - CIA Triad (Confidentiality, Integrity, Availability)
-- Security principles and best practices
-- Risk assessment and management
+- Authentication, Authorization, Accounting
+- Risk management and assessment
 - Security policies and procedures
-- Authentication and authorization
-- Network security fundamentals
+- **Flashcards:** 15 cards
+- **Quiz:** 50 questions
 
-**Content:**
+### Unit 2: Threat Intelligence in Cyber Security
 
-- 60 flashcards
-- 50 quiz questions
-- Includes explanations and hints
-
----
-
-### 🧠 Unit 2: Threat Intelligence in Cyber Security
-
-**Topics Covered:**
-
-- Types of cyber threats (malware, phishing, ransomware, DDoS)
 - Threat actors and motivations
-- Attack vectors and methods
+- Attack vectors and techniques
 - Threat intelligence sources
 - Indicators of Compromise (IoCs)
-- Threat modeling
+- **Flashcards:** 16 cards
+- **Quiz:** 50 questions
 
-**Content:**
+### Unit 3: Cyber Security Testing, Vulnerabilities and Controls
 
-- 72 flashcards
-- 50 quiz questions
-- Real-world examples
+- Penetration testing methodologies
+- Vulnerability scanning and assessment
+- Security controls and countermeasures
+- Testing frameworks and standards
+- **Flashcards:** 17 cards
+- **Quiz:** 50 questions
 
----
+### Unit 4: Cyber Security Incident Response
 
-### 🧰 Unit 3: Cyber Security Testing, Vulnerabilities and Controls
-
-**Topics Covered:**
-
-- Vulnerability assessment methodologies
-- Penetration testing techniques
-- Security controls (preventive, detective, corrective)
-- Testing methodologies and tools
-- Common vulnerabilities (OWASP Top 10)
-- Remediation strategies
-
-**Content:**
-
-- 71 flashcards
-- 50 quiz questions
-- Practical scenarios
-
----
-
-### 🚨 Unit 4: Cyber Security Incident Response
-
-**Topics Covered:**
-
-- Incident response procedures and frameworks
-- Detection and analysis techniques
-- Containment strategies
-- Eradication and recovery
+- Incident response lifecycle
+- Detection and analysis
+- Containment, eradication, recovery
 - Post-incident activities
-- Incident documentation and reporting
+- **Flashcards:** 15 cards
+- **Quiz:** 50 questions
 
-**Content:**
+### Unit 5: Understand Legislation and Ethical Conduct within Cyber Security
 
-- 50 flashcards
-- 50 quiz questions
-- Step-by-step procedures
-
----
-
-### ⚖️ Unit 5: Understand Legislation and Ethical Conduct
-
-**Topics Covered:**
-
-- UK cybersecurity laws and regulations
-- GDPR compliance and data protection
+- Data Protection Act / GDPR
 - Computer Misuse Act
+- Regulatory compliance
 - Ethical hacking principles
-- Professional conduct and responsibilities
-- Legal considerations in cybersecurity
+- **Flashcards:** 12 cards
+- **Quiz:** 50 questions
 
-**Content:**
+### Unit 6: Personal and Professional Development in Cyber Security
 
-- 67 flashcards
-- 50 quiz questions
-- Legal case studies
-
----
-
-### 🔥 BIG 100 Challenge
-
-**Comprehensive Final Assessment:**
-
-- 100 questions covering ALL 5 units
-- Mixed difficulty levels
-- Balanced coverage of all topics
-- Final mastery test
-- Requires solid understanding of all concepts
-- **Triggers comprehensive final feedback upon completion**
-
-**Purpose:**
-
-- Assess overall understanding
-- Identify remaining weak areas
-- Prepare for official NCFE assessment
-- Practice exam conditions
+- Career planning and development
+- Skills assessment and analysis
+- SMART goal setting
+- Professional growth strategies
+- **Flashcards:** 16 cards
+- **PDP System:** 67 questions (4 sections)
 
 ---
 
-## 🧪 Quiz System
+## 🎮 Quiz System
 
-### Question Format
+### Features
 
-**Multiple Choice:**
+**Question Display:**
 
-- 4 options (A, B, C, D)
-- Single correct answer
-- **Answer order randomized each attempt** (prevents memorization)
-  - First attempt: Answer might be B
-  - Second attempt: Same question, answer might be D
-  - Questions appear in same order (answers shuffle)
+- Clear question text at top
+- 4 answer options (A, B, C, D) as clickable cards
+- Hint button (💡) with toggle functionality
+- Progress indicators (header and footer)
 
-**Feedback:**
+**Navigation:**
 
-- ✅ Correct: Green highlight + detailed explanation
-- ❌ Wrong: Red highlight + shows correct answer + explanation
-- 💡 Hints: Available for most questions (click "Show Hint")
+- Previous button (disabled on first question)
+- Skip button (marks question for review)
+- Next button (always enabled, auto-skips if needed)
+- Finish button (appears on last question)
 
-### Scoring
+**Answer Feedback:**
 
-**Current System:**
+- Correct: Green highlight + checkmark
+- Incorrect: Red highlight + X mark + show correct answer
+- Explanation appears after selection
+- Can't change answer after selecting
 
-```
-Score = Correct Answers / Total Questions
+**Skipped Questions:**
 
-Example:
-45 correct out of 50 questions = 45/50 = 90%
-```
+- Counter updates in real-time
+- "📋 Skipped (X)" button appears
+- Click to view modal with list
+- Jump to any skipped question
+- Warning before finishing if unanswered questions remain
 
-**Breakdown:**
+**Results Screen:**
 
-- Correct answers: Counted toward score (green)
-- Wrong answers: Not counted toward score (red)
-- Skipped/Unanswered: Counted as wrong (orange)
+- Large score display with percentage
+- Animated progress ring
+- Score breakdown (Correct/Wrong/Skipped)
+- Time taken
+- Performance message with emoji
+- Confetti for 80%+ scores
+- Three options: Review | Retake | Home
 
-**Quiz Completion Messages:**
+**Review Mode:**
 
-Based on your score, you'll see:
-
-- **100%:** 🏆 "100% Achieved! You crushed it!" with confetti
-- **80-99%:** 🏆 "Quiz Complete! Excellent work!" with confetti and encouragement
-- **50-79%:** 🚀 "Good Progress! Keep pushing forward!"
-- **Below 50%:** 🌱 "Keep Growing! Review and try again!"
-
-### Review Mode
-
-**After Completion:**
-
-- See all questions in order
-- View your answer vs correct answer
-- Read explanations for each question
-- Identify patterns in mistakes
-- Understand what you need to study more
-- Prepare for retake
-
-**How to Access:**
-
-1. Complete quiz and see results
-2. Dismiss or complete feedback prompt
-3. Click "Review Questions" button
-4. Navigate through all questions
-5. Click "Retake Quiz" when ready to try again
+- Shows all questions
+- Your answers highlighted (red if wrong)
+- Correct answers highlighted green
+- Explanations for each question
+- Can't change answers in review
+- Return to results or retake
 
 ---
 
 ## 📋 Knowledge Check System
 
-### Purpose
+### BIG 100 Challenge
 
-**Baseline Assessment for New Students:**
+**Overview:**
 
-- Test fundamental cybersecurity knowledge before starting course
-- 40 multiple-choice questions covering basic concepts
-- No pass/fail - informational only
-- Helps identify starting knowledge level
-- Optional - students can skip and go straight to units
+- 100 questions covering all 5 core units
+- Comprehensive baseline/final assessment
+- Multiple-choice format (A/B/C/D)
+- Mixed difficulty levels
 
-### Features
+**Features:**
 
-**Quiz Mechanics:**
-
-- ✅ All 40 questions must be answered before submission
-- ✅ Progress tracking (Question X / 40)
-- ✅ Previous/Next navigation
-- ✅ Name input required (minimum 2 characters)
-- ✅ Answer selection (A/B/C/D)
-- ✅ Purple gradient UI (matches quiz theme)
-- ✅ Mobile responsive
-
-**Results Display:**
-
-- ✅ Immediate results after submission
-- ✅ Score shown (e.g., 32/40)
-- ✅ Percentage shown (e.g., 80%)
-- ✅ Celebration or encouragement message
-- ✅ Can retake anytime
-
-### Workflow
-
-```
-Homepage
-    ↓
-Click "📋 New Student? Knowledge Check" button
-    ↓
-Modal opens with intro screen
-    ↓
-Enter your name (required)
-    ↓
-Click "Start Knowledge Check"
-    ↓
-Answer Question 1/40
-    ↓
-Navigate through all 40 questions (Previous/Next)
-    ↓
-Submit on Question 40
-    ↓
-View results screen (score + percentage)
-    ↓
-Close and start learning, or retake!
-```
-
-### Topics Covered
-
-**Fundamental Concepts:**
-
-- Basic cybersecurity terminology
-- Common threats (malware, phishing, DDoS)
-- Security principles (CIA Triad)
-- Network security basics
-- Authentication concepts
-- Data protection fundamentals
-- Incident response basics
-- Legal and ethical considerations
-
-**Note:**
-
-- Results are displayed on-screen only (not emailed to tutors)
-- Can be enhanced in Phase 2 to save results to Firebase
-- Students can retake as many times as needed
-
----
-
-## 💬 Feedback System
-
-### Overview
-
-**Two-Tier Automated Feedback Collection:**
-
-1. **Unit Quick Feedback** - After each Unit 1-5 quiz (4 fields, ~30 sec)
-2. **Final Course Feedback** - After BIG 100 Challenge (5 fields, ~30 sec)
+- ✅ All standard quiz features
+- ✅ Progress tracking across all topics
+- ✅ 100 questions total
+- ✅ Same UI as unit quizzes
+- ✅ Hint system available
+- ✅ Skip and review functionality
+- ✅ Comprehensive results breakdown
+- ✅ Can be retaken unlimited times
 
 **Purpose:**
 
-- Gather student insights for course improvement
-- Track satisfaction and difficulty levels
-- Identify areas needing enhancement
-- Provide tutors with actionable feedback
-- Continuous improvement cycle
+- Baseline knowledge assessment for new students
+- Final comprehensive test before exams
+- Identify areas needing focus
+- Track overall progress across course
+
+**Access:**
+
+- Prominent purple button on homepage
+- "📋 BIG 100 Challenge" label
+- Description: "100-question comprehensive assessment"
 
 ---
 
-### Unit Quick Feedback
+## 🤖 PDP AI Integration
 
-#### **When It Appears:**
+### How It Works
 
-- Automatically 3 seconds after completing any Unit 1-5 quiz
-- Triggered by quiz completion (not by button click)
-- Appears in center of screen (not bottom)
+**Step 1: Choose Section**
 
-#### **Visual Design:**
+- Select from 4 PDP sections
+- Each has specific focus area
+- Question counts clearly displayed
 
-- 🟠 Orange gradient banner (same color as skip button)
-- Centered on screen with gentle pulsing animation
-- Message: "💬 Quick feedback? (30 sec) - Help us improve this unit!"
-- Two buttons: [Give Feedback] [Maybe Later]
-- Professional, non-intrusive design
+**Step 2: Choose Method**
 
-#### **The Form (4 Required Fields):**
+- AI Assistant (guided approach)
+- Printable PDF (traditional approach)
+- Both options available for each section
 
-**1. Student Name** (text input)
+**Step 3: Copy Prompt (AI Path)**
 
-- Minimum 2 characters required
-- Validates before allowing submission
-- Example: "John Doe"
+- Section-specific prompt displayed
+- Scrollable textarea (400px minimum)
+- "📋 Copy prompt" button
+- Visual confirmation when copied
 
-**2. Star Rating** (1-5 clickable stars)
+**Step 4: Select AI Platform**
 
-- Interactive gold stars
-- Hover effect shows rating
-- Click to select (1 star = poor, 5 stars = excellent)
-- Rates overall learning experience for that unit
+- 4 platforms available immediately
+- Click anywhere on card to open
+- Opens AI in new browser tab
+- Can choose different AI if needed
 
-**3. Quiz Difficulty** (radio buttons)
+**Step 5: Warning Modal (If Needed)**
 
-- Three options:
-  - Too Easy
-  - Just Right
-  - Too Hard
-- Single selection required
-- Helps tutors calibrate difficulty
+- Appears if clicking AI before copying
+- White modal (like Skipped Questions)
+- Clear instructions
+- "OK, Got it!" button
 
-**4. What could we improve?** (textarea)
+**Step 6: Complete with AI**
 
-- Minimum 5 words required
-- Real-time word counter (e.g., "3 / 5 words")
-- Validates word count before submission
-- Encourages specific, actionable feedback
-- Placeholder: "Tell us what would make this unit better..."
+- Paste prompt in AI chat
+- Answer questions one by one
+- AI provides personalized insights
+- AI generates outputs automatically
 
-#### **Email Sent to Tutor:**
+**Step 7: Use Outputs**
 
-```
-Subject: Unit 1 Quick Feedback - John
+- Apply AI insights to Unit 6 worksheet
+- Create comprehensive PDP
+- Set SMART goals
+- Plan career development
 
-Student: John
-Unit: Unit 1 - Understand Principles of Cyber Security
-Quiz Score: 42/50 (84%)
-Date: December 11, 2025 - 11:45 AM
+### AI Prompt Structure
 
-Flashcard/Learning Experience Rating: ⭐⭐⭐⭐ (4/5)
-Quiz Difficulty: Just Right
-Improvements Suggested: "Add more real-world examples and practical scenarios to help understand the concepts better"
-```
+Each of the 4 section prompts includes:
 
-#### **User Experience:**
+- Clear introduction for AI
+- Question list with examples/hints
+- Instructions to ask one at a time
+- Automatic output generation format
+- Worksheet completion reminder
 
-- Takes approximately 30 seconds to complete
-- Can dismiss with "Maybe Later" (no pressure)
-- Success message shows for 3 seconds
-- Modal closes automatically
-- Student can continue reviewing quiz or return to homepage
+**Section 2.1 Prompt:**
 
----
+- 15 questions organized by category
+- Auto-generates: 5 existing skills + 3 to develop
 
-### Final Course Feedback
+**Section 2.2 Prompt:**
 
-#### **When It Appears:**
+- 20 questions (5 per SWOT area)
+- Auto-generates: SWOT table + 5 goals
 
-- Automatically 3 seconds after completing BIG 100 Challenge
-- One-time comprehensive feedback at course completion
-- Same visual design as unit feedback
+**Section 2.3 Prompt:**
 
-#### **Visual Design:**
+- 15 questions across 3 categories
+- Auto-generates: 8-row comparison table
 
-- 🟠 Orange gradient banner with pulsing
-- Centered on screen
-- Message: "💬 Final course feedback? (30 sec) - Help future students 🎓!"
-- Two buttons: [Give Feedback] [Maybe Later]
-- Celebration theme (congratulatory tone)
+**Section 2.4 Prompt:**
 
-#### **The Form (5 Required Fields):**
-
-**1. Student Name** (text input)
-
-- Minimum 2 characters required
-
-**2. Overall Course Rating** (1-5 stars)
-
-- Interactive gold stars
-- Rates entire course experience
-- 1 star = poor overall, 5 stars = excellent overall
-
-**3. What did you like MOST about this course?** (textarea)
-
-- Minimum 10 words required
-- Real-time word counter
-- Encourages detailed positive feedback
-- Placeholder: "Tell us what worked well..."
-
-**4. What should we IMPROVE?** (textarea)
-
-- Minimum 10 words required
-- Real-time word counter
-- Encourages constructive criticism
-- Placeholder: "What could be better..."
-
-**5. Would you recommend this course?** (radio buttons)
-
-- Four options:
-  - Definitely
-  - Probably
-  - Probably Not
-  - No
-- Single selection required
-- Net Promoter Score style question
-
-#### **Email Sent to Tutor:**
-
-```
-Subject: FINAL Course Feedback - John
-
-Student: John
-Course: NCFE Level 3 Cybersecurity
-BIG 100 Score: 85/100 (85%)
-Completion Date: December 11, 2025 - 3:30 PM
-
-OVERALL RATING: ⭐⭐⭐⭐⭐ (5/5)
-
-WHAT THEY LIKED MOST:
-"I really appreciated the structured approach with clear explanations and the ability to practice with quizzes. The flashcards were extremely helpful for retention and the quiz feedback helped me understand my mistakes."
-
-WHAT TO IMPROVE:
-"More practical hands-on scenarios and real-world case studies would make the content even more engaging and applicable to actual cybersecurity work. Maybe some video content too."
-
-WOULD RECOMMEND: Definitely
-```
-
-#### **User Experience:**
-
-- Takes approximately 30 seconds to complete
-- Larger modal than unit feedback
-- Celebration/congratulatory tone
-- Success message shows for 5 seconds
-- Closes automatically with satisfying animation
-
----
-
-### Feedback System Features
-
-**Form Validation:**
-
-- ✅ All fields required (can't submit incomplete)
-- ✅ Name minimum 2 characters
-- ✅ Star rating must be selected
-- ✅ Radio buttons must have selection
-- ✅ Text areas must meet word minimum
-- ✅ Real-time feedback (red borders if invalid)
-- ✅ Clear error messages
-
-**Word Counter:**
-
-- ✅ Updates in real-time as you type
-- ✅ Shows "X / Y words minimum"
-- ✅ Turns green when requirement met
-- ✅ Counts actual words (not just characters)
-- ✅ Helps students provide substantial feedback
-
-**Visual Feedback:**
-
-- ✅ Orange pulsing banner (impossible to miss)
-- ✅ Centered position (better than bottom banner)
-- ✅ Star hover effects (shows rating before clicking)
-- ✅ Button hover effects (lift on hover)
-- ✅ Success animation (fade in/out)
-- ✅ Professional, polished design
-
-**Accessibility:**
-
-- ✅ Keyboard navigation (Tab key works)
-- ✅ Clear focus indicators
-- ✅ Large touch targets (mobile friendly)
-- ✅ High contrast text
-- ✅ Readable fonts
-
----
-
-## 📧 EmailJS
-
-### What is EmailJS?
-
-**EmailJS** is a service that allows sending emails directly from JavaScript without needing a backend server. Perfect for static websites like this platform.
-
-**Benefits:**
-
-- ✅ No backend server needed
-- ✅ Works with static HTML/CSS/JS
-- ✅ Free tier (200 emails/month)
-- ✅ Reliable delivery
-- ✅ Professional HTML emails
-- ✅ Multiple email services supported (Gmail, Outlook, etc.)
-
----
-
-### EmailJS Free Tier Limits
-
-**What You Get (FREE):**
-
-- 200 emails per month
-- Unlimited templates
-- All features
-- Professional HTML emails
-- Email tracking/history
-
-**Your Usage:**
-
-- 10 students maximum
-- 6 emails per student maximum (5 units + final)
-- Total: 60 emails maximum
-- **Usage: 30% of free tier** ✅
-
-**If You Need More:**
-
-- Upgrade to Personal plan ($5/month for 1,000 emails)
-- Or create multiple free accounts
-- Or wait for Phase 2 (Firebase) - unlimited tracking
-
----
-
-### Troubleshooting
-
-**Problem:** Emails not arriving
-
-**Solutions:**
-
-1. Check spam/junk folder
-2. Verify all IDs are correct in `script.js`
-3. Check browser console for errors (F12)
-4. Test from different browser
-5. Check EmailJS dashboard → History
-6. Verify internet connection
-7. Try sending test email from EmailJS dashboard
-
----
-
-**Problem:** "EmailJS is not defined" error
-
-**Solution:**
-
-1. Make sure EmailJS library is loaded in `index.html`:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-```
-
-2. Make sure it's loaded BEFORE `script.js`
-
----
-
-**Problem:** Hitting email quota (200/month)
-
-**Solutions:**
-
-1. Upgrade to paid plan ($5/month)
-2. Create second free account for overflow
-3. Wait for quota reset (resets monthly)
-4. Implement Phase 2 (Firebase) for unlimited storage
-
----
-
-**Problem:** Want to change tutor email
-
-**Solution:**
-
-1. Login to EmailJS dashboard
-2. Go to Email Templates
-3. Edit template
-4. Change "To Email" field
-5. Save
-6. No code changes needed!
+- 17 questions in 4 sections
+- Auto-generates: Summary + 5 SMART goals
 
 ---
 
 ## 🌐 Browser Compatibility
 
-### Fully Supported
-
-- ✅ **Chrome 90+** (Windows, Mac, Linux, Android, ChromeOS)
-- ✅ **Firefox 88+** (Windows, Mac, Linux, Android)
-- ✅ **Safari 14+** (Mac, iOS, iPadOS)
-- ✅ **Edge 90+** (Windows, Mac, Linux)
-- ✅ **Opera 76+** (Windows, Mac, Linux)
-- ✅ **Samsung Internet 14+** (Android)
-
-### Mobile Support
-
-**Features on Mobile:**
-
-- ✅ Fully responsive design
-- ✅ Touch-friendly interface (large tap targets)
-- ✅ Works on phones and tablets
-- ✅ Portrait and landscape modes
-- ✅ Feedback prompts centered and visible
-- ✅ Star ratings work with touch
-- ✅ Keyboard appears for text inputs
-- ✅ Scrolling works smoothly
-
-**Tested Devices:**
-
-- ✅ iPhone (iOS 14+)
-- ✅ iPad (iPadOS 14+)
-- ✅ Android phones (Android 10+)
-- ✅ Android tablets
-
-### Not Supported
-
-- ❌ Internet Explorer (all versions - deprecated)
-- ❌ Very old browsers (pre-2020)
-- ❌ Browsers with JavaScript disabled
-
-### Features Requiring Internet
-
-- ✅ Confetti animation (works offline)
-- ✅ Flashcards (works offline)
-- ✅ Quizzes (works offline)
-- ✅ Knowledge Check (works offline)
-- ❌ **Feedback emails (requires internet for EmailJS)**
-
-**Offline Mode:**
-
-- Platform works fully offline EXCEPT for feedback submission
-- Feedback forms will show error if no internet
-- Students can complete quizzes offline, submit feedback later
-
----
-
-## 🎨 Customization
-
-### Changing Colors
-
-**File:** `styles.css`
-
-#### **Feedback Prompt Color:**
-
-Find `.feedback-prompt` (around line 2144):
-
-```css
-.feedback-prompt {
-  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); /* Orange */
-}
-```
-
-Change to different color:
-
-```css
-.feedback-prompt {
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); /* Blue */
-}
-```
-
-#### **Quiz Gradient:**
-
-Find `.quiz-view` (around line 350):
-
-```css
-.quiz-view {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple */
-}
-```
-
-#### **Flashcard Gradient:**
-
-Find `.flashcard-view` (around line 250):
-
-```css
-.flashcard-view {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); /* Teal/Mint */
-}
-```
-
----
-
-### Changing Feedback Timing
-
-**File:** `script.js`
-
-#### **Change 3-Second Delay:**
-
-Find around line 891:
-
-```javascript
-}, 3000); // 3 second delay
-```
-
-Change to 5 seconds:
-
-```javascript
-}, 5000); // 5 second delay
-```
-
-Or 10 seconds:
-
-```javascript
-}, 10000); // 10 second delay
-```
-
-**Note:** Time is in milliseconds (1000 = 1 second)
-
----
-
-### Changing Word Count Minimums
-
-**File:** `script.js`
-
-#### **Unit Feedback (Currently 5 words):**
-
-Find around line 1471:
-
-```javascript
-if (words.length < 5) {
-  showError(fbError, `Please provide at least 5 words...`);
-}
-```
-
-Change to 10 words:
-
-```javascript
-if (words.length < 10) {
-  showError(fbError, `Please provide at least 10 words...`);
-}
-```
-
-**Also update the HTML label** in `index.html` (around line 439):
-
-```html
-<div class="char-count"><span id="fbWordCount">0</span> / 5 words minimum</div>
-```
-
-Change to:
-
-```html
-<div class="char-count"><span id="fbWordCount">0</span> / 10 words minimum</div>
-```
-
-#### **Final Feedback (Currently 10 words):**
-
-Find around lines 1615 and 1620:
-
-```javascript
-if (likedWords.length < 10) { ... }
-if (improveWords.length < 10) { ... }
-```
-
-Change both to 15:
-
-```javascript
-if (likedWords.length < 15) { ... }
-if (improveWords.length < 15) { ... }
-```
-
-**Also update the HTML labels** in `index.html` (around lines 525, 531):
-
-```html
-<div class="char-count">
-  <span id="ffLikedCount">0</span> / 10 words minimum
-</div>
-<div class="char-count">
-  <span id="ffImproveCount">0</span> / 10 words minimum
-</div>
-```
-
----
-
-### Adding New Content
-
-#### **Flashcards:**
-
-1. Create CSV file: `Unit_6_[Name]_flashcards.csv`
-2. Format:
-   ```csv
-   question,answer
-   "Question 1?","Answer 1"
-   "Question 2?","Answer 2"
-   ```
-3. Add unit card to homepage in `index.html`
-4. Update `unitFiles` mapping in `script.js`:
-   ```javascript
-   const unitFiles = {
-     "Unit 1": "Unit 1_..._flashcards.csv",
-     "Unit 6": "Unit 6_[Name]_flashcards.csv", // Add this
-   };
-   ```
-
-#### **Quizzes:**
-
-1. Create CSV file: `Unit_6_quiz.csv`
-2. Format (10 columns):
-   ```csv
-   question_id,unit,question,answer_a,answer_b,answer_c,answer_d,correct,explanation_correct,hint
-   1,6,"Question?","A","B","C","D",A,"Explanation...","Hint..."
-   ```
-3. Update `quizFiles` mapping in `script.js`:
-   ```javascript
-   const quizFiles = {
-     "Unit 1": "Unit_1_quiz.csv",
-     "Unit 6": "Unit_6_quiz.csv", // Add this
-   };
-   ```
-
----
-
-## 🔧 Future Development
-
-### Planned Features (Phase 2)
-
-**User Authentication & Tracking:**
-
-- Firebase authentication system
-- Student login/registration
-- Teacher dashboard
-- Progress tracking across sessions
-- Persistent data storage
-
-**Advanced Analytics:**
-
-- Time spent per unit (automatic tracking)
-- Quiz attempt history (all attempts saved)
-- **Knowledge Check results saved**
-- **Feedback submissions tracked**
-- Weak area identification
-- Performance trends over time
-- Improvement metrics
-
-**Enhanced Learning:**
-
-- Personalized recommendations based on performance
-- Adaptive difficulty (questions get harder/easier based on performance)
-- Custom review quizzes (focus on weak areas)
-- **Question order randomization** (currently only answers shuffle)
-- Self-improvement metrics
-- Study time goals
-
-**Teacher Tools:**
-
-- Class overview dashboard
-- Individual student progress monitoring
-- **Feedback analytics:**
-  - View all feedback submissions
-  - Word clouds of common improvements
-  - Rating distributions
-  - Identify students who haven't submitted feedback
-  - Track difficulty perception vs actual scores
-- Live activity monitoring
-- Student account management
-- Export data to CSV/Excel
-- Generate reports
-
-**Feedback System Enhancements:**
-
-- Save feedback to Firebase (in addition to emails)
-- Historical feedback analytics
-- Trend analysis over time
-- Export feedback to spreadsheet
-- Identify most requested improvements
-- Correlation between ratings and scores
-
-See `FUTURE_FEATURES.md` for complete Phase 2 roadmap with:
-
-- Detailed 14-day implementation timeline
-- Firebase setup guide
-- Data structure specifications
-- Security rules
-- Complete testing checklist
-
----
-
-## 🐛 Known Issues
-
-**Current Limitations:**
-
-- ❌ No persistent user data (refreshing browser loses quiz progress)
-- ❌ No multi-user support (can't track multiple students)
-- ❌ No analytics or time tracking (beyond EmailJS feedback)
-- ❌ No teacher dashboard (feedback only via email)
-- ❌ **Questions appear in same order** (only answers randomize)
-- ❌ Knowledge Check results not saved (only shown on screen)
-- ❌ Feedback not stored (only emailed, not in database)
-- ❌ No quiz attempt history
-- ❌ No study time tracking
-
-**Workarounds:**
-
-- Complete quizzes in one session (don't refresh mid-quiz)
-- Screenshot quiz scores for personal records
-- Check email for feedback submissions
-- Manual progress tracking in spreadsheet
-- Use Phase 2 (Firebase) for full tracking
-
-**Not Bugs (By Design):**
-
-- ✅ Questions appear in same order (answers shuffle)
-  - This is intentional for now
-  - Will add full randomization in Phase 2
-- ✅ Feedback prompt waits 3 seconds
-  - Gives students time to see results
-  - Adjustable in code (see Customization)
-- ✅ Feedback requires minimum words
-  - Ensures quality feedback
-  - Adjustable in code
-
-**Note:** All major limitations will be addressed in Phase 2 (Firebase integration)
+**Fully Supported:**
+
+- ✅ Google Chrome 90+ (Desktop & Mobile)
+- ✅ Microsoft Edge 90+ (Chromium-based)
+- ✅ Firefox 88+
+- ✅ Safari 14+ (macOS & iOS)
+- ✅ Opera 76+
+- ✅ Brave 1.20+
+
+**Device Compatibility:**
+
+- ✅ Desktop (Windows, Mac, Linux)
+- ✅ Tablets (iPad, Android tablets)
+- ✅ Mobile (iPhone, Android phones)
+- ✅ Responsive breakpoint: 768px
+
+**Minimum Requirements:**
+
+- Modern browser with ES6 support
+- JavaScript enabled
+- CSS3 animations support
+- Local file access (if running locally)
 
 ---
 
 ## 📝 Version History
 
-### Version 2.0 (December 2025) - Current
+### v3.0.0 (Current - January 2026)
 
-**🎉 Major Update - Feedback & Assessment System**
+**🎉 Major Update - Unit 6 PDP System**
 
 **New Features:**
 
-- ✅ **Knowledge Check Quiz** (40 questions)
+- ✨ **Unit 6 PDP System** (67 questions across 4 sections)
+  - Section 2.1: Identify Skills (15 questions)
+  - Section 2.2: Perform SWOT Analysis (20 questions)
+  - Section 2.3: Skills Assessment (15 questions)
+  - Section 2.4: Create SMART PDP (17 questions)
+  - Section chooser with clickable cards
+  - Method selection (AI or PDF)
+  - Printable PDF worksheet with all 67 questions
 
-  - Baseline assessment for new students
-  - Multiple-choice format
-  - Immediate results
-  - Optional entry test
-  - Progress tracking
-  - Purple gradient UI
+- ✨ **AI Platform Integration** (4 platforms)
+  - ChatGPT (OpenAI)
+  - Claude (Anthropic)
+  - Google Gemini (Google)
+  - DeepSeek
+  - Section-specific AI prompts
+  - Automatic output generation
+  - Free to use (no API keys needed)
 
-- ✅ **Automated Feedback System**
+- ✨ **Smart Copy-Prompt Workflow**
+  - Copy validation before AI selection
+  - Warning modal if clicking AI too early
+  - Visual feedback on copy button
+  - "✓ Copied!" confirmation
+  - Green success state for 2 seconds
 
-  - Unit Quick Feedback (4 fields, ~30 sec)
-  - Final Course Feedback (5 fields, ~30 sec)
-  - Orange gradient prompts (high visibility)
-  - Centered modals (better UX)
-  - 3-second delay after quiz completion
-  - Word count validation (5 words, 10 words)
-  - Star rating system (1-5 gold stars)
-  - "Maybe Later" dismissal option
+- ✨ **Enhanced User Experience**
+  - Entire method cards clickable
+  - Entire AI platform cards clickable
+  - Purple gradient copy button (matches UI)
+  - Centered "What to do next" card
+  - Success screen with step-by-step instructions
+  - Improved mobile responsiveness
+  - Better navigation with back buttons
 
-- ✅ **EmailJS Integration**
-  - Automated email delivery to tutors
-  - Unit feedback emails (score + feedback)
-  - Final feedback emails (comprehensive)
-  - Professional HTML formatting
-  - Secure (emails not in code)
-  - Free tier (200/month)
-  - Easy to add multiple tutors
+**UI/UX Improvements:**
 
-**UI/UX Enhancements:**
-
-- ✅ Orange gradient feedback prompts (pulsing animation)
-- ✅ Centered modal position (not bottom)
-- ✅ Interactive star ratings with hover
-- ✅ Real-time word counters
-- ✅ Answer randomization (A/B/C/D shuffle)
-- ✅ Updated footer with clickable logo → GitHub
-- ✅ Improved mobile responsiveness
-- ✅ Knowledge Check section with description
-- ✅ Better form validation
-
-**Technical Improvements:**
-
-- ✅ EmailJS SDK integration
-- ✅ `.gitignore` for credential protection
-- ✅ `.env.example` template
-- ✅ Comprehensive README update
-- ✅ Future features roadmap update
-
-**Bug Fixes:**
-
-- ✅ Fixed score capture in feedback emails (was showing 0)
-- ✅ Removed double delays (was 10 sec, now 3 sec)
-- ✅ Updated timing messages (30 sec instead of 1-2 min)
-- ✅ Fixed feedback prompt positioning
+- ✅ Consistent "Unit 6 | Section X.X" naming format
+- ✅ Copy button matches modal button styling
+- ✅ Warning modal matches "Skipped Questions" style
+- ✅ Success card centered on page
+- ✅ AI platform logos (60x60px)
+- ✅ Hover effects on all interactive elements
+- ✅ Smooth transitions and animations
+- ✅ Professional white modal design
 
 **Files Added:**
 
-- `my_knowledge_check.csv` (40 questions)
-- `.gitignore`
-- `.env.example`
+- `Unit_6_PDP_Questions.pdf` (67 questions)
+- `images/chatgpt-logo.png`
+- `images/claude-logo.png`
+- `images/gemini-logo.png`
+- `images/deepseek-logo.png`
 
 **Files Modified:**
 
-- `index.html` (added 300+ lines for modals)
-- `styles.css` (added 700+ lines for styling)
-- `script.js` (added 400+ lines for logic)
-- `README.md` (complete rewrite)
-- `FUTURE_FEATURES.md` (Phase 1 summary added)
-
-**Statistics:**
-
-- Total new code: ~1,400 lines
-- New features: 3 major systems
-- Documentation: Comprehensive guides
+- `index.html` (added PDP section HTML)
+- `styles.css` (added 500+ lines PDP styling)
+- `script.js` (added 400+ lines PDP logic)
+- `README.md` (complete update with v3.0 features)
 
 ---
 
-### Version 1.0 (November 2025)
+### v2.0.0 (December 2025)
+
+**🎉 Major Update - Feedback & Assessment System**
+
+**Features:**
+
+- ✅ Knowledge Check Quiz (40 questions)
+- ✅ Automated Feedback System (Unit + Final)
+- ✅ EmailJS Integration for tutor notifications
+- ✅ Orange gradient feedback prompts
+- ✅ Star rating system (1-5 stars)
+- ✅ Word count validation
+- ✅ Answer randomization (A/B/C/D shuffle)
+
+---
+
+### v1.0.0 (November 2025)
 
 **🎉 Initial Release**
 
 **Features:**
 
-- ✅ Complete flashcard system (5 units, 320+ cards)
-- ✅ Complete quiz system (6 quizzes, 350 questions)
+- ✅ Complete flashcard system (91 cards, 6 units)
+- ✅ Complete quiz system (5 quizzes, 250+ questions)
+- ✅ BIG 100 Challenge (100 questions)
 - ✅ Responsive design (desktop + mobile)
 - ✅ Skip/review functionality
 - ✅ Score breakdown and completion screens
 - ✅ Confetti animation for high scores
-- ✅ Mobile support
-
-**Recent Updates (Pre-v2.0):**
-
-- ✅ Fixed skipped questions appearing before user interaction
-- ✅ Added auto-skip on Next button
-- ✅ Improved navigation (Next always enabled)
-- ✅ Enhanced completion messages
-- ✅ Added detailed score breakdown
+- ✅ Hint system with toggle
+- ✅ Progress tracking
+- ✅ Dark theme UI with animations
 
 ---
 
-## 🤝 Credits
+## 👩‍💻 About the Developer
 
-**Developed for:** An independent study resource created to support learning for the NCFE Level 3 Cybersecurity course.
+**Created by:** Patrycja Oosthuizen  
+**GitHub:** [@PatrycjaOosthuizen](https://github.com/PatrycjaOosthuizen)  
+**Project:** CyberLab - NCFE Level 3 Cybersecurity Learning Platform  
+**Built with:** ❤️ and lots of ☕
 
-**Developer:** Patrycja Oosthuizen  
-**GitHub:** https://github.com/PatrycjaOosthuizen  
-**Platform:** Cybersecurity Study & Practice Platform
+**Technologies:**
 
-**Content Creation:**
+- Pure HTML5, CSS3, JavaScript (No frameworks)
+- CSV data processing
+- Client-side only (no backend required)
 
-- Flashcards: Based on NCFE Level 3 syllabus and learning outcomes
-- Quiz questions: Aligned with NCFE assessment criteria
-- Knowledge Check: Fundamental cybersecurity concepts
-- Interface design: Modern web standards and UX best practices
+**Contact:**
 
-**Technologies Used:**
-
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Email Service:** EmailJS (feedback delivery)
-- **Fonts:** Inter (Google Fonts)
-- **Icons:** Unicode emojis
-- **No frameworks:** Pure vanilla implementation
-- **No libraries:** Except EmailJS SDK
-
-**Special Thanks:**
-
-- NCFE for course structure and content
-- EmailJS for reliable email service
-- Students for testing and feedback
-- GitHub for hosting and version control
+- GitHub: https://github.com/PatrycjaOosthuizen
+- Portfolio: [Your Portfolio Link]
 
 ---
 
@@ -1750,72 +960,77 @@ This platform is designed for educational purposes within the NCFE Level 3 Cyber
 
 **Copyright Notice:**
 
-- Qualification name and learning outcomes © NCFE
-  (Used only as reference. Not affiliated with or endorsed by NCFE.)
-- Original study content, flashcards, and platform implementation © 2025 Patry
-- Email handling powered by EmailJS © EmailJS
+© 2026 Patrycja Oosthuizen. All rights reserved.
+
+For educational purposes - NCFE Level 3 Cybersecurity
 
 **Usage Rights:**
 
 - ✅ May be used for NCFE Level 3 Cybersecurity course
 - ✅ May be modified for personal or educational use
-- ✅ May be shared with students and tutors for learning purposes
-- ❌ Not for commercial sale unless permission is granted
-- ❌ Do not reproduce NCFE or 5E copyrighted text or diagrams
+- ✅ May be shared with students for learning purposes
+- ❌ Not for commercial sale or redistribution
+- ❌ Do not reproduce NCFE copyrighted materials
+
+**Qualification References:**
+
+- NCFE Level 3 qualification name and learning outcomes are © NCFE
+- Used only as educational reference
+- Not affiliated with or endorsed by NCFE
 
 ---
 
-## 🎓 Educational Philosophy
+## 🙏 Acknowledgments
 
-This platform is built on proven learning principles:
+**Special Thanks:**
 
-**Active Recall:**
+- **NCFE** for the certification framework and course structure
+- **OpenAI, Anthropic, Google, DeepSeek** for AI integration support
+- **Students and educators** who provided feedback during development
+- **Open source community** for inspiration and best practices
 
-- Flashcards promote retrieval practice
-- Testing effect enhances long-term retention
-- Spaced repetition through unlimited retakes
+**Tools & Services:**
 
-**Immediate Feedback:**
+- GitHub for hosting and version control
+- Modern web standards (HTML5, CSS3, ES6+)
+- CSV data format for content management
+- AI platforms for Personal Development Planning
 
-- Quizzes provide instant results
-- Explanations clarify misconceptions
-- Visual feedback reinforces learning
+---
 
-**Spaced Repetition:**
+## 📞 Support & Feedback
 
-- Unlimited retakes encourage review
-- Answer randomization prevents memorization
-- Review mode supports self-paced learning
+**Having Issues?**
 
-**Self-Paced Learning:**
+- Check browser compatibility (Chrome, Firefox, Safari, Edge)
+- Ensure JavaScript is enabled
+- Try refreshing the page (Ctrl+F5 or Cmd+Shift+R)
+- Clear browser cache if experiencing issues
 
-- Students control their progress
-- No time limits or deadlines
-- Can skip and return to content
+**Want to Contribute?**
 
-**Low-Stakes Practice:**
+- Report bugs via GitHub Issues
+- Suggest features or improvements
+- Share with fellow cybersecurity students
+- Provide feedback on content accuracy
 
-- Safe environment to make mistakes
-- No penalties for wrong answers
-- Encourages experimentation and learning
+**Contact:**
 
-**Continuous Improvement:**
+- GitHub: [@PatrycjaOosthuizen](https://github.com/PatrycjaOosthuizen)
+- Project Repository: [Link to GitHub Repo]
 
-- Feedback system enables course refinement
-- Student insights drive improvements
-- Iterative enhancement of content
+---
 
-**Goal:**
-Help students master cybersecurity concepts through engaging, interactive practice while providing tutors with actionable insights to continuously improve the learning experience.
+**Platform Version:** 3.0.0  
+**Last Updated:** January 2026  
+**Status:** Production Ready ✅
+
+---
+
+**Ready to master cybersecurity? Start learning now! 🚀🛡️**
 
 ---
 
 **Happy Studying! 📚🛡️**
 
-_Questions? Feedback? Let us know through the feedback system!_ 💬🟠
-
----
-
-**Platform Version:** 2.0  
-**Last Updated:** December 2025  
-**Status:** Production Ready ✅
+_Master cybersecurity concepts through interactive practice and AI-powered career planning!_
