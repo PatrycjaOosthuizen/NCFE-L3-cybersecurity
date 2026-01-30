@@ -365,6 +365,7 @@ function renderCard() {
   flashcard.classList.remove("flipped");
 
   updateProgress();
+  updateMobileButtons();
 
   prevCardBtn.disabled = currentCardIndex === 0;
   prevCardBtn.style.opacity = currentCardIndex === 0 ? "0.5" : "1";
@@ -2373,6 +2374,160 @@ document.querySelectorAll(".back-btn-bottom").forEach((btn) => {
     window.scrollTo(0, 0);
   });
 });
+
+// ===========================
+// MOBILE FLASHCARD NAVIGATION
+// ===========================
+
+// Mobile navigation button handlers
+const mobilePrevBtn = document.getElementById("mobilePrevBtn");
+const mobileNextBtn = document.getElementById("mobileNextBtn");
+
+if (mobilePrevBtn) {
+  mobilePrevBtn.addEventListener("click", () => {
+    if (currentCardIndex > 0) {
+      currentCardIndex--;
+
+      // Reset flip state
+      if (isFlipped) {
+        flashcard.classList.remove("flipped");
+        isFlipped = false;
+      }
+
+      // Update display
+      displayCard();
+      updateProgress();
+      updateMobileButtons();
+    }
+  });
+}
+
+if (mobileNextBtn) {
+  mobileNextBtn.addEventListener("click", () => {
+    if (currentCardIndex < flashcards.length - 1) {
+      currentCardIndex++;
+
+      // Reset flip state
+      if (isFlipped) {
+        flashcard.classList.remove("flipped");
+        isFlipped = false;
+      }
+
+      // Update display
+      displayCard();
+      updateProgress();
+      updateMobileButtons();
+    }
+  });
+}
+
+// Swipe gesture support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+
+function handleSwipe() {
+  const swipeThreshold = 50; // Minimum distance for swipe
+  const horizontalDistance = Math.abs(touchEndX - touchStartX);
+  const verticalDistance = Math.abs(touchEndY - touchStartY);
+
+  // Only trigger if swipe is more horizontal than vertical
+  if (
+    horizontalDistance > verticalDistance &&
+    horizontalDistance > swipeThreshold
+  ) {
+    if (touchEndX < touchStartX) {
+      // Swiped left - Next card
+      if (currentCardIndex < flashcards.length - 1) {
+        currentCardIndex++;
+
+        // Reset flip state
+        if (isFlipped) {
+          flashcard.classList.remove("flipped");
+          isFlipped = false;
+        }
+
+        // Update display
+        displayCard();
+        updateProgress();
+        updateMobileButtons();
+      }
+    }
+
+    if (touchEndX > touchStartX) {
+      // Swiped right - Previous card
+      if (currentCardIndex > 0) {
+        currentCardIndex--;
+
+        // Reset flip state
+        if (isFlipped) {
+          flashcard.classList.remove("flipped");
+          isFlipped = false;
+        }
+
+        // Update display
+        displayCard();
+        updateProgress();
+        updateMobileButtons();
+      }
+    }
+  }
+}
+
+// Add touch event listeners to flashcard
+if (flashcard) {
+  flashcard.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    },
+    { passive: true },
+  );
+
+  flashcard.addEventListener(
+    "touchend",
+    (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    },
+    { passive: true },
+  );
+}
+
+// Helper function to navigate cards
+function navigateCard(direction) {
+  currentCardIndex += direction;
+
+  // Reset flip state
+  if (isFlipped) {
+    flashcard.classList.remove("flipped");
+    isFlipped = false;
+  }
+
+  // Update card display
+  displayCard();
+  updateProgress();
+  updateMobileButtons();
+  updateMobileButtons();
+}
+
+// Update mobile button states (disable at boundaries)
+function updateMobileButtons() {
+  if (mobilePrevBtn) {
+    mobilePrevBtn.disabled = currentCardIndex === 0;
+  }
+
+  if (mobileNextBtn) {
+    mobileNextBtn.disabled = currentCardIndex === flashcards.length - 1;
+  }
+}
+
+console.log("✅ Mobile Flashcard Navigation Initialized!");
+console.log("📱 Swipe gestures enabled");
+console.log("🔘 Mobile navigation buttons ready");
 
 console.log("✅ Video Lessons System Initialized!");
 console.log("🎬 6 YouTube Playlists Loaded");
