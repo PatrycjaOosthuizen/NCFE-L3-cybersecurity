@@ -66,6 +66,43 @@ const unitFileNames = {
 };
 
 // ===========================
+// YOUTUBE VIDEO PLAYLISTS DATA
+// ===========================
+
+const YOUTUBE_PLAYLISTS = {
+  unit1: {
+    url: "https://www.youtube.com/playlist?list=PL-nZhGHgVXE3yJ1pDZVMx1CNnfqrdW4fW",
+    videos: 9,
+    duration: "2h 22m",
+  },
+  unit2: {
+    url: "https://www.youtube.com/playlist?list=PL-nZhGHgVXE0KsYub1Eqp7QKwrGe70Pui",
+    videos: 13,
+    duration: "3h 08m",
+  },
+  unit3: {
+    url: "https://www.youtube.com/playlist?list=PL-nZhGHgVXE13FCVbVcuAApV4Z2BgJ4wr",
+    videos: 20,
+    duration: "3h 39m",
+  },
+  unit4: {
+    url: "https://www.youtube.com/playlist?list=PL-nZhGHgVXE2OiJVh1NtjG02yv2pkT43G",
+    videos: 11,
+    duration: "2h 10m",
+  },
+  unit5: {
+    url: "https://www.youtube.com/playlist?list=PL-nZhGHgVXE2Ac_R_ubFH1zczGAtgPhdI",
+    videos: 8,
+    duration: "1h 36m",
+  },
+  unit6: {
+    url: "https://www.youtube.com/playlist?list=PL-nZhGHgVXE2Iy7xr5dO8FyCCMKkwFILu",
+    videos: 3,
+    duration: "1h 12m",
+  },
+};
+
+// ===========================
 // DOM ELEMENTS
 // ===========================
 
@@ -2274,3 +2311,68 @@ console.log(
   "  AI cards count:",
   document.querySelectorAll(".ai-platform-card").length,
 );
+
+// ===========================
+// VIDEO LESSONS FUNCTIONALITY
+// ===========================
+
+const videoView = document.getElementById("videoView");
+const videoBackBtn = document.getElementById("videoBackBtn");
+
+// Show video lessons page for specific unit
+function showVideoLessons(unit) {
+  homepage.classList.add("hidden");
+  videoView.classList.remove("hidden");
+
+  // Hide all video content
+  document.querySelectorAll(".video-content").forEach((content) => {
+    content.classList.add("hidden");
+  });
+
+  // Show selected unit content
+  const selectedContent = document.getElementById(`${unit}-video`);
+  if (selectedContent) {
+    selectedContent.classList.remove("hidden");
+  }
+
+  window.scrollTo(0, 0);
+}
+
+// Video button click handlers on unit cards
+document.querySelectorAll(".video-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const unit = btn.dataset.unit;
+    showVideoLessons(unit);
+  });
+});
+
+// Watch playlist button handlers
+document.querySelectorAll(".watch-playlist-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const unit = btn.dataset.unit;
+    const playlist = YOUTUBE_PLAYLISTS[unit];
+    if (playlist) {
+      window.open(playlist.url, "_blank");
+    }
+  });
+});
+
+// Back to units buttons (both top and all bottom buttons)
+if (videoBackBtn) {
+  videoBackBtn.addEventListener("click", () => {
+    videoView.classList.add("hidden");
+    homepage.classList.remove("hidden");
+    window.scrollTo(0, 0);
+  });
+}
+
+document.querySelectorAll(".back-btn-bottom").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    videoView.classList.add("hidden");
+    homepage.classList.remove("hidden");
+    window.scrollTo(0, 0);
+  });
+});
+
+console.log("✅ Video Lessons System Initialized!");
+console.log("🎬 6 YouTube Playlists Loaded");

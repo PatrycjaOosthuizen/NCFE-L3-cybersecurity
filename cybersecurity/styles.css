@@ -2356,8 +2356,8 @@ body {
 /* PDP Button on Unit Card - SAME SIZE AS QUIZ BUTTON */
 .pdp-btn {
   flex: 1;
-  padding: 14px 24px;
-  font-size: 1.2em;
+  padding: 12px 20px;
+  font-size: 1em;
   font-weight: 600;
   background: linear-gradient(135deg, #ff9500 0%, #ff5e3a 100%);
   color: white;
@@ -2390,8 +2390,9 @@ body {
 
 .pdp-header h2 {
   color: white;
-  font-size: 2.5em;
+  font-size: 2.2em;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .pdp-subtitle {
@@ -2439,8 +2440,9 @@ body {
 
 .section-card h3 {
   color: white;
-  font-size: 1.3em;
+  font-size: 1.1em;
   margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .section-title {
@@ -3064,8 +3066,8 @@ body {
 
   /* Build Your PDP Button - Match Other Buttons */
   .pdp-btn {
-    font-size: 1em !important; /* Match Study Flashcards / Take Quiz */
-    padding: 12px 20px !important;
+    font-size: 1em;
+    padding: 12px 20px;
   }
 
   /* All Card Buttons on Mobile */
@@ -3237,4 +3239,312 @@ body {
 .success-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 25px rgba(76, 175, 80, 0.5);
+}
+
+/* ===========================
+   VIDEO LESSONS STYLING
+   =========================== */
+
+/* Video View Container */
+.video-view {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.video-view.hidden {
+  display: none;
+}
+
+.video-content {
+  background: #2a2a3e;
+  padding: 40px;
+  border-radius: 16px;
+  margin-top: 20px;
+  min-height: 600px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-content.hidden {
+  display: none;
+}
+
+/* Video Header */
+.video-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.video-icon {
+  font-size: 4em;
+  margin-bottom: 16px;
+}
+
+.video-header h2 {
+  color: white;
+  font-size: 1.4em;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Video Introduction */
+.video-intro {
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.video-intro p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+}
+
+.video-intro ul {
+  list-style: none;
+  padding-left: 24px;
+}
+
+.video-intro ul li {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 6px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.video-intro ul li:before {
+  content: "•";
+  position: absolute;
+  left: -20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.warning-text {
+  color: #ff9800;
+  font-weight: 600;
+  margin-top: 20px !important;
+}
+
+/* Video Sections */
+.video-sections {
+  margin-bottom: 32px;
+}
+
+.video-sections h3 {
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.video-section {
+  margin-bottom: 20px;
+}
+
+.video-section h4 {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.video-section ul {
+  list-style: none;
+  padding-left: 24px;
+}
+
+.video-section ul li {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 6px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.video-section ul li:before {
+  content: "•";
+  position: absolute;
+  left: -20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Video Redirect Text */
+.video-redirect {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.video-redirect p {
+  color: #667eea;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Watch Playlist Button - BLUE YouTube Style */
+.watch-playlist-btn {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 32px auto;
+  padding: 18px 32px;
+  background: linear-gradient(135deg, #4285f4 0%, #1967d2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.3em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+.watch-playlist-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(66, 133, 244, 0.4);
+  background: linear-gradient(135deg, #5294f5 0%, #2977e2 100%);
+}
+
+/* Video Duration Text */
+.video-duration {
+  text-align: center;
+  color: #667eea;
+  font-size: 1em;
+  margin: 16px 0 32px;
+  font-weight: 500;
+}
+
+/* Back Button Bottom */
+.back-btn-bottom {
+  display: block;
+  margin: 32px auto 0;
+  padding: 12px 24px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn-bottom:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+/* Video Button on Unit Cards - BLUE YouTube Style */
+.video-btn {
+  background: linear-gradient(135deg, #4285f4 0%, #1967d2 100%);
+  box-shadow: 0 4px 6px rgba(66, 133, 244, 0.3);
+  color: white;
+}
+
+.video-btn:hover {
+  background: linear-gradient(135deg, #5294f5 0%, #2977e2 100%);
+  box-shadow: 0 6px 12px rgba(66, 133, 244, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Flashcard Button - ORIGINAL GREEN */
+.flashcard-btn {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard-btn:hover {
+  background: linear-gradient(135deg, #0d7a6e 0%, #2ed968 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(17, 153, 142, 0.4);
+}
+
+/* 3-Button Layout on Unit Cards */
+.unit-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.unit-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Desktop: 3 buttons in a row */
+@media (min-width: 769px) {
+  .unit-buttons {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .unit-btn {
+    flex: 1;
+    padding: 12px 8px;
+    font-size: 1em;
+  }
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 768px) {
+  .video-content {
+    padding: 24px 20px;
+  }
+
+  .video-header h2 {
+    font-size: 1.2em;
+  }
+
+  .video-icon {
+    font-size: 3em;
+  }
+
+  .video-sections h3 {
+    font-size: 1.1em;
+  }
+
+  .video-section h4 {
+    font-size: 1em;
+  }
+
+  .watch-playlist-btn {
+    font-size: 1.1em;
+    padding: 16px 24px;
+  }
+
+  .unit-buttons {
+    flex-direction: column;
+  }
+
+  .unit-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+}
+
+/* Ensure study-btn has same styling as flashcard-btn */
+.study-btn {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.study-btn:hover {
+  background: linear-gradient(135deg, #0d7a6e 0%, #2ed968 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(17, 153, 142, 0.4);
 }

@@ -2,7 +2,7 @@
 
 ## NCFE Level 3 Cybersecurity Course - Interactive Learning System
 
-A comprehensive web-based study platform designed for NCFE Level 3 Cybersecurity students, featuring interactive flashcards, practice quizzes, comprehensive knowledge assessment, and AI-powered Personal Development Planning with multi-platform integration.
+A comprehensive web-based study platform designed for NCFE Level 3 Cybersecurity students, featuring interactive flashcards, practice quizzes, comprehensive knowledge assessment, YouTube video lessons, and AI-powered Personal Development Planning with multi-platform integration.
 
 ---
 
@@ -10,6 +10,7 @@ A comprehensive web-based study platform designed for NCFE Level 3 Cybersecurity
 
 - [Overview](#overview)
 - [Current Features](#current-features)
+- [Video Lessons System](#video-lessons-system)
 - [Unit 6 PDP System](#unit-6-pdp-system)
 - [Technical Stack](#technical-stack)
 - [File Structure](#file-structure)
@@ -29,16 +30,71 @@ A comprehensive web-based study platform designed for NCFE Level 3 Cybersecurity
 
 ## 🎯 Overview
 
-CyberLab provides an interactive learning experience for students studying NCFE Level 3 Cybersecurity. It combines traditional flashcard-based learning with comprehensive quiz assessments, baseline knowledge testing, and AI-powered Personal Development Planning to help students master cybersecurity concepts and plan their career path.
+CyberLab provides an interactive learning experience for students studying NCFE Level 3 Cybersecurity. It combines traditional flashcard-based learning with comprehensive quiz assessments, baseline knowledge testing, curated YouTube video lessons, and AI-powered Personal Development Planning to help students master cybersecurity concepts and plan their career path.
 
-**Current Status:** Fully functional standalone web application with AI integration  
-**Current Version:** 3.0 (January 2026)  
+**Current Status:** Fully functional standalone web application with AI integration and video lessons  
+**Current Version:** 3.1 (January 2026)  
 **Target Audience:** NCFE Level 3 Cybersecurity students  
 **Deployment:** Local/self-hosted website or GitHub Pages
 
 ---
 
 ## ✨ Current Features
+
+
+### 🎥 Video Lessons System
+
+**Curated YouTube Playlists:**
+
+A comprehensive video learning system featuring hand-picked YouTube playlists for each unit, providing visual and auditory learning to complement flashcards and quizzes.
+
+**Features:**
+
+- ✅ 6 dedicated video lesson pages (one per unit)
+- ✅ 64 total videos across all units
+- ✅ 14+ hours of quality content
+- ✅ Direct YouTube integration (opens in new tab)
+- ✅ Beautiful blue gradient video buttons
+- ✅ Structured learning content overview
+- ✅ Mobile-responsive video pages
+- ✅ Consistent design with homepage
+
+**Unit Breakdown:**
+
+- **Unit 1:** 9 videos (2h 22m) - Principles of Cyber Security
+- **Unit 2:** 13 videos (3h 08m) - Threat Intelligence
+- **Unit 3:** 20 videos (3h 39m) - Testing, Vulnerabilities & Controls
+- **Unit 4:** 11 videos (2h 10m) - Incident Response
+- **Unit 5:** 8 videos (1h 36m) - Legislation & Ethical Conduct
+- **Unit 6:** 3 videos (1h 12m) - Professional Development
+
+**Each Video Page Includes:**
+
+- Unit icon and title
+- Welcome introduction text
+- "What we'll explore" section breakdown
+- 3 main sections per unit with bullet points
+- "↗️ You'll be redirected to YouTube" notice
+- Blue "▶ Watch Unit X Playlist" button
+- Video count and total duration
+- Back to Units navigation (top and bottom)
+
+**Content Structure:**
+
+Each video lesson page provides:
+- Clear explanations of what will be covered
+- Real-world examples and case studies
+- Step-by-step coverage of NCFE Level 3 content
+- Organized by section for easy navigation
+- Disclaimer that content is supplementary (not official NCFE)
+
+**Learning Path Integration:**
+
+```
+Watch Videos → Study Flashcards → Take Quiz
+```
+
+Video lessons serve as the foundation for understanding, followed by flashcard review and quiz assessment for comprehensive learning.
 
 ### 📖 Flashcard System
 
@@ -130,6 +186,7 @@ CyberLab provides an interactive learning experience for students studying NCFE 
 - Dark gradient background with glassmorphism effects
 - Color-coded system:
   - 🟢 Green (mint/teal gradient) = Flashcards & study buttons
+  - 🔵 Blue gradient = Video lessons buttons
   - 🟣 Purple gradient = Quizzes, Knowledge Check, PDP AI buttons
   - 🟠 Orange gradient = PDP Build button, warning prompts
   - 🔵 Blue gradient = Success states
@@ -199,6 +256,138 @@ Time: 5 minutes 23 seconds
 
 ---
 
+
+## 🎥 Video Lessons System
+
+### 📺 Comprehensive Video Learning
+
+**Overview:**
+
+The Video Lessons System provides structured, high-quality YouTube content for each unit, offering visual and auditory learning to reinforce concepts learned through flashcards and tested in quizzes.
+
+**System Features:**
+
+- 🎬 6 dedicated video lesson pages
+- 📹 64 professionally selected videos
+- ⏱️ Over 14 hours of content
+- 🔗 Direct YouTube playlist integration
+- 📱 Fully responsive design
+- 🎨 Consistent blue gradient styling
+
+### Video Content by Unit
+
+#### Unit 1: Understand Principles of Cyber Security 🛡️
+- **Videos:** 9 videos
+- **Duration:** 2h 22m
+- **Topics Covered:**
+  - Section 1: Understand Cybersecurity (CIA Triad, security fundamentals)
+  - Section 2: Core terminology and key aspects
+  - Section 3: Security by design principles
+
+#### Unit 2: Threat Intelligence in Cyber Security 🧠
+- **Videos:** 13 videos
+- **Duration:** 3h 08m
+- **Topics Covered:**
+  - Section 1: Understand threat intelligence
+  - Section 2: Types of threats
+  - Section 3: Threat intelligence sources and analysis
+
+#### Unit 3: Cyber Security Testing, Vulnerabilities and Controls 🧰
+- **Videos:** 20 videos
+- **Duration:** 3h 39m
+- **Topics Covered:**
+  - Section 1: Understand vulnerability assessment
+  - Section 2: Understand penetration testing
+  - Section 3: Understand security controls
+
+#### Unit 4: Cyber Security Incident Response 🚨
+- **Videos:** 11 videos
+- **Duration:** 2h 10m
+- **Topics Covered:**
+  - Section 1: Understand incident response planning
+  - Section 2: Understand incident detection and analysis
+  - Section 3: Understand containment, eradication and recovery
+
+#### Unit 5: Understand Legislation and Ethical Conduct ⚖️
+- **Videos:** 8 videos
+- **Duration:** 1h 36m
+- **Topics Covered:**
+  - Section 1: Understand cyber security legislation
+  - Section 2: Understand ethical conduct in cyber security
+  - Section 3: Understand privacy and data protection
+
+#### Unit 6: Personal and Professional Development 🎓
+- **Videos:** 3 videos
+- **Duration:** 1h 12m
+- **Topics Covered:**
+  - Section 1: Understand career pathways
+  - Section 2: Develop professional skills
+  - Section 3: Understand continuous professional development
+
+### How to Use Video Lessons
+
+**Step 1: Access Video Page**
+- Click "🎥 Watch Videos" button on any unit card
+- View structured content overview
+- Read what topics will be covered
+
+**Step 2: Review Content Structure**
+- Introduction text explains playlist purpose
+- Section breakdown shows organized topics
+- Bullet points detail specific learning outcomes
+
+**Step 3: Watch Playlist**
+- Click blue "▶ Watch Unit X Playlist" button
+- Opens YouTube in new tab
+- All videos available in organized playlist
+
+**Step 4: Continue Learning**
+- Return to homepage via back buttons
+- Practice with flashcards to reinforce concepts
+- Test knowledge with unit quizzes
+
+### Video Page Design
+
+**Each page includes:**
+
+1. **Header Section:**
+   - Back to Units button (top)
+   - Unit icon (matches homepage)
+   - Unit title (consistent sizing)
+
+2. **Introduction:**
+   - Welcome message
+   - Learning objectives (bullet points)
+   - Disclaimer notice
+
+3. **Content Overview:**
+   - "🔍 📚 In Unit X, we will explore:" heading
+   - 3 organized sections
+   - Detailed bullet points per section
+
+4. **Action Section:**
+   - "↗️ You'll be redirected to YouTube" notice
+   - Large blue "▶ Watch Unit X Playlist" button
+   - Video count and duration information
+
+5. **Footer:**
+   - Back to Units button (bottom)
+
+### Video Button Styling
+
+**Consistent Design:**
+- Color: Blue gradient (#4285F4 to #1967D2)
+- Matches YouTube/Google branding
+- Hover effect with lift animation
+- Same size as other unit buttons (1em font)
+- Appears first in 3-button layout
+
+**3-Button Layout:**
+- Desktop: Horizontal row (Video | Flashcards | Quiz)
+- Mobile: Vertical stack
+- All buttons same size and weight
+
+---
 ## 🆕 Unit 6 PDP System
 
 ### 📋 Personal Development Plan Builder
@@ -829,7 +1018,58 @@ Each of the 4 section prompts includes:
 
 ## 📝 Version History
 
-### v3.0.0 (Current - January 2026)
+### v3.1.0 (Current - January 2026)
+
+**🎉 Major Update - Video Lessons System**
+
+**New Features:**
+
+- ✨ **Complete Video Lessons System**
+  - 6 dedicated video lesson pages (one per unit)
+  - 64 curated YouTube videos
+  - 14+ hours of quality content
+  - Direct YouTube playlist integration
+  - Structured content overview for each unit
+  - Beautiful blue gradient video buttons
+
+- ✨ **Video Page Design**
+  - Unit icons matching homepage
+  - Welcome introduction text
+  - 3-section content breakdown per unit
+  - Bullet-pointed learning outcomes
+  - "↗️ Redirects to YouTube" notices
+  - Video count and duration display
+  - Dual back navigation (top and bottom)
+
+- ✨ **Enhanced Homepage Integration**
+  - "🎥 Watch Videos" button added to all 6 units
+  - 3-button layout: Video | Flashcards | Quiz/PDP
+  - Desktop: horizontal row layout
+  - Mobile: vertical stack layout
+  - Consistent button sizing (1em font)
+  - Blue gradient matching YouTube branding
+
+**UI/UX Improvements:**
+
+- ✅ Consistent font sizing across all buttons
+- ✅ Video page titles match homepage card size (1.4em)
+- ✅ Section headings optimized (1.1-1.2em)
+- ✅ Reduced line spacing for cleaner look (6px, 1.4 line-height)
+- ✅ Purple/blue accent color for video text (#667eea)
+- ✅ All cards same height (600px min-height)
+- ✅ Centered card layout (900px max-width)
+- ✅ Mobile-responsive scaling
+
+**Files Modified:**
+
+- `index.html` (added video pages HTML ~390 lines)
+- `styles.css` (added video styling ~280 lines)
+- `script.js` (added video data and navigation ~70 lines)
+- `README.md` (added video lessons documentation)
+
+---
+
+### v3.0.0 (January 2026)
 
 **🎉 Major Update - Unit 6 PDP System**
 
@@ -985,6 +1225,7 @@ For educational purposes - NCFE Level 3 Cybersecurity
 **Special Thanks:**
 
 - **NCFE** for the certification framework and course structure
+- **YouTube Content Creators** for high-quality cybersecurity educational videos
 - **OpenAI, Anthropic, Google, DeepSeek** for AI integration support
 - **Students and educators** who provided feedback during development
 - **Open source community** for inspiration and best practices
@@ -992,6 +1233,7 @@ For educational purposes - NCFE Level 3 Cybersecurity
 **Tools & Services:**
 
 - GitHub for hosting and version control
+- YouTube for video content hosting
 - Modern web standards (HTML5, CSS3, ES6+)
 - CSV data format for content management
 - AI platforms for Personal Development Planning
@@ -1033,4 +1275,4 @@ For educational purposes - NCFE Level 3 Cybersecurity
 
 **Happy Studying! 📚🛡️**
 
-_Master cybersecurity concepts through interactive practice and AI-powered career planning!_
+_Master cybersecurity concepts through interactive practice, video lessons, and AI-powered career planning!_
