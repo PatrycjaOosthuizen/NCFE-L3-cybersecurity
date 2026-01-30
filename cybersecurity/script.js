@@ -15,6 +15,9 @@ let userAnswers = [];
 let quizMode = ""; // 'unit' or 'big100'
 let currentQuizUnit = "";
 
+// Global variable to remember homepage scroll position
+let lastHomepageScrollPosition = 0;
+
 // Unit emoji mapping
 const unitEmojis = {
   "Unit 1": "🔐",
@@ -269,6 +272,7 @@ document.addEventListener("keydown", (e) => {
 // ===========================
 
 async function loadUnit(unit) {
+  lastHomepageScrollPosition = window.scrollY;
   currentUnit = unit;
 
   loadingOverlay.classList.remove("hidden");
@@ -308,6 +312,8 @@ async function loadUnit(unit) {
     homepage.classList.add("hidden");
     flashcardView.classList.remove("hidden");
     loadingOverlay.classList.add("hidden");
+    window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
     completionScreen.classList.add("hidden");
     flashcard.style.display = "block";
@@ -462,6 +468,7 @@ function returnToHomepage() {
 // ===========================
 
 async function loadQuiz(unit, mode) {
+  lastHomepageScrollPosition = window.scrollY;
   currentQuizUnit = unit;
   quizMode = mode;
 
@@ -518,6 +525,7 @@ async function loadQuiz(unit, mode) {
     flashcardView.classList.add("hidden");
     quizView.classList.remove("hidden");
     loadingOverlay.classList.add("hidden");
+    window.scrollTo(0, 0);
 
     quizQuestionContainer.classList.remove("hidden");
     quizFinishScreen.classList.add("hidden");
@@ -2053,6 +2061,7 @@ document.querySelectorAll(".pdp-btn").forEach((btn) => {
 function showSectionChooser() {
   homepage.classList.add("hidden");
   pdpView.classList.remove("hidden");
+  window.scrollTo(0, 0);
   sectionChooser.classList.remove("hidden");
   methodChooser.classList.add("hidden");
   promptDisplay.classList.add("hidden");
@@ -2300,7 +2309,7 @@ function showSuccessInstructions(aiName) {
 pdpBackBtn.addEventListener("click", () => {
   pdpView.classList.add("hidden");
   homepage.classList.remove("hidden");
-  window.scrollTo(0, 0);
+  setTimeout(() => window.scrollTo(0, lastHomepageScrollPosition), 10);
 });
 
 console.log("✅ Unit 6 PDP System Initialized!");

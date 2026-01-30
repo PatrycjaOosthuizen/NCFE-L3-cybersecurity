@@ -1530,12 +1530,15 @@ body {
   }
 
   .quiz-navigation {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 8px;
   }
 
   .quiz-nav-btn {
-    flex: 1 1 calc(50% - 5px);
-    min-width: 120px;
+    flex: 1;
+    padding: 12px 8px;
+    font-size: 0.95em;
+    min-width: 0;
   }
 
   .score-cards {
