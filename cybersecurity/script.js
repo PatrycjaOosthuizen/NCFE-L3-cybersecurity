@@ -2395,7 +2395,7 @@ if (mobilePrevBtn) {
       }
 
       // Update display
-      displayCard();
+      renderCard();
       updateProgress();
       updateMobileButtons();
     }
@@ -2414,7 +2414,7 @@ if (mobileNextBtn) {
       }
 
       // Update display
-      displayCard();
+      renderCard();
       updateProgress();
       updateMobileButtons();
     }
@@ -2449,7 +2449,7 @@ function handleSwipe() {
         }
 
         // Update display
-        displayCard();
+        renderCard();
         updateProgress();
         updateMobileButtons();
       }
@@ -2467,7 +2467,7 @@ function handleSwipe() {
         }
 
         // Update display
-        displayCard();
+        renderCard();
         updateProgress();
         updateMobileButtons();
       }
@@ -2508,7 +2508,7 @@ function navigateCard(direction) {
   }
 
   // Update card display
-  displayCard();
+  renderCard();
   updateProgress();
   updateMobileButtons();
   updateMobileButtons();
